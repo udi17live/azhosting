@@ -2,11 +2,7 @@ const express = require('express');
 const resellerPanelURL = process.env.RESELLER_PANEL_URL;
 
 //Load Models
-const Domain = require('../models/Domain');
-const SharedHosting = require('../models/SharedHosting');
-const VPS = require('../models/VPS');
-const VPSCloud = require('../models/VPSCloud');
-const DedicatedServer = require('../models/DedicatedServer');
+const models = require('../models');
 
 const router = express.Router();
 
@@ -20,88 +16,83 @@ function slugify(text) {
 }
 
 router.get('/', async function (req, res) {
-    var domains = await Domain.find({ tld: { $in: ["com", "net", "store", "org", "xyz"] } })
+    var domains = await models.Domain.findAll({where: {tld: ["com","net","org","store","club","xyz"]}})
         .then(domains_recieved => {
             var domains_obj = {};
             domains_recieved.forEach((item) => {
                 domains_obj[item.tld] = item.final_cost;
             });
-
+            
             return domains_obj;
         })
         .catch(err => console.log(err));
 
-    var minDomainDoc = await Domain.aggregate(
-        [{ $sort: { final_cost: 1 } }, { $limit: 1 }]
-    );
+    var minDomainCost = await models.Domain.findAll()
+        .then(domains_recieved => {
+            var domains_arr = [];
+            domains_recieved.forEach((item) => {
+                domains_arr.push(parseFloat(item.final_cost));
+            });
+            
+            domains_arr.sort(function(a,b) { return a - b;})
+            return domains_arr[0];
+        })
+        .catch(err => console.log(err));
 
-    var minSharedHostingPrice = await SharedHosting.find({}, ("product_name final_cost"), { sort: { "final_cost": 1 } })
+    var minSharedHostingPrice = await models.SharedHostingPlan.findAll()
         .then(result => {
-            var sh_obj = {};
+            var sh_arr = [];
             result.forEach((item) => {
-                sh_obj[item.product_name] = parseFloat(item.final_cost);
+                sh_arr.push(parseFloat(item.final_cost));
             });
 
-            const final_plans = Object.entries(sh_obj)
-                .sort(([, a], [, b]) => a - b)
-                .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
+            sh_arr.sort(function(a,b) { return a - b;});
 
-            minPlanValue = final_plans[Object.keys(final_plans)[0]] / 12;
+            minPlanValue = sh_arr[0] / 12;
             return minPlanValue;
         })
         .catch(err => console.log(err));
 
-    const minVpsCloudPrice = await VPSCloud.find({}, ("product_name final_cost"), { sort: { "final_cost": 1 } })
-        .then(result => {
-            var sh_obj = {};
-            result.forEach((item) => {
-                sh_obj[item.product_name] = parseFloat(item.final_cost);
-            });
+    const minVpsCloudPrice = await await models.VpsCloudHostingPlan.findAll()
+    .then(result => {
+        var vps_cloud_arr = [];
+        result.forEach((item) => {
+            vps_cloud_arr.push(parseFloat(item.final_cost));
+        });
 
-            const final_plans = Object.entries(sh_obj)
-                .sort(([, a], [, b]) => a - b)
-                .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
+        vps_cloud_arr.sort(function(a,b) { return a - b;});
 
-            minPlanValue = final_plans[Object.keys(final_plans)[0]];
-            return minPlanValue;
-        })
-        .catch(err => console.log(err));
+        return vps_cloud_arr[0];
+    })
+    .catch(err => console.log(err));
 
 
-    const minVpsPrice = await VPS.find({}, ("product_name final_cost"), { sort: { "final_cost": 1 } })
-        .then(result => {
-            var sh_obj = {};
-            result.forEach((item) => {
-                sh_obj[item.product_name] = parseFloat(item.final_cost);
-            });
+    const minVpsPrice = await await models.VpsHostingPlan.findAll()
+    .then(result => {
+        var vps_arr = [];
+        result.forEach((item) => {
+            vps_arr.push(parseFloat(item.final_cost));
+        });
 
-            const final_plans = Object.entries(sh_obj)
-                .sort(([, a], [, b]) => a - b)
-                .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
+        vps_arr.sort(function(a,b) { return a - b;});
 
-            minPlanValue = final_plans[Object.keys(final_plans)[0]];
-            return minPlanValue;
-        })
-        .catch(err => console.log(err));
+        return vps_arr[0];
+    })
+    .catch(err => console.log(err));
 
 
-    const minDedicatedServerPrice = await DedicatedServer.find({}, ("product_name final_cost"), { sort: { "final_cost": 1 } })
-        .then(result => {
-            var sh_obj = {};
-            result.forEach((item) => {
-                sh_obj[item.product_name] = parseFloat(item.final_cost);
-            });
+    const minDedicatedServerPrice = await models.DedicatedHostingPlan.findAll()
+    .then(result => {
+        var ded_arr = [];
+        result.forEach((item) => {
+            ded_arr.push(parseFloat(item.final_cost));
+        });
 
-            const final_plans = Object.entries(sh_obj)
-                .sort(([, a], [, b]) => a - b)
-                .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
+        ded_arr.sort(function(a,b) { return a - b;});
 
-            minPlanValue = final_plans[Object.keys(final_plans)[0]];
-            return minPlanValue;
-        })
-        .catch(err => console.log(err));
-
-    var minDomainCost = minDomainDoc.final_cost ? minDomainDoc.final_cost : "0";
+        return ded_arr[0];
+    })
+    .catch(err => console.log(err));
 
     res.render('home', {
         domains,
@@ -114,7 +105,7 @@ router.get('/', async function (req, res) {
 });
 
 router.get('/shared-web-hosting', async function (req, res) {
-    var sharedHostingPlans = await SharedHosting.find({})
+    var sharedHostingPlans =  await models.SharedHostingPlan.findAll()
         .then(result => {
             var plans = {};
             result.forEach((item) => {
@@ -145,15 +136,8 @@ router.get('/vps', async function (req, res) {res.render('vps')});
 
 
 router.get('/domain-pricing', async function (req, res) {
-    var domains = await Domain.find()
+    var domains = await models.Domain.findAll()
         .then(domains_recieved => {
-            
-            domains_recieved.sort(function(a, b){
-                if(a.tld < b.tld) { return -1; }
-                if(a.tld > b.tld) { return 1; }
-                return 0;
-            });
-
             return domains_recieved;
         })
         .catch(err => console.log(err));
