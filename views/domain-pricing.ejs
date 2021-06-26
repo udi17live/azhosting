@@ -1,0 +1,66 @@
+<div class="mt-auto header-top-height"></div>
+<main class="container mb-auto">
+    <div class="row">
+        <div class="col-md-5 d-flex mx-auto flex-column">
+            <div class="mb-auto"></div>
+            <h3 class="mt-3 main-header-text-title"><span>Choose from over 400 tlds.</span>Domain Pricing</h3>
+        </div>
+        <div class="col-md-7">
+            <div class="breadcrumb-hosting-pages row">
+                <a class="col-md-3 active" href="<%= process.env.RESELLER_PANEL_URL %>/bill/#search-domain">
+                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483555/azh/svgs/hosting_ubjjrj.svg"
+                        alt="" />
+                    <span class="sub-breadcrumb-host-title">Domain Name Search</span>
+                </a>
+                <a class="col-md-3" href="<%= process.env.RESELLER_PANEL_URL %>/bill/#transfer-domain">
+                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483556/azh/svgs/servers_ywxanw.svg"
+                        alt="" />
+                    <span class="sub-breadcrumb-host-title">Transfer Domain</span>
+                </a>
+                <a class="col-md-3" href="cloud-vps.html">
+                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483557/azh/svgs/clouds_jxjmof.svg"
+                        alt="#" />
+                    <span class="sub-breadcrumb-host-title">Shared Hosting</span>
+                </a>
+                <a class="col-md-3" href="dedicated.html">
+                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483558/azh/svgs/dedicated_qhucdk.svg"
+                        alt="" />
+                    <span class="sub-breadcrumb-host-title">VPS Hosting</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+<div class="mt-auto"></div>
+</div>
+
+<section class="padding-50-0-10 position-relative">
+    <div class="container">
+        <h3 class="d-none">pricing table</h3>
+        <div class="table-responsive">
+            <table class="table table-striped table-dedicated-hosting-container">
+                <thead class="table-dedicated-hosting-header">
+                    <tr>
+                        <th scope="col">
+                        </th>
+                        <th scope="col">
+                            <span class="plan-name-dedicated">Price</span>
+                        </th>
+                        <th scope="col">
+                            <span class="plan-name-dedicated">Renewal Pricing</span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="table-dedicated-hosting-body">
+                    <% domains.forEach((domain) => { %>
+                        <tr>
+                            <th scope="row"><b>.<%= domain.tld %></b></th>
+                            <td><b class="plan-dedicated-config">$<%= domain.final_cost %></b> </td>
+                            <td><b class="plan-dedicated-config">$<%= domain.renewal_cost %></b> </td>
+                        </tr>
+                    <% }); %> 
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
