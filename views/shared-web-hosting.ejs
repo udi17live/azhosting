@@ -3,8 +3,7 @@
     <div class="row">
         <div class="col-md-5 d-flex mx-auto flex-column">
             <div class="mb-auto"></div>
-            <h3 class="mt-3 main-header-text-title"><span>Stay in full control of your environment with our web
-                    hosting</span>Shared Hosting</h3>
+            <h3 class="mt-3 main-header-text-title"><span>A Hosting Plan for Everyone!</span>Shared Hosting</h3>
         </div>
         <div class="col-md-7">
             <div class="breadcrumb-hosting-pages row">
@@ -19,12 +18,12 @@
                         alt="" />
                     <span class="sub-breadcrumb-host-title">Vps Hosting</span>
                 </a>
-                <a class="col-md-3" href="cloud-vps.html">
+                <a class="col-md-3" href="/vps-cloud">
                     <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483557/azh/svgs/clouds_jxjmof.svg"
                         alt="#" />
                     <span class="sub-breadcrumb-host-title">clouds VPS</span>
                 </a>
-                <a class="col-md-3" href="dedicated.html">
+                <a class="col-md-3" href="/ded">
                     <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483558/azh/svgs/dedicated_qhucdk.svg"
                         alt="" />
                     <span class="sub-breadcrumb-host-title">Dedicated</span>
@@ -48,11 +47,11 @@
                         <i class="monthly">$<%= sharedHostingPlans.starter.monthly_cost %><small>/mo</small></i>
                     </span>
                     <ul class="second-pricing-table-body">
-                        <li>1 Website</li>
-                        <li>Unlimited Disk Space</li>
-                        <li>Unlimited Bandwidth</li>
+                        <li><%= sharedHostingPlans.starter.features.hostedDomains %> Website</li>
+                        <li><%= sharedHostingPlans.starter.features.diskspace %> Disk Space</li>
+                        <li><%= sharedHostingPlans.starter.features.bandwith %> Bandwidth</li>
                         <li>Free SSL</li>
-                        <li>10 Free Email Accounts</li>
+                        <li><%= sharedHostingPlans.starter.features.emailAccounts %> Free Email Accounts</li>
                         <li>Softaculous Script Installer</li>
                         <li>24/7 Support</li>
                         <li>Instant Setup</li>
@@ -69,11 +68,11 @@
                         <i class="monthly">$<%= sharedHostingPlans.small_scale.monthly_cost %><small>/mo</small></i>
                     </span>
                     <ul class="second-pricing-table-body">
-                        <li>5 Websites</li>
-                        <li>Unlimited Disk Space</li>
-                        <li>Unlimited Bandwidth</li>
+                        <li><%= sharedHostingPlans.small_scale.features.hostedDomains %> Websites</li>
+                        <li><%= sharedHostingPlans.small_scale.features.diskspace %> Disk Space</li>
+                        <li><%= sharedHostingPlans.small_scale.features.bandwith %> Bandwidth</li>
                         <li>Free SSL</li>
-                        <li>50 Free Email Accounts</li>
+                        <li><%= sharedHostingPlans.small_scale.features.emailAccounts %> Free Email Accounts</li>
                         <li>Softaculous Script Installer</li>
                         <li>24/7 Support</li>
                         <li>Instant Setup</li>
@@ -90,11 +89,11 @@
                         <i class="monthly">$<%= sharedHostingPlans.start_up.monthly_cost %><small>/mo</small></i>
                     </span>
                     <ul class="second-pricing-table-body">
-                        <li>20 Websites</li>
-                        <li>Unlimited Disk Space</li>
-                        <li>Unlimited Bandwidth</li>
+                        <li><%= sharedHostingPlans.start_up.features.hostedDomains %> Websites</li>
+                        <li><%= sharedHostingPlans.start_up.features.diskspace %> Disk Space</li>
+                        <li><%= sharedHostingPlans.start_up.features.bandwith %> Bandwidth</li>
                         <li>Free SSL</li>
-                        <li>100 Free Email Accounts</li>
+                        <li><%= sharedHostingPlans.start_up.features.emailAccounts %> Free Email Accounts</li>
                         <li>Softaculous Script Installer</li>
                         <li>24/7 Support</li>
                         <li>Instant Setup</li>
@@ -111,11 +110,11 @@
                         <i class="monthly">$<%= sharedHostingPlans.business.monthly_cost %><small>/mo</small></i>
                     </span>
                     <ul class="second-pricing-table-body">
-                        <li>50 Websites</li>
-                        <li>Unlimited Disk Space</li>
-                        <li>Unlimited Bandwidth</li>
+                        <li><%= sharedHostingPlans.enterprise.features.hostedDomains %> Websites</li>
+                        <li><%= sharedHostingPlans.enterprise.features.diskspace %> Disk Space</li>
+                        <li><%= sharedHostingPlans.enterprise.features.bandwith %> Bandwidth</li>
                         <li>Free SSL</li>
-                        <li>Unlimited Email Accounts</li>
+                        <li><%= sharedHostingPlans.enterprise.features.emailAccounts %> Free Email Accounts</li>
                         <li>Softaculous Script Installer</li>
                         <li>24/7 Support</li>
                         <li>Instant Setup</li>
@@ -132,11 +131,11 @@
                         <i class="monthly">$<%= sharedHostingPlans.enterprise.monthly_cost %><small>/mo</small></i>
                     </span>
                     <ul class="second-pricing-table-body">
-                        <li>Unlimited Websites</li>
-                        <li>Unlimited Disk Space</li>
-                        <li>Unlimited Bandwidth</li>
+                        <li><%= sharedHostingPlans.enterprise.features.hostedDomains %> Websites</li>
+                        <li><%= sharedHostingPlans.enterprise.features.diskspace %> Disk Space</li>
+                        <li><%= sharedHostingPlans.enterprise.features.bandwith %> Bandwidth</li>
                         <li>Free SSL</li>
-                        <li>Unlimited Email Accounts</li>
+                        <li><%= sharedHostingPlans.enterprise.features.emailAccounts %> Free Email Accounts</li>
                         <li>Softaculous Script Installer</li>
                         <li>24/7 Support</li>
                         <li>Instant Setup</li>
@@ -153,11 +152,11 @@
                         <i class="monthly">$<%= sharedHostingPlans.large_scale.monthly_cost %><small>/mo</small></i>
                     </span>
                     <ul class="second-pricing-table-body">
-                        <li>Unlimited Websites</li>
-                        <li>Unlimited Disk Space</li>
-                        <li>Unlimited Bandwidth</li>
+                        <li><%= sharedHostingPlans.large_scale.features.hostedDomains %> Websites</li>
+                        <li><%= sharedHostingPlans.large_scale.features.diskspace %> Disk Space</li>
+                        <li><%= sharedHostingPlans.large_scale.features.bandwith %> Bandwidth</li>
                         <li>Free SSL</li>
-                        <li>Unlimited Email Accounts</li>
+                        <li><%= sharedHostingPlans.large_scale.features.emailAccounts %> Free Email Accounts</li>
                         <li>Softaculous Script Installer</li>
                         <li>24/7 Support</li>
                         <li>Instant Setup</li>
@@ -176,62 +175,71 @@
         <h5 class="title-default-coodiv-two">Simple & Powerful tools<span class="mr-tp-10">high performance 100%
                 Intel CPU and 100% SSD bare metal platform.</span></h5>
         <div class="row justify-content-center mr-tp-40">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="box-features-one">
-                    <i class="e-flaticon-002-plug"></i>
+                    <i class="fas fa-shield-alt"></i>
                     <h5>Free SSL</h5>
                     <p>All our shared hosting plans comes with a free SSL certificate for all hosted domains including addon domains later added.</p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="box-features-one">
-                    <i class="e-flaticon-002-plug"></i>
-                    <h5>Hosted With CPanel</h5>
-                    <p>Yes, we are using the most popular web hosting management software for all our shared hosting customers. This comes for free!</p>
+                    <i class="fas fa-th"></i>
+                    <h5>Softaculous Apps Installer</h5>
+                    <p>We have installed Softaculous for all plans, this makes it possible to install major apps like WordPress with just one click without any programming knowledge.</p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="box-features-one">
-                    <i class="e-flaticon-002-plug"></i>
-                    <h5>100% Uptime</h5>
-                    <p>Our cloud infrastructure guarantees a 100% uptime network, so all clients hosted with you are also guaranteed this also!</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="box-features-one">
-                    <i class="e-flaticon-002-plug"></i>
-                    <h5>7 Days Money Back Guaranteed</h5>
-                    <p>For new accounts using our shared hosting servers, there is a 7 days Money back guaranteed system, its automated and true!</p>
+                    <i class="far fa-check-circle"></i>
+                    <h5>Easy Domain Management</h5>
+                    <p>All customers can easily manage all their domains from the billing panel. DNS Management, Name servers set up, DNSSEC, e.t.c</p>
                 </div>
             </div>
         </div>
         <div class="row justify-content-center mr-tp-10">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="box-features-one">
-                    <i class="e-flaticon-002-plug"></i>
-                    <h5>Free SSL</h5>
-                    <p>All our shared hosting plans comes with a free SSL certificate for all hosted domains including addon domains later added.</p>
+                    <i class="fab fa-cpanel"></i>
+                    <h5>Hosted With CPanel</h5>
+                    <p>Yes, we are using the most popular web hosting management software for all our shared hosting customers. This comes for free!</p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="box-features-one">
-                    <i class="e-flaticon-002-plug"></i>
+                    <i class="h-flaticon-019-uptime"></i>
+                    <h5>100% Uptime</h5>
+                    <p>Our cloud infrastructure guarantees a 100% uptime network, so all clients hosted with you are also guaranteed this also!</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box-features-one">
+                    <i class="h-flaticon-032-server-3"></i>
+                    <h5>Easy Upgrade & Downgrade</h5>
+                    <p>There is no need for long support and calls, customers are able to upgrade their servers instally and vise versa automatically.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center mr-tp-10">
+            <div class="col-md-4">
+                <div class="box-features-one">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h5>7 Days Money Back Guaranteed</h5>
+                    <p>For new accounts using our shared hosting servers, there is a 7 days Money back guaranteed system, its automated and true!</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="box-features-one">
+                    <i class="fas fa-headset"></i>
                     <h5>24/7 Customer Support</h5>
                     <p>We work round the clock just to make sure all customers are enjoying their value for money. Customers get responses via the support ticket channel.</p>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="box-features-one">
-                    <i class="e-flaticon-002-plug"></i>
+                    <i class="fas fa-puzzle-piece"></i>
                     <h5>Lots Of Addons</h5>
                     <p>All our shared hosting plans comes with a free SSL certificate for all hosted domains including addon domains later added.</p>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="box-features-one">
-                    <i class="e-flaticon-002-plug"></i>
-                    <h5>Free SSL</h5>
-                    <p>All other addons are available for usage. We have very interesting products like Social Media Marketing, SEO and many more!</p>
                 </div>
             </div>
         </div>

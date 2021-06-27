@@ -17,7 +17,7 @@
  @font-face {
  font-family: 'fontello';src: url('https://cdn.azpirehosting.info/cdn/icon-packs/fontello/fontello7616.eot');src: url('https://cdn.azpirehosting.info/cdn/icon-packs/fontello/fontello7616.eot?24141936#iefix') format('embedded-opentype'),url('https://cdn.azpirehosting.info/cdn/icon-packs/fontello/fontello7616.woff2?24141936') format('woff2'),url('https://cdn.azpirehosting.info/cdn/icon-packs/fontello/fontello7616.woff?24141936') format('woff'),url('https://cdn.azpirehosting.info/cdn/icon-packs/fontello/fontello7616.ttf?24141936') format('truetype'),url('https://cdn.azpirehosting.info/cdn/icon-packs/fontello/fontello7616.svg?24141936#fontello') format('svg');font-weight: normal;font-style: normal;
  }
- [class^="e-flaticon-"]:before, [class*=" e-flaticon-"]:before,
+ [class^="e-flaticon-"]:before, [class*=" e-flaticon-"]:before,[class="e-flaticon"],
  [class^="e-flaticon-"]:after, [class*=" e-flaticon-"]:after{font-family:electronic-icons-pack;font-size:20px;font-style:normal;margin-left:0;}
  .h-flaticon-001-bug-1:before{content:"\f100";}
  .h-flaticon-002-error-404:before{content:"\f101";}
@@ -621,7 +621,7 @@
  .map-comment-area-title{margin:0;padding:20px;text-align:center;font-size:26px;font-weight:600;font-family:'Poppins', sans-serif;letter-spacing:0.5px;}
  .maps-comments-area-overflow{position:absolute;left:0;right:0;bottom:0;height:250px;background:rgb(34,193,195);background:linear-gradient(0deg, #333 0%, #fff 100%);opacity:0.1;pointer-events:none;}
  .map-comment-area-text{color:#5a6480;font-size:18px;font-weight:300;line-height:29px;text-align:center;}
- .footer-section-banner{padding:70px 0;background:#2d2d44;color:#fff;}
+ .footer-section-banner{padding:70px 0;background:#051360;color:#fff;}
  .free-trial-footer-banner-title{margin:0;font-size:20px;font-weight:600;font-family:'Poppins', sans-serif;letter-spacing:0.5px;margin-bottom:8px;text-transform:capitalize;}
  .free-trial-footer-banner-text{color:#c4c7de;font-size:16px;font-weight:300;line-height:27px;}
  .free-trial-footer-links{text-align:center;}
@@ -630,8 +630,9 @@
  .free-trial-footer-links a.sign-btn:hover{background:#6e55e4;color:#fff;}
  .free-trial-footer-links a.log-btn{background:#fff;color:#8065ff;}
  .free-trial-footer-links a.log-btn:hover{background:#e2e6e8;color:#8065ff;}
- .footer-section{padding:100px 0 30px;background:#33334f;color:#fff;}
- .quiq-links-footer-title{font-weight:600;font-family:'Poppins', sans-serif;letter-spacing:0.5px;font-size:17px;margin-bottom:20px;}
+ .footer-section{padding:100px 0 30px;background:#020B3F;color:#fff;}
+ .quiq-links-footer-title{font-weight:600;font-family:'Poppins', sans-serif;letter-spacing:0.5px;font-size:17px;margin-bottom:5px;}
+ .quiq-links-footer-title-xs{font-weight:500;font-family:'Poppins', sans-serif;letter-spacing:0.5px;font-size:14px;margin-bottom:5px;margin-top:10px;}
  .quiq-links-footer-ul li{list-style:none;position:relative;padding:4px 0;}
  .quiq-links-footer-ul li:after{position:absolute;content:'';width:4px;height:4px;background:#7f64ff;left:-19px;top:0;bottom:0;margin:auto;border-radius:1px;}
  .quiq-links-footer-ul li a{color:#969cc1;font-weight:500;line-height:25px;font-size:14px;text-transform:capitalize;text-decoration:none;}
@@ -650,6 +651,12 @@
  .footer-social-icons{margin-top:30px;}
  .footer-social-icons a{background:#22253e;width:24px;height:24px;display:inline-block;text-align:center;line-height:24px;color:#fff;font-size:12px;border-radius:20px;margin-right:8px;opacity:0.8;}
  .footer-social-icons a:hover{opacity:1;}
+ 
+ .footer-payment-icons{margin-top:30px; justify-content:end;}
+ /*.footer-payment-icons i{background:#22253e;font-size:150px;display:inline-block;text-align:center;line-height:24px;color:#fff;font-size:12px;border-radius:20px;margin-right:8px;opacity:0.8;}*/
+ .footer-payment-icons i{display:inline-block;}
+ .footer-payment-icons i:before{font-size:30px;color:#fff;}
+
  .under-footer-ullist{margin-bottom:0;margin-top:15px}
  .under-footer-ullist li{list-style:none;padding:2px 0;}
  .under-footer-ullist li a{color:#969cc1;font-weight:500;line-height:25px;font-size:13px;text-decoration:none;text-transform:uppercase;}
@@ -2682,7 +2689,7 @@
  }
  @media (min-width:768px) and (max-width:991px){
  .navbar-brand {margin-right: 0.5rem;}
- .main-header-coodiv-s.container {max-width: 768px;}
+ .main-header-coodiv-s.cofntainer {max-width: 768px;}
  #coodiv-navbar-header .navbar-nav .nav-link {font-size: 12px;padding-right: .5rem;padding-left: .5rem;}
  }
  .bg-img-header-new-standard{

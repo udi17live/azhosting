@@ -110,12 +110,22 @@ router.get('/shared-web-hosting', async function (req, res) {
             var plans = {};
             result.forEach((item) => {
                 var slugified_name = slugify(item.product_name);
-                var final_cost = parseFloat(item.final_cost);
-                var monthly_cost = final_cost / 12;
+                var finalCost = parseFloat(item.final_cost);
+                var monthly_cost = finalCost / 12;
                 plans[slugified_name] = {
-                    name: item.product_name,
+                    name: item.my_custom_product_name,
                     monthly_cost: monthly_cost,
-                    cost: final_cost
+                    cost: finalCost,
+                    features: {
+                        diskspace: item.diskspace,
+                        bandwith: item.bandwith,
+                        dedicatedIp: item.dedicated_ip,
+                        backups: item.backups,
+                        hostedDomains: item.hosted_domains,
+                        subDomains: item.sub_domains,
+                        emailAccounts: item.email_accounts,
+                        emailPerHour: item.email_per_hour
+                    }
                 };
             });
             return plans;
@@ -124,7 +134,6 @@ router.get('/shared-web-hosting', async function (req, res) {
 
     const billingURL = `${resellerPanelURL}/bill/?shared_hosting`;
 
-    console.log(sharedHostingPlans);
     res.render('shared-web-hosting', {
         sharedHostingPlans,
         billingURL
@@ -132,7 +141,101 @@ router.get('/shared-web-hosting', async function (req, res) {
 });
 
 
-router.get('/vps', async function (req, res) {res.render('vps')});
+router.get('/vps', async function (req, res) {
+    var vpsHostingPlans =  await models.VpsHostingPlan.findAll()
+        .then(result => {
+            var plans = [];
+            result.forEach((item) => {
+                var slugified_name = slugify(item.product_name);
+                plans.push( {
+                    name: item.product_name,
+                    cost: item.final_cost,
+                    features: {
+                        cores: item.cores,
+                        ram: item.ram,
+                        diskspace: item.diskspace,
+                        bandwidth: item.bandwidth,
+                        dedicatedIp: item.dedicated_ip,
+                        mbit: item.mbit
+                    }
+                });
+            });
+            return plans;
+        })
+        .catch(err => console.log(err));
+
+    const billingURL = `${resellerPanelURL}/bill/`;
+    
+    res.render('vps', {
+        vpsHostingPlans,
+        billingURL
+    });
+
+});
+
+
+router.get('/vps-cloud', async function (req, res) {
+    var vpsCloudHostingPlans =  await models.VpsCloudHostingPlan.findAll()
+        .then(result => {
+            var plans = [];
+            result.forEach((item) => {
+                var slugified_name = slugify(item.product_name);
+                plans.push( {
+                    name: item.product_name,
+                    cost: item.final_cost,
+                    features: {
+                        cores: item.cores,
+                        ram: item.ram,
+                        diskspace: item.diskspace,
+                        bandwidth: item.bandwidth,
+                        dedicatedIp: item.dedicated_ip
+                    }
+                });
+            });
+            return plans;
+        })
+        .catch(err => console.log(err));
+
+    const billingURL = `${resellerPanelURL}/bill/`;
+    
+    res.render('vps-cloud', {
+        vpsCloudHostingPlans,
+        billingURL
+    });
+
+});
+
+router.get('/ded', async function (req, res) {
+    var dedicatedHostingPlans =  await models.DedicatedHostingPlan.findAll()
+        .then(result => {
+            var plans = [];
+            result.forEach((item) => {
+                plans.push( {
+                    name: item.my_custom_product_name,
+                    cost: item.final_cost,
+                    features: {
+                        cores: item.cores,
+                        ram: item.ram,
+                        diskspace: item.diskspace,
+                        bandwidth: item.bandwidth,
+                        dedicatedIp: item.dedicated_ip,
+                        ghz: item.ghz,
+                        mbit: item.mbit
+                    }
+                });
+            });
+            return plans;
+        })
+        .catch(err => console.log(err));
+
+    const billingURL = `${resellerPanelURL}/bill/`;
+    
+    res.render('ded', {
+        dedicatedHostingPlans,
+        billingURL
+    });
+
+});
 
 
 router.get('/domain-pricing', async function (req, res) {
@@ -146,5 +249,11 @@ router.get('/domain-pricing', async function (req, res) {
         domains
     });
 });
+
+
+//Legal Section Routes
+router.get('/privacy-policy',  (req, res) => res.render('legal/privacy-policy'));
+router.get('/refund-policy',  (req, res) => res.render('legal/refund-policy'));
+router.get('/aup',  (req, res) => res.render('legal/aup'));
 
 module.exports = router;

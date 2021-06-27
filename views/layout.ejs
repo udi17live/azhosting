@@ -11,8 +11,9 @@
 	<title>Azpire Hosting | Cheap and Reliable Hosting</title>
 
 	<link rel="stylesheet" href="https://cdn.azpirehosting.info/cdn/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 	<link href="https://cdn.azpirehosting.info/cdn/css/main.min.css" rel="stylesheet">
+	
 </head>
 
 <body class="second-color-styles">
@@ -135,26 +136,31 @@
 						<h5 class="quiq-links-footer-title">Quick Links</h5>
 						<div class="row">
 							<ul class="col-md-6 quiq-links-footer-ul">
-								<li><a href="#">our company announcements</a></li>
-								<li><a href="#">Knowledgebase</a></li>
-								<li><a href="#">Downloads</a></li>
-								<li><a href="#">Network Status</a></li>
-								<li><a href="#">My Support Tickets</a></li>
+								<h6 class="quiq-links-footer-title-xs">Domains</h6>
 								<li><a href="#">Register a New Domain</a></li>
 								<li><a href="#">Transfer New Domain</a></li>
-								<li><a href="#">Software Products</a></li>
-								<li><a href="#">Dedicated Hosting</a></li>
+								<li><a href="#">Domain Pricing</a></li>
+								<li><a href="#">WHOIS Checker</a></li>
+								<h6 class="quiq-links-footer-title-xs">Hosting</h6>
+								<li><a href="/shared-web-hosting">Shared Web Hosting</a></li>
+								<li><a href="/vps-cloud">Vps Cloud Hosting</a></li>
+								<li><a href="/vps">Vps Hosting</a></li>
+								<li><a href="/ded">Dedicated Server Hosting</a></li>
+								<li><a href="/addons">Addons</a></li>
 							</ul>
 							<ul class="col-md-6 quiq-links-footer-ul">
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Network Status</a></li>
-								<li><a href="#">Forgot Password?</a></li>
-								<li><a href="#">Create an account with us</a></li>
-								<li><a href="#">Login to your account</a></li>
-								<li><a href="#">make a new payment</a></li>
-								<li><a href="#">Review & Checkout</a></li>
-								<li><a href="#">client area</a></li>
-								<li><a href="#">manage your account</a></li>
+								<h6 class="quiq-links-footer-title-xs">Information</h6>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Contact</a></li>
+								<h6 class="quiq-links-footer-title-xs">Company</h6>
+								<li><a href="/about-us">About Us</a></li>
+								<li><a href="/contact-us">Contact Us</a></li>
+								<h6 class="quiq-links-footer-title-xs">Legal</h6>
+								<li><a href="/privacy-policy">Privacy policy</a></li>
+								<li><a href="/aup">Acceptable Use Policy</a></li>
+								<li><a href="/refund-policy">Refund Policy</a></li>
 							</ul>
 						</div>
 					</div>
@@ -184,27 +190,25 @@
 						<a href="#"><img class="footer-logo-blue" src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483364/azh/header/logo-w-f_wwk4h9.png" alt="" /></a>
 						<div class="footer-social-icons">
 							<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
 							<a href="#"><i class="fab fa-instagram"></i></a>
 							<a href="#"><i class="fab fa-youtube"></i></a>
 							<a href="#"><i class="fab fa-dribbble"></i></a>
 							<a href="#"><i class="fab fa-google"></i></a>
 						</div>
 					</div>
-					<div class="col-md-4 row">
-						<ul class="col-md-6 under-footer-ullist">
-							<li><a href="#">about us</a></li>
-							<li><a href="#">our services</a></li>
-						</ul>
-						<ul class="col-md-6 under-footer-ullist text-right">
-							<li><a href="#">privacy policy</a></li>
-							<li><a href="#">terms of sevice</a></li>
-						</ul>
+					<div class="col-md-4 row justify-content-between">
+						<div class="footer-payment-icons">
+							<i class="fab fa-cc-visa"></i>
+							<i class="fab fa-cc-mastercard"></i>
+							<i class="fab fa-cc-paypal"></i>
+							<i class="fab fa-cc-amex"></i>
+							<i class="fab fa-cc-discover"></i>
+						</div>
 					</div>
 				</div>
 				<div class="row justify-content-between final-footer-area mr-tp-40">
 					<div class="final-footer-area-text">
-						© Copyright 2019 coodiv , made with love in ageria
+						Copyright © <%=  new Date().getFullYear(); %> Azpire Hosting
 					</div>
 					<div class="footer-lang-changer">
 						<div class="lang-changer-drop-up">
@@ -213,13 +217,6 @@
 								english</a>
 							<div class="dropdown-menu dropupmenulagchanger" aria-labelledby="dropupmenulagchanger">
 								<a class="dropdown-item" href="#">english</a>
-								<a class="dropdown-item" href="#">العربية</a>
-								<a class="dropdown-item" href="#">Español</a>
-								<a class="dropdown-item" href="#">Nederlands</a>
-								<a class="dropdown-item" href="#">Français</a>
-								<a class="dropdown-item" href="#">Dansk</a>
-								<a class="dropdown-item" href="#">Português</a>
-								<a class="dropdown-item" href="#">Deutsch</a>
 							</div>
 						</div>
 						<div class="lang-changer-drop-up">
@@ -234,7 +231,13 @@
         <!-- scripts -->
 		<script type="text/javascript">
 			var pathname = window.location.pathname;
-			if( pathname !== "/") {
+			var subHeaderMinRoutes = ['/privacy-policy','/privacy-policy/','/aup','/aup/', '/refund-policy','/refund-policy/'];
+
+			if (subHeaderMinRoutes.includes(pathname)){
+				var element = document.getElementById("coodiv-header");
+				element.classList.remove("subpages-header");
+				element.classList.add("subpages-header-min");
+			}else if( pathname !== "/") {
 				var element = document.getElementById("coodiv-header");
 				element.classList.add("subpages-header");
 			}else{
@@ -243,7 +246,7 @@
 			}
 		</script>
 
-		<script src="https://kit.fontawesome.com/06b7542c72.js" crossorigin="anonymous"></script>
+		<!-- <script src="https://kit.fontawesome.com/06b7542c72.js" crossorigin="anonymous"></script> -->
 
         <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 

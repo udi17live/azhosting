@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-5 d-flex mx-auto flex-column">
             <div class="mb-auto"></div>
-            <h3 class="mt-3 main-header-text-title"><span>Let our servers do the heavy lifting</span>VPS Hosting</h3>
+            <h3 class="mt-3 main-header-text-title"><span>Affordable VPS Hosting</span>VPS Cloud Hosting</h3>
         </div>
         <div class="col-md-7">
             <div class="breadcrumb-hosting-pages row">
@@ -12,12 +12,12 @@
                         alt="" />
                     <span class="sub-breadcrumb-host-title">Shared Hosting</span>
                 </a>
-                <a class="col-md-3 active" href="#">
+                <a class="col-md-3" href="/vps">
                     <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483556/azh/svgs/servers_ywxanw.svg"
                         alt="" />
                     <span class="sub-breadcrumb-host-title">Vps Hosting</span>
                 </a>
-                <a class="col-md-3" href="/vps-cloud">
+                <a class="col-md-3 active" href="#">
                     <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483557/azh/svgs/clouds_jxjmof.svg"
                         alt="#" />
                     <span class="sub-breadcrumb-host-title">clouds VPS</span>
@@ -39,20 +39,19 @@
     <div class="container">
         <h5 class="title-default-coodiv-two">High performing servers at affordable prices<span class="mr-tp-20">Billed Monthly. No hidden fees on renewals</span></h5>
         <div class="row justify-content-start second-pricing-table-container mr-tp-30">
-            <% vpsHostingPlans.forEach((vpsHostingPlan, index) => { %>
-                <div class="col-md-3">
+            <% vpsCloudHostingPlans.forEach((vpsCloudHostingPlan, index) => { %>
+                <div class="col-md-4">
                     <div class="second-pricing-table <%= index%2 == 0 ? '': 'active' %> ">
-                        <h5 class="second-pricing-table-title"><%= vpsHostingPlan.name %> <span></span></h5>
+                        <h5 class="second-pricing-table-title"><%= vpsCloudHostingPlan.name %> <span></span></h5>
                         <span class="second-pricing-table-price">
-                            <i class="monthly">$<%= vpsHostingPlan.cost %><small>/mo</small></i>
+                            <i class="monthly">$<%= vpsCloudHostingPlan.cost %><small>/mo</small></i>
                         </span>
                         <ul class="second-pricing-table-body">
-                            <li><%= vpsHostingPlan.features.cores %></li>
-                            <li><%= vpsHostingPlan.features.ram %></li>
-                            <li><%= vpsHostingPlan.features.diskspace %></li>
-                            <li><%= vpsHostingPlan.features.bandwidth %></li>
-                            <li><%= vpsHostingPlan.features.dedicatedIp %> Dedicated IP</li>
-                            <li><%= vpsHostingPlan.features.mbit %></li>
+                            <li><%= vpsCloudHostingPlan.features.cores %></li>
+                            <li><%= vpsCloudHostingPlan.features.ram %></li>
+                            <li><%= vpsCloudHostingPlan.features.diskspace %></li>
+                            <li><%= vpsCloudHostingPlan.features.bandwidth %></li>
+                            <li><%= vpsCloudHostingPlan.features.dedicatedIp %> Dedicated IP</li>
                         </ul>
                         <a class="second-pricing-table-button" href="<%= billingURL %>">Order Now</a>
                     </div>
@@ -64,36 +63,36 @@
 
 <section class="padding-100-0">
     <div class="container">
-        <h5 class="title-default-coodiv-two">Why Choose Azpire VPS Servers?</h5>
+        <h5 class="title-default-coodiv-two">Why Choose Azpire Cloud VPS?</h5>
         <div class="row justify-content-center mr-tp-40">
             <div class="col-md-4">
                 <div class="box-features-one">
-                    <i class="fas fa-exchange-alt"></i>
-                    <h5>32TB Transfer</h5>
-                    <p>There is enough for incoming and outgoing transfers on all our VPS plans compared to so many other competitors out there.</p>
+                    <i class="e-flaticon-031-ssd"></i>
+                    <h5>Faster-than-SSD with MaxIOPS</h5>
+                    <p>MaxIOPS is our proprietary storage technology, built on enterprise-grade SSDs but up to 2x faster compared to industry-standard cloud servers.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="box-features-one">
-                    <i class="h-flaticon-024-lifesaver-1"></i>
-                    <h5>Full Virtualization</h5>
-                    <p>You would get full benefits of the hardware components used to build the server which guarantees a better performance.</p>
+                    <i class="h-flaticon-019-uptime"></i>
+                    <h5>100% Uptime</h5>
+                    <p>Our cloud infrastructure guarantees a 100% uptime network, so all clients hosted with you are also guaranteed this also!</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="box-features-one">
-                    <i class="far fa-clock"></i>
-                    <h5>Timely SetUp</h5>
-                    <p>VPS are created beween 1 - 3 hours. This timeframe allows us to carefully setup the server as this is done manually per each order.</p>
+                    <i class="far fa-check-circle"></i>
+                    <h5>Easy Upgrade & Downgrade</h5>
+                    <p>There is no need for long support and calls, customers are able to upgrade their VPS Cloud servers instally and vise versa automatically.</p>
                 </div>
             </div>
         </div>
         <div class="row justify-content-center mr-tp-10">
             <div class="col-md-4">
                 <div class="box-features-one">
-                    <i class="e-flaticon-031-ssd"></i>
-                    <h5>100% SSD</h5>
-                    <p>All VPS plans comes with an SSD hard drive which automatically improves the server speed. These hard drives are 100% reliable.</p>
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h5>Instant SetUp</h5>
+                    <p>Immediately the payment is successful, the account is created and login details are automatically sent by the system.</p>
                 </div>
             </div>
             <div class="col-md-4">
@@ -106,8 +105,8 @@
             <div class="col-md-4">
                 <div class="box-features-one">
                     <i class="far fa-building"></i>
-                    <h5>US Data Center</h5>
-                    <p>Our Datacenter for the VPS plans exist in the US, we plan to add more locations very soon later in the future.</p>
+                    <h5>Multi Location Data Center</h5>
+                    <p>Our Datacenter for the cloud VPS plans exist in several regions; USA, FRANCE, GERMANY, ITALY, NETHERLANDS, SINGAPORE, POLAND, UK, SPAIN.</p>
                 </div>
             </div>
         </div>
