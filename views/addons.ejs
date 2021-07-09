@@ -1,0 +1,35 @@
+<div class="mt-auto header-top-height"></div>
+<main class="container mb-auto">
+    <div class="row">
+        <div class="col-md-5 d-flex mx-auto flex-column">
+            <div class="mb-auto"></div>
+            <h3 class="mt-3 main-header-text-title"><span>Spice up your business!</span>Addons</h3>
+        </div>
+        <div class="col-md-7">
+           
+        </div>
+    </div>
+</main>
+<div class="mt-auto"></div>
+</div>
+
+<section class="padding-100-0-10 position-relative">
+    <div class="container">
+        
+        <div class="row justify-content-left server-tabls-head">
+            <div class="col-md-3">Addon</div>
+            <div class="col-md-4">Features</div>
+            <div class="col-md-3">Price</div>
+        </div>
+        <div class="server-tabls-body">
+            <% addons.forEach((addon, index) => { %>
+                <div class="row justify-content-left server-tabls-row">
+                    <div class="col-md-3"><span class="server-spects-for-mobile">Addon</span><%= addon.name %> </div>
+                    <div class="col-md-4"><span class="server-spects-for-mobile">Features</span><%= addon.features %> </div>
+                    <div class="col-md-3"><span class="server-spects-for-mobile">Price</span>$ <%= addon.cost + '/' + addon.term %> </div>
+                    <div class="col-md-2"><a class="server-order-button" href="<%= process.env.RESELLER_HOSTING_URL %>/bill/">order now</a></div>
+                </div>
+            <% }); %> 
+        </div>
+    </div>
+</section>

@@ -36,15 +36,15 @@
 		<div class="preloader-container">
 			<svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 				x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
-				<circle fill="#675cda" stroke="none" cx="6" cy="50" r="6">
+				<circle fill="#051630" stroke="none" cx="6" cy="50" r="6">
 					<animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15"
 						repeatCount="indefinite" begin="0.1" />
 				</circle>
-				<circle fill="#675cda" stroke="none" cx="30" cy="50" r="6">
+				<circle fill="#051630" stroke="none" cx="30" cy="50" r="6">
 					<animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10"
 						repeatCount="indefinite" begin="0.2" />
 				</circle>
-				<circle fill="#675cda" stroke="none" cx="54" cy="50" r="6">
+				<circle fill="#051630" stroke="none" cx="54" cy="50" r="6">
 					<animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5"
 						repeatCount="indefinite" begin="0.3" />
 				</circle>
@@ -87,8 +87,8 @@
 								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Domains<span
 									class="sr-only">(current)</span></a>
 							<ul class="dropdown-menu coodiv-dropdown-header" aria-labelledby="header-pages-drop-down">
-								<li><a class="dropdown-item" href="<%= process.env.RESELLER_PANEL_URL %>/bill/#search-domain">Domain Name Search</a></li>
-								<li><a class="dropdown-item" href="<%= process.env.RESELLER_PANEL_URL %>/bill/#transfer-domain">Transfer Domain</a></li>
+								<li><a class="dropdown-item" href="<%= process.env.RESELLER_HOSTING_URL %>/bill/#search-domain">Domain Name Search</a></li>
+								<li><a class="dropdown-item" href="<%= process.env.RESELLER_HOSTING_URL %>/bill/#transfer-domain">Transfer Domain</a></li>
 								<li><a class="dropdown-item" href="/domain-pricing">Domain Pricing</a></li>
 							</ul>
 						</li>
@@ -137,10 +137,10 @@
 						<div class="row">
 							<ul class="col-md-6 quiq-links-footer-ul">
 								<h6 class="quiq-links-footer-title-xs">Domains</h6>
-								<li><a href="#">Register a New Domain</a></li>
-								<li><a href="#">Transfer New Domain</a></li>
-								<li><a href="#">Domain Pricing</a></li>
-								<li><a href="#">WHOIS Checker</a></li>
+								<li><a href="<%= process.env.RESELLER_HOSTING_URL %>/bill/#search-domain">Register a New Domain</a></li>
+								<li><a href="<%= process.env.RESELLER_HOSTING_URL %>/bill/#transfer-domain">Transfer New Domain</a></li>
+								<li><a href="/domain-pricing">Domain Pricing</a></li>
+								<li><a href="/whois-checker">WHOIS Checker</a></li>
 								<h6 class="quiq-links-footer-title-xs">Hosting</h6>
 								<li><a href="/shared-web-hosting">Shared Web Hosting</a></li>
 								<li><a href="/vps-cloud">Vps Cloud Hosting</a></li>

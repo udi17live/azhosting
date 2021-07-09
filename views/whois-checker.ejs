@@ -1,0 +1,73 @@
+<div class="mt-auto header-top-height"></div>
+<main class="container mb-auto">
+    <div class="row">
+        <div class="col-md-5">
+            <h3 class="mt-3 main-header-text-title mr-tp-60"><span>You still got questions ?</span>WHOIS Checker
+                <span class="sub-page-breadcrumb"><a href="#">homepage</a> - contact us</span>
+            </h3>
+            <div class="contact-us-social-icons">
+                <a class="fb" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="tw" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="yb" href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <form class="row form-contain-home contact-page-form-send" id="ajax-contact" method="POST" action="/whois-checker">
+                <div id="form-messages"></div>
+                <h5>Enter your Domain here.</h5>
+                <div class="col-md-12">
+
+                    <div class="field input-field">
+                        <input class="form-contain-home-input" type="text" id="domain" name="domain"
+                            placeholder="azpirehosting.com" required>
+
+                        <i class="fas fa-globe"></i>
+                    </div>
+                </div>
+
+                <div class="btn-holder-contect">
+                    <button type="submit">Check</button>
+
+                </div>
+                <div class="col-md-12">
+                    <% if (typeof  data !== 'undefined') { %>
+                        <% if (data === null) { %>
+                            <p id="whois-results">Invalid Url</p>
+                        <% }else{ %>
+                            <p id="whois-results"><%= data.registrar %></p>
+                        <% } %>
+                    <% } %>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</main>
+<div class="mt-auto"></div>
+</div>
+<div id="mobile-form-contact-height"></div>
+<section class="padding-20-0 mob-display-none">
+    <div class="container">
+        <div class="row justify-content-start">
+            <div class="col-md-5">
+                <h5 class="immediate-help-center-title">Need some immediate <br>help ?</h5>
+                <p class="immediate-help-center-text">our suuport team here for you 24/7</p>
+                <a class="immediate-help-center-link" href="#">00213 123 45 67 89</a>
+                <a class="immediate-help-center-link" href="#"><span class="__cf_email__"
+                        data-cfemail="9eedebeeeef1eceadefdf1f1faf7e8b0f0fbea">[email&#160;protected]</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    const axios = require('axios').default;
+    var loader = document.getElementById("whois-loading");
+    var details = document.getElementById("whois-results");
+
+    loader.style.display = "none";
+    document.addEventListener("submit", (e) => {
+        loader.style.display = "block";
+    });
+</script>

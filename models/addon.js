@@ -16,7 +16,9 @@ module.exports = (sequelize, DataTypes) => {
   Addon.init({
     addon_type: DataTypes.STRING,
     addon_code: DataTypes.STRING,
-    cost: DataTypes.STRING
+    cost: DataTypes.STRING,
+    features: DataTypes.STRING,
+    term: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Addon',
