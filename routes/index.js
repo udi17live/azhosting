@@ -1,8 +1,9 @@
 const express = require('express');
 const resellerPanelURL = process.env.RESELLER_HOSTING_URL;
 const axios = require('axios').default;
-const xml2js = require('xml2js');
-const nodemailer = require('nodemailer');
+const mailjet = require('node-mailjet')
+    .connect(process.env.MAILJET_API_KEY, process.env.MAILJET_API_SECRET);
+const fetch = require('node-fetch');
 
 //Load Models
 const models = require('../models');
@@ -26,12 +27,15 @@ function validateUrl(url) {
 router.get('/', async function (req, res) {
     var domains = await models.Domain.findAll({ where: { tld: ["com", "net", "org", "store", "club", "xyz"] } })
         .then(domains_recieved => {
-            var domains_obj = {};
+            var domains_arr = [];
             domains_recieved.forEach((item) => {
-                domains_obj[item.tld] = item.final_cost;
+                domains_arr.push({
+                    tld: item.tld,
+                    cost: item.final_cost
+                });
             });
 
-            return domains_obj;
+            return domains_arr;
         })
         .catch(err => console.log(err));
 
@@ -108,25 +112,26 @@ router.get('/', async function (req, res) {
         minSharedHostingPrice,
         minVpsCloudPrice,
         minVpsPrice,
-        minDedicatedServerPrice
+        minDedicatedServerPrice,
+        title: 'Azpire Hosting'
     });
 });
 
 router.get('/shared-web-hosting', async function (req, res) {
     var sharedHostingPlans = await models.SharedHostingPlan.findAll()
         .then(result => {
-            var plans = {};
+            var plans = [];
             result.forEach((item) => {
                 var slugified_name = slugify(item.product_name);
                 var finalCost = parseFloat(item.final_cost);
                 var monthly_cost = finalCost / 12;
-                plans[slugified_name] = {
+                plans.push({
                     name: item.my_custom_product_name,
                     monthly_cost: monthly_cost,
                     cost: finalCost,
                     features: {
                         diskspace: item.diskspace,
-                        bandwith: item.bandwith,
+                        bandwidth: item.bandwidth,
                         dedicatedIp: item.dedicated_ip,
                         backups: item.backups,
                         hostedDomains: item.hosted_domains,
@@ -134,7 +139,7 @@ router.get('/shared-web-hosting', async function (req, res) {
                         emailAccounts: item.email_accounts,
                         emailPerHour: item.email_per_hour
                     }
-                };
+                });
             });
             return plans;
         })
@@ -253,8 +258,22 @@ router.get('/domain-pricing', async function (req, res) {
         })
         .catch(err => console.log(err));
 
+    var domain_fiters = ["com", "org", "store", "xyz"];
+
+    var selected_domains = domains.filter(function (domain) {
+        if (domain_fiters.includes(domain.tld)) {
+            // console.log(domain);
+            return true;
+        }
+
+        return false;
+    });
+
+    // console.log(selected_domains);
+
     res.render('domain-pricing', {
-        domains
+        domains,
+        selected_domains
     });
 });
 
@@ -274,7 +293,6 @@ router.get('/addons', async function (req, res) {
             return addons;
         })
         .catch(err => console.log(err));
-    console.log(addons);
     res.render('addons', {
         addons
     });
@@ -282,35 +300,11 @@ router.get('/addons', async function (req, res) {
 
 
 router.get('/whois-checker', (req, res) => {
-    res.render('whois-checker')
+    res.render('whois-checker');
 });
 
 router.post('/whois-checker', async function (req, res) {
-
-    try {
-        domain = req.body.domain;
-
-        if (validateUrl(domain)) {
-            const res = await axios.get(`https://api.promptapi.com/whois/query?domain=${domain}`, {
-                headers: {
-                    'apikey': '5PZcpN8wj5LWfumzEA8IziBTk4Whwmd6'
-                }
-            });
-
-            data = res.data.result;
-        } else {
-            data = null;
-        }
-
-    } catch (error) {
-        console.error(error);
-    }
-
-
-
-    res.render('whois-checker', {
-        data
-    });
+    // @todo: To be implemented;
 });
 
 
@@ -320,60 +314,99 @@ router.get('/refund-policy', (req, res) => res.render('legal/refund-policy'));
 router.get('/aup', (req, res) => res.render('legal/aup'));
 
 router.get('/contact-us', (req, res) => res.render('contact-us'));
-router.post('/contact-us', (req, res) => {
-    const { name, email, message } = req.body;
-    let errors = [];
+router.post('/contact-us', async function (req, res) {
 
-    console.log("Name: ", name);
-    console.log("email: ", email);
-    console.log("message: ", message);
-
-    if (!Boolean(name) || !Boolean(email) || !Boolean(message)) {
-        errors.push({ msg: "All fields are required" });
+    if (!req.body.captcha){
+        return res.json({ success: false, msg: 'Please select captchaa' });
     }
 
-    var transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'youremail@gmail.com',
-            pass: 'yourpassword'
-        }
+    // reCaptcha Validation
+    // Secret key
+    const recaptchaSecretKey = process.env.RECAPTCHA_SITE_KEY;
+
+    // Verify URL
+    const query = stringify({
+        secret: recaptchaSecretKey,
+        response: req.body.captcha,
+        remoteip: req.connection.remoteAddress
     });
+    const verifyURL = `https://google.com/recaptcha/api/siteverify?${query}`;
 
-    var mailOptions = {
-        from: 'youremail@gmail.com',
-        to: 'myfriend@yahoo.com',
-        subject: 'Sending Email using Node.js',
-        text: 'That was easy!'
-    };
+    // Make a request to verifyURL
+    const body = await fetch(verifyURL).then(res => res.json());
 
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log('Email sent: ' + info.response);
-        }
-    });
+    // If not successful
+    if (body.success !== undefined && !body.success)
+        return res.json({ success: false, msg: 'Failed reCaptcha verification' });
 
+    // Email Sending    
+    const { name, email, message, phone_number, msg_subject } = req.body;
 
-    if (errors.length > 0) {
-        res.render('contact-us', {
-            errors,
-            name,
-            email,
-            message
+    let errors = 0;
+
+    var text_body = "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&phone_number=" + phone_number + "&message=" + message;
+
+    var html_body = await fetch('https://azpirehosting.xyz/cdn/cdn-new/email_templates/contact-form-template.html')
+        .then(response => response.text())
+        .then(html => {
+            var replace_data_var = ["name", "email", "phone_number", "msg_subject", "message"];
+            var replace_data_with = [name, email, phone_number, msg_subject, message];
+
+            for (var i = 0; i < replace_data_var.length; i++) {
+                html = html.replace(new RegExp('{{' + replace_data_var[i] + '}}', 'gi'), replace_data_with[i]);
+            }
+
+            return html;
         });
-    } else {
-        req.flash(
-            'success_msg',
-            'Successfully submitted. We will get back to you soon.'
-        );
-        res.redirect('contact-us');
+
+    var payload = {
+        "SandboxMode": true,
+        "Messages": [
+            {
+                "From": {
+                    "Email": "forms@azpirehosting.info",
+                    "Name": "CF from Azpire Hosting"
+                },
+                "To": [
+                    {
+                        "Email": "hello@azpirehosting.info",
+                        "Name": "Azpire Hosting Client"
+                    }
+                ],
+                "Subject": msg_subject,
+                "TextPart": text_body,
+                "HTMLPart": html_body
+            }
+        ]
     }
 
-    return res.render('contact-us', {
-        errors
-    });
+    const request = mailjet
+        .post("send", { 'version': 'v3.1' })
+        .request(payload);
+
+    await request
+        .then((result) => {
+            console.log(result.body);
+            if (result.body.Messages[0].Status === 'success') {
+                success_msg = "Form Submitted Successfully"
+            } else {
+                errors = 1;
+            }
+        })
+        .catch((err) => {
+            errors = 1;
+        })
+
+    error_msg = "Failed to send form. Please try again";
+
+    successStatus = errors === 0 ? true : false;
+    msg = successStatus === false ? error_msg : success_msg;
+
+    return res.json({ success: successStatus, msg: msg });
 });
+
+router.get('/freq-ask-q', (req, res) => res.render('faq'));
+router.get('/about-us', (req, res) => res.render('about-us'));
+
 
 module.exports = router;

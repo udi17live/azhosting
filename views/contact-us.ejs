@@ -1,77 +1,197 @@
-<div class="mt-auto header-top-height"></div>
-        <main class="container mb-auto">
-            <div class="row">
-                <div class="col-md-5">
-                    <h3 class="mt-3 main-header-text-title mr-tp-60"><span>Still not sure what to choose? ?</span>We are here to help you.
-                        
-                    </h3>
-                    <div class="contact-us-social-icons">
-                        <a class="fb" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="tw" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="yb" href="#"><i class="fab fa-youtube"></i></a>
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-sm-12">
+            <div class="header-page-content text-center text-lg-start">
+                <h1>Contact Us</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+
+<div class="comment-section pt-100 pb-70 blue-gradient-with-opacity">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-lg-4 pb-30">
+                <div class="comment-content-item">
+                    <div class="about-content-image image-margin-left desk-pad-right-20">
+                        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1625840358/azh_newui/support-2_bzqrtc.png" alt="support">
                     </div>
                 </div>
-                <div class="col-md-7">
-                    <form class="row form-contain-home contact-page-form-send" id="ajax-contact" method="post"
-                        action="/contact-us">
-
-                        <h5>get in touch <span>discouver how can our services grow your business.</span></h5>
-                        <div id="form-messages"></div>
-
-                        <div class="col-md-12">
-                            <%- include ("./partials/messages"); %>
-                        </div>
-
-                        <div class="col-md-12">
-
-                            <div class="field input-field">
-                                <input class="form-contain-home-input" type="text" id="name" name="name"
-                                    placeholder="enter your name" required>
-
-                                <i class="fas fa-user"></i>
-                            </div>
-                        </div>
-
-                        <div class="col-md-12">
-
-                            <div class="field input-field">
-                                <input class="form-contain-home-input" type="email" id="email" name="email"
-                                    placeholder="enter your email" required>
-
-                                <i class="far fa-envelope"></i>
-                            </div>
-                        </div>
-
-                        <div class="col-md-12">
-
-                            <div class="field input-field">
-                                <textarea class="form-contain-home-input" id="message" name="message"
-                                    placeholder="enter your message" required></textarea>
-
-                            </div>
-                        </div>
-
-                        <div class="btn-holder-contect">
-                            <button type="submit">Send</button>
-
-                        </div>
-                    </form>
-
-                </div>
             </div>
-        </main>
-        <div class="mt-auto"></div>
-    </div>
-    <div id="mobile-form-contact-height"></div>
-    <section class="padding-20-0 mob-display-none">
-        <div class="container">
-            <div class="row justify-content-start">
-                <div class="col-md-5">
-                    <h5 class="immediate-help-center-title">Need further <br>assistance ?</h5>
-                    <p class="immediate-help-center-text">If you are an existing customer you can use the below channels to recieve support.</p>
-                    <a class="immediate-help-center-link" href="<%= process.env.RESELLER_PANEL_URL + '/support' %>" target="_blank">Open a support ticket</a>
-                    <a class="immediate-help-center-link" href="#"><span class="mailto:hello@azpirehosting.info">hello@azpirehosting.info</span></a>
+            <div class="col-sm-12 col-lg-8 pb-30">
+                <div class="comment-content-item">
+                    <div class="comment-area bg-white">
+                        <div class="sub-section-title">
+                            <h3>Leave A Message</h3>
+                            <p>Your email address will not be published. Required fields are marked *</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <% if (typeof errors !=='undefined' ) { %>
+                                <% errors.forEach(function(error){ %>
+                                    <div class="h4 submit-post-info text-danger">
+                                        <%= error.msg %>
+                                    </div>
+                                    <% }); %>
+                                        <% } %>
+
+                                            <% if (typeof success_msg !=='undefined' ){ %>
+                                                <div class="h4 submit-post-info tada animated text-success">
+                                                    <%= success_msg %>
+                                                </div>
+                                                <% } %>
+
+                        </div>
+                        <div class="comment-input-area mt-30">
+                            <!-- <form action="/contact-us" method="POST"> -->
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <div class="form-group mb-20">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="flaticon-user"></i></span>
+                                                </div>
+                                                <input type="text" name="name" id="name" class="form-control" required
+                                                    data-error="Please enter your name" placeholder="Name*" />
+                                            </div>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <div class="form-group mb-20">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="flaticon-user"></i></span>
+                                                </div>
+                                                <input type="email" name="email" id="email" class="form-control"
+                                                    required data-error="Please enter your email"
+                                                    placeholder="Email*" />
+                                            </div>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <div class="form-group mb-20">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i
+                                                            class="flaticon-phone-call"></i></span>
+                                                </div>
+                                                <input type="text" name="phone_number" id="phone_number"
+                                                    data-error="Please enter your phone number" class="form-control"
+                                                    placeholder="Phone" />
+                                            </div>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <div class="form-group mb-20">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i class="flaticon-book"></i></span>
+                                                </div>
+                                                <input type="text" name="msg_subject" id="msg_subject"
+                                                    class="form-control" required data-error="Please enter your subject"
+                                                    placeholder="Subject*" />
+                                            </div>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group mb-20">
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><i
+                                                            class="flaticon-envelope"></i></span>
+                                                </div>
+                                                <textarea name="message" class="form-control" id="message" rows="5"
+                                                    required data-error="Please write your message"
+                                                    placeholder="Your Message*"></textarea>
+                                            </div>
+                                            <div class="help-block with-errors"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="g-recaptcha" data-sitekey="<%= process.env.RECAPTCHA_SITE_KEY %>"
+                                            required></div>
+                                        <br>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-12">
+                                        <input class="btn btn-gradient" type="submit" value="Send A Message">
+                                        <div id="msgSubmit"></div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</div>
+
+<script>
+    function formSuccess() {
+        $("#contactForm")[0].reset();
+        submitMSG(true, "Message Submitted!");
+    }
+    function formError() {
+        $("#contactForm")
+            .removeClass()
+            .addClass("animate__animated animate__shakeX")
+            .one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () {
+                $(this).removeClass();
+            });
+    }
+    function submitMSG(valid, msg) {
+        if (valid) {
+            var msgClasses = "h4 submit-post-info tada animated text-success";
+        } else {
+            var msgClasses = "h4 submit-post-info text-danger";
+        }
+        $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+    }
+
+    document.getElementById('contactForm').addEventListener('submit', e => {
+        e.preventDefault();
+
+        const name = document.querySelector('#name').value;
+        const email = document.querySelector('#email').value;
+        const phoneNumber = document.querySelector('#phone_number').value;
+        const subject = document.querySelector('#msg_subject').value;
+        const message = document.querySelector('#message').value;
+        const captcha = document.querySelector('#g-recaptcha-response').value;
+
+        console.log(captcha);
+
+        // JSON.stringify({ name: name, email: email, phone_number: phoneNumber, subject: subject, message: message, captcha: captcha })
+
+        var myHeaders = new Headers();
+        myHeaders.append('Content-Type', 'application/json');
+        return fetch('/contact-us', {
+            method: 'POST',
+            headers: myHeaders,
+            body: JSON.stringify({ name: name, email: email, phone_number: phoneNumber, subject: subject, message: message, captcha: captcha })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+
+                // if (data.success) return location.reload();
+                if (data.success) {
+                    formSuccess();
+                } else {
+                    formError();
+                    submitMSG(false, data.msg);
+                }
+            });
+    });
+</script>

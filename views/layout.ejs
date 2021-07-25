@@ -1,275 +1,412 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Bredh flat responsive HTML & WHMCS hosting and domains template">
-	<meta name="author" content="coodiv.net (nedjai mohamed)">
-	<link rel="icon" href="favicon.ico">
-	<title>Azpire Hosting | Cheap and Reliable Hosting</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Aila">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Azpire Designs">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>
+        <%= typeof title !=='undefined' ? title + " | " : '' %>Cheap Reliable Web Hosting and Domains by Azpire Hosting
+    </title>
+    <link rel="icon" href="https://res.cloudinary.com/azpire-ui/image/upload/v1625840358/azh_newui/tab_gjvecp.png"
+        type="image/png" sizes="16x16">
 
-	<link rel="stylesheet" href="https://cdn.azpirehosting.info/cdn/css/bootstrap.min.css">
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-	<link href="https://cdn.azpirehosting.info/cdn/css/main.min.css" rel="stylesheet">
-	
+    <link rel="stylesheet" href="https://cdn.azpirehosting.xyz/cdn-new/css/bootstrap.min.css" type="text/css"
+        media="all"  />
+
+    <link rel="stylesheet" href="https://cdn.azpirehosting.xyz/cdn-new/css/animate.min.css" type="text/css"
+        media="all"  />
+
+    <link rel="stylesheet" href="https://cdn.azpirehosting.xyz/cdn-new/css/owl.carousel.min.css" type="text/css"
+        media="all"  />
+    <link rel="stylesheet" href="https://cdn.azpirehosting.xyz/cdn-new/css/owl.theme.default.min.css" type="text/css"
+        media="all"  />
+
+    <link rel="stylesheet" href="https://cdn.azpirehosting.xyz/cdn-new/css/meanmenu.min.css" type="text/css"
+        media="all"  />
+
+    <link rel="stylesheet" href="https://cdn.azpirehosting.xyz/cdn-new/css/magnific-popup.min.css" type="text/css"
+        media="all"  />
+
+    <link rel='stylesheet' href='https://cdn.azpirehosting.xyz/cdn-new/css/boxicons.min.css' type="text/css"
+        media="all"  />
+
+    <link rel='stylesheet' href='https://cdn.azpirehosting.xyz/cdn-new/css/flaticon.css' type="text/css" media="all"  />
+
+    <link rel="stylesheet" href="https://cdn.azpirehosting.xyz/cdn-new/css/style_unmin.css" type="text/css"
+        media="all"  />
+
+    <link rel="stylesheet" href="https://cdn.azpirehosting.xyz/cdn-new/css/responsive.css" type="text/css"
+        media="all"  />
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons@2.0.0-beta.3/css/all.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
-<body class="second-color-styles">
-	<div class="modal fade" id="videomodal" tabindex="-1" role="dialog" aria-labelledby="videomodal" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-body">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
+<body>
 
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" id="video"></iframe>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="preloader">
-		<div class="preloader-container">
-			<svg version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-				x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
-				<circle fill="#051630" stroke="none" cx="6" cy="50" r="6">
-					<animateTransform attributeName="transform" dur="1s" type="translate" values="0 15 ; 0 -15; 0 15"
-						repeatCount="indefinite" begin="0.1" />
-				</circle>
-				<circle fill="#051630" stroke="none" cx="30" cy="50" r="6">
-					<animateTransform attributeName="transform" dur="1s" type="translate" values="0 10 ; 0 -10; 0 10"
-						repeatCount="indefinite" begin="0.2" />
-				</circle>
-				<circle fill="#051630" stroke="none" cx="54" cy="50" r="6">
-					<animateTransform attributeName="transform" dur="1s" type="translate" values="0 5 ; 0 -5; 0 5"
-						repeatCount="indefinite" begin="0.3" />
-				</circle>
-			</svg>
-			<span>loading</span>
-		</div>
-	</div>
-	<div id="coodiv-header" class="d-flex mx-auto flex-column">
-		<div class="bg_overlay_header">
-			<div class="bg-img-header-new-standard">&nbsp;</div>
-		</div>
+    <div class="preloader blue-gradient">
+        <div class="preloader-wrapper">
+            <div class="preloader-img">
+                <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1625841498/azh_newui/loader_qcbv7i.gif"
+                    alt="preloader">
+            </div>
+        </div>
+    </div>
 
-		<nav id="coodiv-navbar-header" class="navbar navbar-expand-md fixed-header-layout">
-			<div class="container main-header-coodiv-s">
-				<a class="navbar-brand" href="index-2.html"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483364/azh/header/logo_pomxco.png" alt="" /></a>
-				<button class="navbar-toggle offcanvas-toggle menu-btn-span-bar ml-auto" data-toggle="offcanvas"
-					data-target="#offcanvas-menu-home">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
-				<div class="collapse navbar-collapse navbar-offcanvas" id="offcanvas-menu-home">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="/">Home</a>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link" href="#" role="button" id="header-pages-drop-down"
-								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hosting<span
-									class="sr-only">(current)</span></a>
-							<ul class="dropdown-menu coodiv-dropdown-header" aria-labelledby="header-pages-drop-down">
-								<li><a class="dropdown-item" href="/shared-web-hosting">Shared Web Hosting</a></li>
-								<li><a class="dropdown-item" href="/vps-cloud">VPS Cloud Hosting</a></li>
-								<li><a class="dropdown-item" href="/vps">VPS Hosting</a></li>
-								<li><a class="dropdown-item" href="/ded">Dedicated Server Hosting</a></li>
-							</ul>
-						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link" href="#" role="button" id="header-pages-drop-down"
-								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Domains<span
-									class="sr-only">(current)</span></a>
-							<ul class="dropdown-menu coodiv-dropdown-header" aria-labelledby="header-pages-drop-down">
-								<li><a class="dropdown-item" href="<%= process.env.RESELLER_HOSTING_URL %>/bill/#search-domain">Domain Name Search</a></li>
-								<li><a class="dropdown-item" href="<%= process.env.RESELLER_HOSTING_URL %>/bill/#transfer-domain">Transfer Domain</a></li>
-								<li><a class="dropdown-item" href="/domain-pricing">Domain Pricing</a></li>
-							</ul>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="/contact-us">Contact us</a>
-						</li>
-					</ul>
-				</div>
-				<ul class="header-user-info-coodiv">
-					<li class="dropdown"><a role="button" id="header-login-dropdown" target="_blank" href="https://panel.azpirehosting.com/login">Client Area</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
+
+    <div class="topbar bg-off-white-two">
+        <div class="container">
+            <div class="topbar-inner">
+                <div class="topbar-item">
+                    <div class="topbar-item-list">
+                        <div class="topbar-list-thumb">
+                            <i class='bx bx-envelope'></i>
+                        </div>
+                        <div class="topbar-list-content">
+                            <a href="mailto:<%= process.env.AZPIRE_USER_MAIL %>">
+                                <%= process.env.AZPIRE_USER_MAIL %>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="topbar-item">
+
+                    <div class="topbar-item-list navbar-language">
+                        <button class="language-option" type="button" id="language1">
+                            <span class="lang-name"></span>
+                        </button>
+                        <div  aria-labelledby="language1">
+                            <a class="dropdown-item" href="#">
+                                <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1625840359/azh_newui/uk_ktvksg.png"
+                                    alt="flag" class="dropdown-flag-icon">
+                                US$
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <header id="azh-header" class="header-banner header-bg-shape-three">
+
+        <div class="fixed-top">
+            <div class="navbar-area">
+
+                <div class="mobile-nav mobile-nav-two">
+                    <a href="index.html" class="mobile-logo">
+                        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1625841869/azh_newui/logo_resized_uyghsj.png"
+                            alt="logo" class="blue-logo">
+                    </a>
+
+                    <div class="navbar-option">
+                        <div class="navbar-option-item navbar-option-dots dropdown">
+                            <button type="button" id="dot" aria-haspopup="true" aria-expanded="false">
+                                <i class="bx bx-dots-horizontal-rounded"></i>
+                            </button>
+                            <ul class="dropdown-menu navbar-dots-dropdown">
+                                <li class="dropdown-item">
+                                    <div class="navbar-option-item dropdown">
+                                        <button class="search navbar-option-icon dropdown-toggle" type="button"
+                                            id="search1" data-bs-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            <span class="navbar-search-zoom"><i class="flaticon-zoom"></i></span>
+                                            <span class="navbar-search-cancel"><i class="flaticon-cancel"></i></span>
+                                        </button>
+                                        <div class="navbar-search dropdown-menu" aria-labelledby="search1">
+                                            <form>
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" placeholder="Search...">
+                                                    <button class="btn btn-gradient"><span><i
+                                                                class="flaticon-loupe"></i></span></button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="dropdown-item">
+                                    <div class="navbar-option-item">
+                                        <a href="cart.html" target="_blank" class="shopping-cart navbar-option-icon">
+                                            <span><i class="flaticon-shopping-bags"></i></span>
+                                            <span class="shopping-cart-tooltip">2</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="navbar-option-item navbar-option-search dropdown mobile-hide">
+                            <button class="search navbar-option-icon dropdown-toggle" type="button" id="search3"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="navbar-search-zoom"><i class="flaticon-zoom"></i></span>
+                                <span class="navbar-search-cancel"><i class="flaticon-cancel"></i></span>
+                            </button>
+                            <div class="navbar-search dropdown-menu" aria-labelledby="search3">
+                                <form>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Search...">
+                                        <button class="btn btn-gradient"><span><i
+                                                    class="flaticon-loupe"></i></span></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-nav main-nav-two bg-white">
+                    <div class="container">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            <a class="navbar-brand" href="/">
+                                <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1625841869/azh_newui/logo_resized_uyghsj.png"
+                                    width="120px" alt="logo" class="blue-logo">
+                            </a>
+
+                            <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-item">
+                                        <a href="/" class="nav-link">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link dropdown-toggle">Hosting</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="/shared-web-hosting" class="nav-link">Shared Web Hosting</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="/vps-cloud" class="nav-link">VPS Cloud Hosting</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="/vps" class="nav-link">VPS Hosting</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="/ded" class="nav-link">Dedicated Hosting</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="/addons" class="nav-link">Addons</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link dropdown-toggle">Domain</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="<%= process.env.RESELLER_HOSTING_URL %>/bill/#search-domain"
+                                                    class="nav-link">Register Domain</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="<%= process.env.RESELLER_HOSTING_URL %>/bill/#transfer-domain"
+                                                    class="nav-link">Transfer Domain</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="/domain-pricing" class="nav-link">Domain Pricing</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="/contact-us" class="nav-link">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="navbar-option">
+                                <div class="navbar-option-item">
+                                    <a href="<%= process.env.RESELLER_PANEL_URL %>" target="_blank"
+                                        class="btn btn-gradient text-nowrap">
+                                        Client Area
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- Body -->
-            <%- body %>
-        <!-- End of Body-->
+        <%- body %>
+            <!-- End of Body-->
 
-		<!-- footer -->
-		<section class="footer-section-banner">
-			<div class="container">
-				<div class="row free-trial-footer-banner">
-					<div class="col-md-8">
-						<h5 class="free-trial-footer-banner-title">join now and have free month of deluxe hosting</h5>
-						<p class="free-trial-footer-banner-text">We offers a free month of service for new customers.* Sign
-							up for your trial offer and instantly have deluxe hosting in your account with free domain
-							included.</p>
-					</div>
-					<div class="col-md-4 free-trial-footer-links d-flex mx-auto flex-column">
-						<div class="mb-auto"></div>
-						<div class="mb-auto">
-							<a class="sign-btn" href="signup.html">sign up</a>
-							<a class="log-btn" href="signin.html">log in</a>
-						</div>
-						<div class="mt-auto"></div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="footer-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-9 quiq-links-footer">
-						<h5 class="quiq-links-footer-title">Quick Links</h5>
-						<div class="row">
-							<ul class="col-md-6 quiq-links-footer-ul">
-								<h6 class="quiq-links-footer-title-xs">Domains</h6>
-								<li><a href="<%= process.env.RESELLER_HOSTING_URL %>/bill/#search-domain">Register a New Domain</a></li>
-								<li><a href="<%= process.env.RESELLER_HOSTING_URL %>/bill/#transfer-domain">Transfer New Domain</a></li>
-								<li><a href="/domain-pricing">Domain Pricing</a></li>
-								<li><a href="/whois-checker">WHOIS Checker</a></li>
-								<h6 class="quiq-links-footer-title-xs">Hosting</h6>
-								<li><a href="/shared-web-hosting">Shared Web Hosting</a></li>
-								<li><a href="/vps-cloud">Vps Cloud Hosting</a></li>
-								<li><a href="/vps">Vps Hosting</a></li>
-								<li><a href="/ded">Dedicated Server Hosting</a></li>
-								<li><a href="/addons">Addons</a></li>
-							</ul>
-							<ul class="col-md-6 quiq-links-footer-ul">
-								<h6 class="quiq-links-footer-title-xs">Information</h6>
-								<li><a href="#">Contact</a></li>
-								<li><a href="#">Contact</a></li>
-								<li><a href="#">Contact</a></li>
-								<li><a href="#">Contact</a></li>
-								<h6 class="quiq-links-footer-title-xs">Company</h6>
-								<li><a href="/about-us">About Us</a></li>
-								<li><a href="/contact-us">Contact Us</a></li>
-								<h6 class="quiq-links-footer-title-xs">Legal</h6>
-								<li><a href="/privacy-policy">Privacy policy</a></li>
-								<li><a href="/aup">Acceptable Use Policy</a></li>
-								<li><a href="/refund-policy">Refund Policy</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-3">
-						<h5 class="quiq-links-footer-title">secure and contact</h5>
-						<p class="secure-img-footer-area">
-							<img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483333/azh/footer/secure_s1gv1i.png" alt="" />
-							<span>this is for demo reason only</span>
-						</p>
-						<div class="footer-contact-method">
-							<a href="#">
-								<span>email us :</span>
-								<b><span class="__cf_email__"
-										data-cfemail="1a696f6a6a75686e5a7975757e736c34747f6e">[email&#160;protected]</span></b>
-								<i class="fas fa-at"></i>
-							</a>
-							<a href="#">
-								<span>call us :</span>
-								<b>00123 45 67 89 91</b>
-								<i class="fas fa-phone"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="mr-tp-40 row justify-content-between footer-area-under">
-					<div class="col-md-4">
-						<a href="#"><img class="footer-logo-blue" src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483364/azh/header/logo-w-f_wwk4h9.png" alt="" /></a>
-						<div class="footer-social-icons">
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-instagram"></i></a>
-							<a href="#"><i class="fab fa-youtube"></i></a>
-							<a href="#"><i class="fab fa-dribbble"></i></a>
-							<a href="#"><i class="fab fa-google"></i></a>
-						</div>
-					</div>
-					<div class="col-md-4 row justify-content-between">
-						<div class="footer-payment-icons">
-							<i class="fab fa-cc-visa"></i>
-							<i class="fab fa-cc-mastercard"></i>
-							<i class="fab fa-cc-paypal"></i>
-							<i class="fab fa-cc-amex"></i>
-							<i class="fab fa-cc-discover"></i>
-						</div>
-					</div>
-				</div>
-				<div class="row justify-content-between final-footer-area mr-tp-40">
-					<div class="final-footer-area-text">
-						Copyright © <%=  new Date().getFullYear(); %> Azpire Hosting
-					</div>
-					<div class="footer-lang-changer">
-						<div class="lang-changer-drop-up">
-							<a class="menu-btn-changer" role="button" id="dropupmenulagchanger" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false" href="#"><i class="fas fa-globe-asia"></i>
-								english</a>
-							<div class="dropdown-menu dropupmenulagchanger" aria-labelledby="dropupmenulagchanger">
-								<a class="dropdown-item" href="#">english</a>
-							</div>
-						</div>
-						<div class="lang-changer-drop-up">
-							<a class="menu-btn-changer" href="#"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483308/azh/flags/usa_ajdxmr.svg" alt="" /> united states</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- end of footer -->
 
-        <!-- scripts -->
-		<script type="text/javascript">
-			var pathname = window.location.pathname;
-			var subHeaderMinRoutes = ['/privacy-policy','/privacy-policy/','/aup','/aup/', '/refund-policy','/refund-policy/'];
 
-			if (subHeaderMinRoutes.includes(pathname)){
-				var element = document.getElementById("coodiv-header");
-				element.classList.remove("subpages-header");
-				element.classList.add("subpages-header-min");
-			}else if( pathname !== "/") {
-				var element = document.getElementById("coodiv-header");
-				element.classList.add("subpages-header");
-			}else{
-				var element = document.getElementById("coodiv-header");
-				element.classList.remove("subpages-header");
-			}
-		</script>
+            <footer class="footer-bg">
 
-		<!-- <script src="https://kit.fontawesome.com/06b7542c72.js" crossorigin="anonymous"></script> -->
+                <div class="footer-upper pt-100 pb-80">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-4">
+                                <div class="footer-content-item">
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627237773/azh_newui/logo_resized_light_b5w2in.png" alt="Azpire Hosting"></a>
+                                    </div>
+                                    <div class="footer-details">
+                                        <p>Our mission is to provide easy, affordable and reliable hosting for every individual or business to go online. Your success is our hapiness.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-8">
+                                <div class="footer-right pl-80">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-md-4 col-lg-4">
+                                            <div class="footer-content-list footer-content-item">
+                                                <div class="footer-content-title">
+                                                    <h3>Hosting</h3>
+                                                </div>
+                                                <ul class="footer-details footer-list">
+                                                    <li><a href="/shared-web-hosting">Shared Hosting</a></li>
+                                                    <li><a href="/vps-cloud">Cloud VPS Hosting</a></li>
+                                                    <li><a href="/vps">VPS Hosting</a></li>
+                                                    <li><a href="/ded">Dedicated Hosting</a></li>
+                                                    <li><a href="/addons">Addons</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-4">
+                                            <div class="footer-content-list footer-content-item">
+                                                <div class="footer-content-title">
+                                                    <h3>Domains</h3>
+                                                </div>
+                                                <ul class="footer-details footer-list">
+                                                    <li><a
+                                                            href="<%= process.env.RESELLER_HOSTING_URL %>/bill/#search-domain">Register
+                                                            a Domain</a></li>
+                                                    <li><a
+                                                            href="<%= process.env.RESELLER_HOSTING_URL %>/bill/#transfer-domain">Transfer
+                                                            Domain</a></li>
+                                                    <li><a href="/domain-pricing">Domain Pricing</a></li>
+                                                    <li><a href="/whois-checker">WHOIS Checker</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-4 col-lg-4">
+                                            <div class="footer-content-list footer-content-item">
+                                                <div class="footer-content-title">
+                                                    <h3>Other</h3>
+                                                </div>
+                                                <ul class="footer-details footer-list">
+                                                    <li><a href="/aup">Acceptable Use Policy</a></li>
+                                                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                                                    <li><a href="/refund-policy">Refund Policy</a></li>
+                                                    <li><a href="/freq-ask-q">FAQ's</a></li>
+                                                    <li><a href="/about-us">About Us</a></li>
+                                                    <li><a href="/contact-us">Contact Us</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                <div class="footer-lower">
+                    <div class="container">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-sm-12 col-lg-5 pt-10 pb-10">
+                                <div class="footer-lower-item-inner footer-lower-item-left">
 
-        <script src="https://cdn.azpirehosting.info/cdn/js/jquery.min.js"></script>
+                                    <div class="footer-lower-content">
+                                        <div class="footer-social-logo">
+                                            <ul class="footer-social-list">
+                                                <li class="social-btn social-btn-fb"><a href="#"><i
+                                                            class='bx bxl-facebook'></i></a></li>
+                                                <li class="social-btn social-btn-tw"><a href="#"><i
+                                                            class='bx bxl-twitter'></i></a></li>
+                                                <li class="social-btn social-btn-ins"><a href="#"><i
+                                                            class='bx bxl-instagram'></i></a></li>
+                                                <li class="social-btn social-btn-pin"><a href="#"><i
+                                                            class='bx bxl-pinterest-alt'></i></a></li>
+                                                <li class="social-btn social-btn-yt"><a href="#"><i
+                                                            class='bx bxl-youtube'></i></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-lg-7 pt-10 pb-10">
+                                <div class="footer-lower-item-inner footer-lower-item-right justify-content-lg-end">
 
-        <script src="https://cdn.azpirehosting.info/cdn/js/popper.min.js"></script>
+                                    <div class="footer-lower-text text-lg-end">
+                                        <p class="footer-text-copy"><div class="footer-social-logo">
+                                            <ul class="footer-payment-list" style="justify-content: end;">
+                                                <li class="social-btn social-btn-fb"><i class="cib-visa "></i></li>
+                                                <li class="social-btn social-btn-fb"> <i class="cib-mastercard"></i>
+                                                </li>
+                                                <li class="social-btn social-btn-fb"> <i class="cib-cc-paypal"></i>
+                                                </li>
+                                                <li class="social-btn social-btn-fb"> <i class="cib-cc-discover"></i>
+                                                </li>
+                                                <li class="social-btn social-btn-fb"> <i class="cib-cc-amex"></i> </li>
+                                            </ul>
+                                        </div></p>
+                                        <p class="footer-text-gen">Copyright © <%= new Date().getFullYear(); %> Azpire
+                                            Hosting</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
-        <script src="https://cdn.azpirehosting.info/cdn/js/bootstrap.min.js"></script>
 
-        <script src="https://cdn.azpirehosting.info/cdn/js/template-scripts.js"></script>
+            <div class="scroll-top" id="scrolltop">
+                <div class="scroll-top-inner">
+                    <span><i class="flaticon-up-arrow"></i></span>
+                </div>
+            </div>
 
-        <script src="https://cdn.azpirehosting.info/cdn/js/flickity.pkgd.min.js"></script>
 
-        <script src="https://cdn.azpirehosting.info/cdn/js/owl.carousel.min.js"></script>
+            <script type="text/javascript">
+                var pathname = window.location.pathname;
+                var subHeaderMinRoutes = ['/domain-pricing', '/domain-pricing/'];
 
-        <script src="https://cdn.azpirehosting.info/cdn/js/parallax.min.js"></script>
+                if (subHeaderMinRoutes.includes(pathname)) {
+                    var element = document.getElementById("azh-header");
+                    element.classList.remove("header-page");
+                    element.classList.add("header-page");
+                    element.classList.remove("blue-gradient");
+                    element.classList.add("blue-gradient");
+                    element.classList.remove("header-bg-shape-three");
+                    element.classList.add("header-padding");
+                } else if (pathname !== "/") {
+                    var element = document.getElementById("azh-header");
+                    element.classList.add("header-page");
+                    element.classList.add("blue-gradient");
+                    element.classList.remove("header-bg-shape-three");
+                    element.classList.remove("header-padding");
+                } else {
+                    var element = document.getElementById("azh-header");
+                    element.classList.add("header-bg-shape-three");
+                    element.classList.remove("header-page");
+                    element.classList.remove("blue-gradient");
+                    element.classList.remove("header-padding");
+                }
+            </script>
 
-        <script src="https://cdn.azpirehosting.info/cdn/js/mailchamp.js"></script>
 
-        <script src="https://cdn.azpirehosting.info/cdn/js/bootstrap.offcanvas.min.js"></script>
+            <!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
 
-        <script src="https://cdn.azpirehosting.info/cdn/js/jquery.touchSwipe.min.js"></script>
-        <!-- <script src="https://cdn.azpirehosting.info/cdn/js/demo.js"></script> -->
-        <!-- end of scripts -->
-        </body>
-        </html>
+
+            <script src="https://cdn.azpirehosting.xyz/cdn-new/js/jquery-3.5.1.min.js"></script>
+            <script src="https://cdn.azpirehosting.xyz/cdn-new/js/bootstrap.bundle.min.js"></script>
+
+            <script src="https://cdn.azpirehosting.xyz/cdn-new/js/jquery.magnific-popup.min.js"></script>
+
+            <script src="https://cdn.azpirehosting.xyz/cdn-new/js/owl.carousel.min.js"></script>
+
+            <script src="https://cdn.azpirehosting.xyz/cdn-new/js/jquery.ajaxchimp.min.js"></script>
+
+            <script src="https://cdn.azpirehosting.xyz/cdn-new/js/form-validator.min.js"></script>
+
+            <script src="https://cdn.azpirehosting.xyz/cdn-new/js/jquery.meanmenu.min.js"></script>
+
+            <script src="https://cdn.azpirehosting.xyz/cdn-new/js/script.js"></script>
+</body>
+
+</html>

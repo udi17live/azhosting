@@ -1,180 +1,151 @@
-<div class="mt-auto header-top-height"></div>
-<main class="container mb-auto">
-    <div class="row">
-        <div class="col-md-5 d-flex mx-auto flex-column">
-            <div class="mb-auto"></div>
-            <h3 class="mt-3 main-header-text-title"><span>Let our servers do the heavy lifting</span>VPS Hosting</h3>
-        </div>
-        <div class="col-md-7">
-            <div class="breadcrumb-hosting-pages row">
-                <a class="col-md-3" href="/shared-web-hosting">
-                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483555/azh/svgs/hosting_ubjjrj.svg"
-                        alt="" />
-                    <span class="sub-breadcrumb-host-title">Shared Hosting</span>
-                </a>
-                <a class="col-md-3 active" href="#">
-                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483556/azh/svgs/servers_ywxanw.svg"
-                        alt="" />
-                    <span class="sub-breadcrumb-host-title">Vps Hosting</span>
-                </a>
-                <a class="col-md-3" href="/vps-cloud">
-                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483557/azh/svgs/clouds_jxjmof.svg"
-                        alt="#" />
-                    <span class="sub-breadcrumb-host-title">clouds VPS</span>
-                </a>
-                <a class="col-md-3" href="/ded">
-                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483558/azh/svgs/dedicated_qhucdk.svg"
-                        alt="" />
-                    <span class="sub-breadcrumb-host-title">Dedicated</span>
-                </a>
+<div class="container blue-gradient">
+    <div class="row align-items-center">
+        <div class="col-sm-12">
+            <div class="header-page-content text-center text-lg-start">
+                <h1>VPS Hosting</h1>
+                <p>If you are looking for the best VPS servers for your business then Azpirehosting's VPS Servers are the solution. High performing servers that are reliable and affordable.</p>
+                <ul class="section-button">
+                    <li><a href="#pricing"><button class="btn btn-pill">Get Started</button></a></li>
+                </ul>
             </div>
         </div>
     </div>
-</main>
-<div class="mt-auto"></div>
 </div>
+</header>
 
-<section class="padding-100-0 position-relative">
-    <div class="body_overlay_ono"></div>
+
+<section id="pricing" class="pricing-section-five pt-100 pb-70">
     <div class="container">
-        <h5 class="title-default-coodiv-two">High performing servers at unbeatable prices<span class="mr-tp-20">Billed Monthly. Same fees on renewals</span></h5>
-        <div class="row justify-content-start second-pricing-table-container mr-tp-30">
-            <% vpsHostingPlans.forEach((vpsHostingPlan, index) => { %>
-                <div class="col-md-3">
-                    <div class="second-pricing-table <%= index%2 == 0 ? '': 'active' %> ">
-                        <h5 class="second-pricing-table-title"><%= vpsHostingPlan.name %> <span></span></h5>
-                        <span class="second-pricing-table-price">
-                            <i class="monthly">$<%= vpsHostingPlan.cost %><small>/mo</small></i>
-                        </span>
-                        <ul class="second-pricing-table-body">
-                            <li><%= vpsHostingPlan.features.cores %></li>
-                            <li><%= vpsHostingPlan.features.ram %></li>
-                            <li><%= vpsHostingPlan.features.diskspace %></li>
-                            <li><%= vpsHostingPlan.features.bandwidth %></li>
-                            <li><%= vpsHostingPlan.features.dedicatedIp %> Dedicated IP</li>
-                            <li><%= vpsHostingPlan.features.mbit %></li>
-                        </ul>
-                        <a class="second-pricing-table-button" href="<%= billingURL %>">Order Now</a>
+        <div class="section-title section-title-two">
+            <h2>Price & plans</h2>
+        </div>
+        <div class="row">
+            <% vpsHostingPlans.forEach((vpsHostingPlan, index)=> { %>
+                <div class="col-sm-12 col-md-3">
+                    <div class="pricing-item pricing-item-two">
+                        <div class="pricing-secondary-header">
+                            <div class="pricing-header-title">
+                                <h3 class="pricing-header-title-text">
+                                    <%= vpsHostingPlan.name %>
+                                </h3>
+                            </div>
+                            <div class="pricing-item-amount">
+                                <h4 class="pricing-item-amount-number"><small>$</small>
+                                    <%= vpsHostingPlan.cost %><span>/Month</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="pricing-item-body">
+                            <ul class="pricing-body-list pricing-body-list-two">
+                                <li><%= vpsHostingPlan.features.cores %></li>
+                                <li><%= vpsHostingPlan.features.ram %></li>
+                                <li><%= vpsHostingPlan.features.diskspace %></li>
+                                <li><%= vpsHostingPlan.features.bandwidth %></li>
+                                <li><%= vpsHostingPlan.features.dedicatedIp %> Dedicated IP</li>
+                                <li><%= vpsHostingPlan.features.mbit %></li>
+                            </ul>
+                            <a href="<%= billingURL %>" class="btn btn-gradient">Order Now</a>
+                        </div>
                     </div>
                 </div>
-            <% }); %> 
+                <% }); %>
         </div>
     </div>
 </section>
 
-<section class="padding-100-0">
+
+<section class="feature-section pt-100 pb-70">
     <div class="container">
-        <h5 class="title-default-coodiv-two">Why Choose Azpire VPS Servers?</h5>
-        <div class="row justify-content-center mr-tp-40">
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="fas fa-exchange-alt"></i>
-                    <h5>32TB Transfer</h5>
-                    <p>There is enough for incoming and outgoing transfers on all our VPS plans compared to so many other competitors out there.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="h-flaticon-024-lifesaver-1"></i>
-                    <h5>Full Virtualization</h5>
-                    <p>You would get full benefits of the hardware components used to build the server which guarantees a better performance.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="far fa-clock"></i>
-                    <h5>Timely SetUp</h5>
-                    <p>VPS are created beween 1 - 3 hours. This timeframe allows us to carefully setup the server as this is done manually per each order.</p>
-                </div>
-            </div>
+        <div class="section-title section-title-two">
+            <h2>Why Choose Azpire VPS Hosting?</h2>
         </div>
-        <div class="row justify-content-center mr-tp-10">
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="e-flaticon-031-ssd"></i>
-                    <h5>100% SSD</h5>
-                    <p>All VPS plans comes with an SSD hard drive which automatically improves the server speed. These hard drives are 100% reliable.</p>
+
+        <div class="row">
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/32_transfer_m95yv6.png" alt="32TB Transfer">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>32TB Transfer</h3>
+                            <p>There is enough for incoming and outgoing transfers on all our VPS plans compared to so many other competitors out there.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="fas fa-headset"></i>
-                    <h5>24/7 Customer Support</h5>
-                    <p>We work round the clock just to make sure all customers are enjoying their value for money. Customers get responses via the support ticket channel.</p>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/full_virtualization_qxtngg.png" alt="Full Virtualization">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Full Virtualization</h3>
+                            <p>You would get full benefits of the hardware components used to build the server which guarantees a better performance.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="far fa-building"></i>
-                    <h5>US Data Center</h5>
-                    <p>Our Datacenter for the VPS plans exist in the US, we plan to add more locations very soon later in the future.</p>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/timely_setup_ajr04d.png" alt="Timely Setup">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Timely Setup</h3>
+                            <p>VPS are created beween 1 - 3 hours. This timeframe allows us to carefully setup the server as this is done manually per each order..</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/ssd_rhtwwy.png" alt="100% SSD">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>100% SSD</h3>
+                            <p>All VPS plans comes with an SSD hard drive which automatically improves the server speed. These hard drives are 100% reliable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/24_7_support_udiwfc.png" alt="24/7 Customer Support">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>24/7 Customer Support</h3>
+                            <p>We work round the clock just to make sure all customers are enjoying their value for money. Customers get responses via the support ticket channel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/data_center_az8imy.png" alt="US Data Center">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>US Data Center</h3>
+                            <p>Our Datacenter for the VPS plans exist in the US, we plan to add more locations very soon later in the future.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
         </div>
     </div>
 </section>
-<!-- <section class="padding-100-0 with-top-border">
-    <div class="container">
-        <h5 class="title-default-coodiv-two">Frequently asked questions.</h5>
-        <div class="row justify-content-center mr-tp-40">
-            <div class="col-md-9">
-                <div class="accordion" id="frequently-questions">
-                    <div class="questions-box">
-                        <div id="headingOne">
-                            <button class="btn questions-title" type="button" data-toggle="collapse"
-                                data-target="#questionone" aria-expanded="true" aria-controls="questionone">
-                                How Can I Order New Host ?
-                            </button>
-                        </div>
-                        <div id="questionone" class="collapse show questions-reponse" aria-labelledby="headingOne"
-                            data-parent="#frequently-questions">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                            quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
-                            squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                            butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                            nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                    <div class="questions-box">
-                        <div id="headingtwo">
-                            <button class="btn questions-title collapsed" type="button" data-toggle="collapse"
-                                data-target="#questiontwo" aria-expanded="true" aria-controls="questiontwo">
-                                What Is Resellers Hosting ?
-                            </button>
-                        </div>
-                        <div id="questiontwo" class="collapse questions-reponse" aria-labelledby="headingtwo"
-                            data-parent="#frequently-questions">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                            quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
-                            squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                            butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                            nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                    <div class="questions-box">
-                        <div id="headingtree">
-                            <button class="btn questions-title collapsed" type="button" data-toggle="collapse"
-                                data-target="#questiontree" aria-expanded="true" aria-controls="questiontree">
-                                I Want New Domain Name
-                            </button>
-                        </div>
-                        <div id="questiontree" class="collapse questions-reponse" aria-labelledby="headingtree"
-                            data-parent="#frequently-questions">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                            quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
-                            squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                            butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                            nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->

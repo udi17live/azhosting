@@ -1,35 +1,102 @@
-<div class="mt-auto header-top-height"></div>
-<main class="container mb-auto">
-    <div class="row">
-        <div class="col-md-5 d-flex mx-auto flex-column">
-            <div class="mb-auto"></div>
-            <h3 class="mt-3 main-header-text-title"><span>Spice up your business!</span>Addons</h3>
-        </div>
-        <div class="col-md-7">
-           
+<div class="container blue-gradient">
+    <div class="row align-items-center">
+        <div class="col-sm-12 ">
+            <div class="header-page-content text-center text-lg-start">
+                <h1>Addons</h1>
+                <p>Its more than just hosting. Get Addons like Search Engine Optimization packages, Social Media marketing packages and more</p>
+                <ul class="section-button">
+                    <li><a href="#pricing"><button class="btn btn-pill">Get Started</button></a></li>
+                </ul>
+            </div>
         </div>
     </div>
-</main>
-<div class="mt-auto"></div>
 </div>
+</header>
 
-<section class="padding-100-0-10 position-relative">
+
+<section id="pricing" class="pricing-section-five pt-100 pb-70">
     <div class="container">
-        
-        <div class="row justify-content-left server-tabls-head">
-            <div class="col-md-3">Addon</div>
-            <div class="col-md-4">Features</div>
-            <div class="col-md-3">Price</div>
+        <div class="section-title section-title-two">
+            <h2>Pricing</h2>
         </div>
-        <div class="server-tabls-body">
+        <div class="row">
             <% addons.forEach((addon, index) => { %>
-                <div class="row justify-content-left server-tabls-row">
-                    <div class="col-md-3"><span class="server-spects-for-mobile">Addon</span><%= addon.name %> </div>
-                    <div class="col-md-4"><span class="server-spects-for-mobile">Features</span><%= addon.features %> </div>
-                    <div class="col-md-3"><span class="server-spects-for-mobile">Price</span>$ <%= addon.cost + '/' + addon.term %> </div>
-                    <div class="col-md-2"><a class="server-order-button" href="<%= process.env.RESELLER_HOSTING_URL %>/bill/">order now</a></div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="pricing-item pricing-item-two">
+                        <div class="pricing-secondary-header">
+                            <div class="pricing-header-title">
+                                <h3 class="pricing-header-title-text">
+                                    <%= addon.name %>
+                                </h3>
+                            </div>
+                            <div class="pricing-item-amount">
+                                <h4 class="pricing-item-amount-number"><small>$</small>
+                                    <%= addon.cost %><span><%= '/' + addon.term %></span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="pricing-item-body">
+                            <ul class="pricing-body-list pricing-body-list-two">
+                                <li><%= addon.features %></li>
+                            </ul>
+                            <a href="<%= process.env.RESELLER_HOSTING_URL %>/bill/" class="btn btn-gradient">Order Now</a>
+                        </div>
+                    </div>
                 </div>
-            <% }); %> 
+                <% }); %>
+        </div>
+    </div>
+</section>
+
+
+<section class="faq-section pt-100 pb-70 blue-gradient-with-opacity">
+    <div class="container">
+        <div class="section-title section-title-two">
+            <h2>Addons FAQ</h2>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-sm-12 col-md-12 col-lg-5 pb-30">
+                <div class="faq-accordion">
+
+                    <div class="faq-accordion-item faq-accordion-item-active bg-white">
+                        <div class="faq-accordion-header">
+                            <h3 class="faq-accordion-title">What are your targets with SEO Plans?</h3>
+                        </div>
+                        <div class="faq-accordion-body">
+                            <div class="faq-accordion-body-inner">
+                                <p class="faq-accordion-para">Our SEO target is very easy. We do everything necessary for your website to rank in 30days. We are not promising you a particular number of backlinks, or guest posting or what so ever, what our offer is based on is the actual ranking goal. Before your SEO work begins, we shall have the record of what your present ranking is and what it is after 30days. If we are not able to meet up we shall refund your order at 100%.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-accordion-item bg-white">
+                        <div class="faq-accordion-header">
+                            <h3 class="faq-accordion-title">Will the ranking increase every month with the SEO Packages?</h3>
+                            <div class="faq-accordion-header-overlay"></div>
+                        </div>
+                        <div class="faq-accordion-body">
+                            <div class="faq-accordion-body-inner">
+                                <p class="faq-accordion-para">The continuation of a particular order does not increase it Monthly it simply maintains that record. Example, if you order SEO 001 for 3 Months, this doesn’t mean after 3 Months it would rank 30% higher, it means it would remain at the 10% increase without it dropping. If you want to increase your ranking you should place another order of another category like SEO 002 or SEO 003 or you contact us for a higher Group.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-accordion-item bg-white">
+                        <div class="faq-accordion-header">
+                            <h3 class="faq-accordion-title">What is your refund process?</h3>
+                            <div class="faq-accordion-header-overlay"></div>
+                        </div>
+                        <div class="faq-accordion-body">
+                            <div class="faq-accordion-body-inner">
+                                <p class="faq-accordion-para">We use Alexa’s Score check which is available here <a href="https://www.alexa.com" target="_blank">https://www.alexa.com</a> for easy and uniformed result target. We can decide to refund your order even before it starts if we feel it cannot be achieved. You can get a full refund if we don’t meet the ranking promise, if we do you can’t get any refund.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-1 pb-30">
+                <div class="about-content-image">
+                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1625840346/azh_newui/faq_pjzo4m.png" alt="faq">
+                </div>
+            </div>
         </div>
     </div>
 </section>

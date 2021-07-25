@@ -1,567 +1,464 @@
-<div class="mt-auto header-top-height"></div>
-<main class="container mb-auto">
-    <div class="row">
-        <div class="col-md-5 d-flex mx-auto flex-column">
-            <div class="mb-auto"></div>
-            <h3 class="mt-3 main-header-text-title"><span>A Hosting Plan for Everyone!</span>Shared Hosting</h3>
-        </div>
-        <div class="col-md-7">
-            <div class="breadcrumb-hosting-pages row">
-                <a class="col-md-3 active" href="#">
-                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483555/azh/svgs/hosting_ubjjrj.svg"
-                        alt="" />
-                    <span class="sub-breadcrumb-host-title">Shared Hosting</span>
-                </a>
-                <a class="col-md-3" href="/vps">
-                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483556/azh/svgs/servers_ywxanw.svg"
-                        alt="" />
-                    <span class="sub-breadcrumb-host-title">Vps Hosting</span>
-                </a>
-                <a class="col-md-3" href="/vps-cloud">
-                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483557/azh/svgs/clouds_jxjmof.svg"
-                        alt="#" />
-                    <span class="sub-breadcrumb-host-title">clouds VPS</span>
-                </a>
-                <a class="col-md-3" href="/ded">
-                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483558/azh/svgs/dedicated_qhucdk.svg"
-                        alt="" />
-                    <span class="sub-breadcrumb-host-title">Dedicated</span>
-                </a>
+<div class="container blue-gradient">
+    <div class="row align-items-center">
+        <div class="col-sm-12 ">
+            <div class="header-page-content text-center text-lg-start">
+                <h1>Shared Hosting</h1>
+                <p>Cheaper faster and reliable web hosting plans starting from $1.99/month. These plans are great for hosting your dream site. The most popular and easiest interface paired with array of leading apps such as Wordpress, will give you plenty of options for hosting and managing your websites and emails.</p>
+                <ul class="section-button">
+                    <li><a href="#shared-pricing"><button class="btn btn-pill">Get Started</button></a></li>
+                </ul>
             </div>
         </div>
+        
     </div>
-</main>
-<div class="mt-auto"></div>
 </div>
+</header>
 
-<section class="padding-100-0 position-relative">
-    <div class="body_overlay_ono"></div>
+
+<section id="shared-pricing" class="pricing-section-five pt-100 pb-70">
     <div class="container">
-        <h5 class="title-default-coodiv-two">Cheap,yet reliable hosting plans for all<span class="mr-tp-20">Billed Anually, same renewal fees.</span></h5>
-        <div class="row justify-content-start second-pricing-table-container mr-tp-30">
-            <div class="col-md-4">
-                <div class="second-pricing-table">
-                    <h5 class="second-pricing-table-title"><%= sharedHostingPlans.starter.name %> <span></span></h5>
-                    <span class="second-pricing-table-price">
-                        <i class="monthly">$<%= sharedHostingPlans.starter.monthly_cost %><small>/mo</small></i>
-                    </span>
-                    <ul class="second-pricing-table-body">
-                        <li><%= sharedHostingPlans.starter.features.hostedDomains %> Website</li>
-                        <li><%= sharedHostingPlans.starter.features.diskspace %> Disk Space</li>
-                        <li><%= sharedHostingPlans.starter.features.bandwith %> Bandwidth</li>
-                        <li>Free SSL</li>
-                        <li><%= sharedHostingPlans.starter.features.emailAccounts %> Free Email Accounts</li>
-                        <li>Softaculous Script Installer</li>
-                        <li>24/7 Support</li>
-                        <li>Instant Setup</li>
-                        <li class="not-chacked">1 Dedicated IP</li>
-                        <li>$<%= sharedHostingPlans.starter.cost %> Paid Annually.</li>
-                    </ul>
-                    <a class="second-pricing-table-button" href="<%= billingURL %>">Order Now</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="second-pricing-table active">
-                    <h5 class="second-pricing-table-title"><%= sharedHostingPlans.small_scale.name %> <span></span></h5>
-                    <span class="second-pricing-table-price">
-                        <i class="monthly">$<%= sharedHostingPlans.small_scale.monthly_cost %><small>/mo</small></i>
-                    </span>
-                    <ul class="second-pricing-table-body">
-                        <li><%= sharedHostingPlans.small_scale.features.hostedDomains %> Websites</li>
-                        <li><%= sharedHostingPlans.small_scale.features.diskspace %> Disk Space</li>
-                        <li><%= sharedHostingPlans.small_scale.features.bandwith %> Bandwidth</li>
-                        <li>Free SSL</li>
-                        <li><%= sharedHostingPlans.small_scale.features.emailAccounts %> Free Email Accounts</li>
-                        <li>Softaculous Script Installer</li>
-                        <li>24/7 Support</li>
-                        <li>Instant Setup</li>
-                        <li class="not-chacked">1 Dedicated IP</li>
-                        <li>$<%= sharedHostingPlans.small_scale.cost %> Paid Annually.</li>
-                    </ul>
-                    <a class="second-pricing-table-button" href="<%= billingURL %>">Order Now</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="second-pricing-table">
-                    <h5 class="second-pricing-table-title"><%= sharedHostingPlans.start_up.name %> <span></span></h5>
-                    <span class="second-pricing-table-price">
-                        <i class="monthly">$<%= sharedHostingPlans.start_up.monthly_cost %><small>/mo</small></i>
-                    </span>
-                    <ul class="second-pricing-table-body">
-                        <li><%= sharedHostingPlans.start_up.features.hostedDomains %> Websites</li>
-                        <li><%= sharedHostingPlans.start_up.features.diskspace %> Disk Space</li>
-                        <li><%= sharedHostingPlans.start_up.features.bandwith %> Bandwidth</li>
-                        <li>Free SSL</li>
-                        <li><%= sharedHostingPlans.start_up.features.emailAccounts %> Free Email Accounts</li>
-                        <li>Softaculous Script Installer</li>
-                        <li>24/7 Support</li>
-                        <li>Instant Setup</li>
-                        <li class="not-chacked">1 Dedicated IP</li>
-                        <li>$<%= sharedHostingPlans.start_up.cost %> Paid Annually.</li>
-                    </ul>
-                    <a class="second-pricing-table-button" href="<%= billingURL %>">Order Now</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="second-pricing-table">
-                    <h5 class="second-pricing-table-title"><%= sharedHostingPlans.business.name %> <span></span></h5>
-                    <span class="second-pricing-table-price">
-                        <i class="monthly">$<%= sharedHostingPlans.business.monthly_cost %><small>/mo</small></i>
-                    </span>
-                    <ul class="second-pricing-table-body">
-                        <li><%= sharedHostingPlans.enterprise.features.hostedDomains %> Websites</li>
-                        <li><%= sharedHostingPlans.enterprise.features.diskspace %> Disk Space</li>
-                        <li><%= sharedHostingPlans.enterprise.features.bandwith %> Bandwidth</li>
-                        <li>Free SSL</li>
-                        <li><%= sharedHostingPlans.enterprise.features.emailAccounts %> Free Email Accounts</li>
-                        <li>Softaculous Script Installer</li>
-                        <li>24/7 Support</li>
-                        <li>Instant Setup</li>
-                        <li class="not-chacked">1 Dedicated IP</li>
-                        <li>$<%= sharedHostingPlans.business.cost %> Paid Annually.</li>
-                    </ul>
-                    <a class="second-pricing-table-button" href="<%= billingURL %>">Order Now</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="second-pricing-table">
-                    <h5 class="second-pricing-table-title"><%= sharedHostingPlans.enterprise.name %> <span></span></h5>
-                    <span class="second-pricing-table-price">
-                        <i class="monthly">$<%= sharedHostingPlans.enterprise.monthly_cost %><small>/mo</small></i>
-                    </span>
-                    <ul class="second-pricing-table-body">
-                        <li><%= sharedHostingPlans.enterprise.features.hostedDomains %> Websites</li>
-                        <li><%= sharedHostingPlans.enterprise.features.diskspace %> Disk Space</li>
-                        <li><%= sharedHostingPlans.enterprise.features.bandwith %> Bandwidth</li>
-                        <li>Free SSL</li>
-                        <li><%= sharedHostingPlans.enterprise.features.emailAccounts %> Free Email Accounts</li>
-                        <li>Softaculous Script Installer</li>
-                        <li>24/7 Support</li>
-                        <li>Instant Setup</li>
-                        <li class="not-chacked">1 Dedicated IP</li>
-                        <li>$<%= sharedHostingPlans.enterprise.cost %> Paid Annually.</li>
-                    </ul>
-                    <a class="second-pricing-table-button" href="<%= billingURL %>">Order Now</a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="second-pricing-table">
-                    <h5 class="second-pricing-table-title"><%= sharedHostingPlans.large_scale.name %> <span></span></h5>
-                    <span class="second-pricing-table-price">
-                        <i class="monthly">$<%= sharedHostingPlans.large_scale.monthly_cost %><small>/mo</small></i>
-                    </span>
-                    <ul class="second-pricing-table-body">
-                        <li><%= sharedHostingPlans.large_scale.features.hostedDomains %> Websites</li>
-                        <li><%= sharedHostingPlans.large_scale.features.diskspace %> Disk Space</li>
-                        <li><%= sharedHostingPlans.large_scale.features.bandwith %> Bandwidth</li>
-                        <li>Free SSL</li>
-                        <li><%= sharedHostingPlans.large_scale.features.emailAccounts %> Free Email Accounts</li>
-                        <li>Softaculous Script Installer</li>
-                        <li>24/7 Support</li>
-                        <li>Instant Setup</li>
-                        <li>1 Dedicated IP</li>
-                        <li>$<%= sharedHostingPlans.large_scale.cost %> Paid Annually.</li>
-                    </ul>
-                    <a class="second-pricing-table-button" href="<%= billingURL %>">Order Now</a>
-                </div>
-            </div>
+        <div class="section-title section-title-two">
+            <h2>Price & plans</h2>
         </div>
-        <div class="button-row text-center">
-            <a class="btn jango-color-btn" href="#compare-plans">Compare Plans</a>
+        <div class="row">
+            <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                <div class="col-sm-12 col-md-4">
+                    <div class="pricing-item pricing-item-two">
+                        <div class="pricing-secondary-header">
+                            <div class="pricing-header-title">
+                                <h3 class="pricing-header-title-text">
+                                    <%= sharedHostingPlan.name %>
+                                </h3>
+                            </div>
+                            <div class="pricing-item-amount">
+                                <small>$<%= sharedHostingPlan.cost %> billed annually.</small>
+                                <h4 class="pricing-item-amount-number"><small>$</small>
+                                    <%= sharedHostingPlan.monthly_cost %><span>/Month</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="pricing-item-body">
+                            <ul class="pricing-body-list pricing-body-list-two">
+                                <li>
+                                    <%= sharedHostingPlan.features.hostedDomains %> Website<%=
+                                            sharedHostingPlan.features.hostedDomains==='1' ? '' : 's' %>
+                                </li>
+                                <li>
+                                    <%= sharedHostingPlan.features.diskspace %> Diskspace
+                                </li>
+                                <li>
+                                    <%= sharedHostingPlan.features.bandwidth %> Bandwidth
+                                </li>
+                                <li>
+                                    <%= sharedHostingPlan.features.subDomains %> Subdomains
+                                </li>
+                                <li>
+                                    <%= sharedHostingPlan.features.emailAccounts %> Email Accounts
+                                </li>
+                                <li>
+                                    <%= sharedHostingPlan.features.emailPerHour %> Emails per hour
+                                </li>
+                            </ul>
+                            <a href="<%= billingURL %>" class="btn btn-gradient">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <% }); %>
+        </div>
+
+        <div class="col text-center">
+            <a href="#compare-plans" class="btn btn-gradient btn-pill">Compare All Plans</a>
         </div>
     </div>
 </section>
 
-<section class="padding-100-0">
+
+<section class="feature-section pt-100 pb-70">
     <div class="container">
-        <h5 class="title-default-coodiv-two">Why choose Azpire Shared Hosting?</h5>
-        <div class="row justify-content-center mr-tp-40">
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="fas fa-shield-alt"></i>
-                    <h5>Free SSL</h5>
-                    <p>All our shared hosting plans comes with a free SSL certificate for all hosted domains including addon domains later added.</p>
+        <div class="section-title section-title-two">
+            <h2>Why Choose Azpire Shared Hosting?</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="box-card fluid-height">
+                    <div class="box-card-inner box-card-inner-2 box-card-white-hover full-height border-around">
+                        <div class="box-number"><span>01</span></div>
+                        <div class="box-card-content text-center">
+                            <div class="box-card-thumb">
+                                <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627156089/azh_newui/illustrations/free_migration_bpwyki.png" alt="Free Migration">
+                            </div>
+                            <div class="box-card-details">
+                                <h3>Free Migration</h3>
+                                <p>We provide a free migration service to all our customers so that the whole process migration will be seamless.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="fas fa-th"></i>
-                    <h5>Softaculous Apps Installer</h5>
-                    <p>We have installed Softaculous for all plans, this makes it possible to install major apps like WordPress with just one click without any programming knowledge.</p>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                <div class="box-card fluid-height">
+                    <div class="box-card-inner box-card-inner-2 box-card-white-hover full-height border-around">
+                        <div class="box-number"><span>02</span></div>
+                        <div class="box-card-content text-center">
+                            <div class="box-card-thumb">
+                                <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627156089/azh_newui/illustrations/instant_setup_mcfe5u.png" alt="Instant Setup">
+                            </div>
+                            <div class="box-card-details">
+                                <h3>Instant Setup</h3>
+                                <p>Immediately the payment is successful, the account is created and login details are automatically sent by the system.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="far fa-check-circle"></i>
-                    <h5>Easy Domain Management</h5>
-                    <p>All customers can easily manage all their domains from the billing panel. DNS Management, Name servers set up, DNSSEC, e.t.c</p>
+            <div class="col-sm-12 col-md-6 col-lg-4 offset-md-3 offset-lg-0">
+                <div class="box-card fluid-height">
+                    <div class="box-card-inner box-card-inner-2 box-card-white-hover full-height border-around">
+                        <div class="box-number"><span>03</span></div>
+                        <div class="box-card-content text-center">
+                            <div class="box-card-thumb">
+                                <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627156089/azh_newui/illustrations/backup_lvyw8l.png" alt="Free Backup">
+                            </div>
+                            <div class="box-card-details">
+                                <h3>Free Backup</h3>
+                                <p>We provide a free backup service for the Large Scale shared hosting plan at no additional cost. This is important incase of any data loss. </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center mr-tp-10">
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="fab fa-cpanel"></i>
-                    <h5>Hosted With CPanel</h5>
-                    <p>Yes, we are using the most popular web hosting management software for all our shared hosting customers. This comes for free!</p>
+
+        <div class="row"  id="features">
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627148557/azh_newui/features/ssl_dvdxyr.png" alt="Free SSL">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Free SSL</h3>
+                            <p>All our shared hosting plans comes with a free SSL certificate for all hosted domains including addon domains later added.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="h-flaticon-019-uptime"></i>
-                    <h5>100% Uptime</h5>
-                    <p>Our cloud infrastructure guarantees a 100% uptime network!</p>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/apps_install_wordpress_cnejeh.png" alt="Easy Wordpress Install">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Easy Wordpress Install</h3>
+                            <p>We have installed Softaculous Apps for all plans, this makes it possible to install major apps like WordPress with just one click without any programming knowledge.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="h-flaticon-032-server-3"></i>
-                    <h5>Easy Upgrade & Downgrade</h5>
-                    <p>There is no need for long support and calls, customers are able to upgrade their servers instally and vise versa automatically.</p>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152657/azh_newui/features/easy_domain_management_it86tv.png" alt="Easy Domain Management">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Easy Domain Management</h3>
+                            <p>All customers can easily manage all their domains from the billing panel. DNS Management, Name servers set up, DNSSEC, e.t.c</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center mr-tp-10">
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="fas fa-money-bill-wave"></i>
-                    <h5>7 Days Money Back Guaranteed</h5>
-                    <p>For new accounts using our shared hosting servers, there is a 7 days Money back guaranteed system, its automated and true!</p>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/cpanel_mcmfsh.png" alt="Hosted with cPanel">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Hosted with cPanel</h3>
+                            <p>Yes, we are using the most popular web hosting management software for all our shared hosting customers. This comes for free!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="fas fa-headset"></i>
-                    <h5>24/7 Customer Support</h5>
-                    <p>We work round the clock just to make sure all customers are enjoying their value for money. Customers get responses via the support ticket channel.</p>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/uptime_f25n7g.png" alt="100% Uptime">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>100% Uptime</h3>
+                            <p>Our cloud infrastructure guarantees a 100% uptime network</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="fas fa-puzzle-piece"></i>
-                    <h5>Lots Of Addons</h5>
-                    <p>All our shared hosting plans comes with a free SSL certificate for all hosted domains including addon domains later added.</p>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/upgrade_downgrade_zlphuu.png" alt="Easy Upgrade & Downgrade">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Easy Upgrade & Downgrade</h3>
+                            <p>There is no need for long support and calls, customers are able to upgrade their servers instally and vise versa automatically.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/money_back_yxvrgw.png" alt="7 Days Money Back Guaranteed">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>7 Days Money Back Guaranteed</h3>
+                            <p>For new accounts using our shared hosting servers, there is a 7 days Money back guaranteed system, its automated and true!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/24_7_support_udiwfc.png" alt="24/7 Customer Support">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>24/7 Customer Support</h3>
+                            <p>We work round the clock just to make sure all customers are enjoying their value for money. Customers get responses via the support ticket channel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
         </div>
     </div>
 </section>
-<!-- <section class="padding-100-0 with-top-border">
+
+<!-- Compare Plans -->
+<section id="compare-plans" class="pricing-section-four p-tb-100 blue-gradient-with-opacity">
     <div class="container">
-        <h5 class="title-default-coodiv-two">Frequently asked questions.</h5>
-        <div class="row justify-content-center mr-tp-40">
-            <div class="col-md-9">
-                <div class="accordion" id="frequently-questions">
-                    <div class="questions-box">
-                        <div id="headingOne">
-                            <button class="btn questions-title" type="button" data-toggle="collapse"
-                                data-target="#questionone" aria-expanded="true" aria-controls="questionone">
-                                How Can I Order New Host ?
-                            </button>
-                        </div>
-                        <div id="questionone" class="collapse show questions-reponse" aria-labelledby="headingOne"
-                            data-parent="#frequently-questions">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                            quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
-                            squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                            butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                            nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                    <div class="questions-box">
-                        <div id="headingtwo">
-                            <button class="btn questions-title collapsed" type="button" data-toggle="collapse"
-                                data-target="#questiontwo" aria-expanded="true" aria-controls="questiontwo">
-                                What Is Resellers Hosting ?
-                            </button>
-                        </div>
-                        <div id="questiontwo" class="collapse questions-reponse" aria-labelledby="headingtwo"
-                            data-parent="#frequently-questions">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                            quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
-                            squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                            butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                            nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                    <div class="questions-box">
-                        <div id="headingtree">
-                            <button class="btn questions-title collapsed" type="button" data-toggle="collapse"
-                                data-target="#questiontree" aria-expanded="true" aria-controls="questiontree">
-                                I Want New Domain Name
-                            </button>
-                        </div>
-                        <div id="questiontree" class="collapse questions-reponse" aria-labelledby="headingtree"
-                            data-parent="#frequently-questions">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                            quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
-                            squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                            butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                            nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="section-title section-title-two">
+            <h2>Compare All Plans</h2>
         </div>
-    </div>
-</section> -->
-<section id="compare-plans" class="padding-50-0-10 position-relative">
-    <div class="container">
-        <h3 class="d-none">Compare Plans</h3>
-        <div class="table-responsive">
-            <table class="table table-striped table-dedicated-hosting-container">
-                <thead class="table-dedicated-hosting-header">
+
+        <div class="pricing-hosting-table">
+            <table>
+                <thead>
                     <tr>
-                        <th scope="col">
-                            <span class="plan-name-dedicated text-left">plans names</span>
-                            <div id="monthly-yearly-chenge" class=" custom-change">
-                                <a class="active monthly-price f-size12"> <span class="change-box-text">monthly</span> <span class="change-box"></span></a>
-                                <a class="yearli-price f-size12"> <span class="change-box-text">
-                                        yearly</span></a>
+                        <th>
+                            <div class="pricing-header-title">
+                                <div class="pricing-header-title-text">Specifications</div>
                             </div>
                         </th>
-                        <th scope="col">
-                            <span class="plan-name-dedicated f-size12"><%= sharedHostingPlans.starter.name %></span>
-                            <span class="price-dedicated second-pricing-table-price monthly">
-                                <i class="monthly f-size16">$<%= sharedHostingPlans.starter.monthly_cost %> <span>/mo</span></i>
-                                <i class="yearly f-size16">$<%= sharedHostingPlans.starter.cost %> <span>/yr</span></i>
-                            </span>
-                        </th>
-                        <th scope="col">
-                            <span class="plan-name-dedicated f-size12"><%= sharedHostingPlans.small_scale.name %></span>
-                            <span class="price-dedicated second-pricing-table-price monthly">
-                                <i class="monthly f-size16">$<%= sharedHostingPlans.small_scale.monthly_cost %> <span>/mo</span></i>
-                                <i class="yearly f-size16">$<%= sharedHostingPlans.small_scale.cost %> <span>/yr</span></i>
-                            </span>
-                        </th>
-                        <th scope="col">
-                            <span class="plan-name-dedicated  f-size12"><%= sharedHostingPlans.start_up.name %></span>
-                            <span class="price-dedicated second-pricing-table-price monthly">
-                                <i class="monthly f-size16">$<%= sharedHostingPlans.start_up.monthly_cost %> <span>/mo</span></i>
-                                <i class="yearly f-size16">$<%= sharedHostingPlans.start_up.cost %> <span>/yr</span></i>
-                            </span>
-                        </th>
-                        <th scope="col">
-                            <span class="plan-name-dedicated f-size12"><%= sharedHostingPlans.business.name %></span>
-                            <span class="price-dedicated second-pricing-table-price monthly">
-                                <i class="monthly f-size16">$<%= sharedHostingPlans.business.monthly_cost %> <span>/mo</span></i>
-                                <i class="yearly f-size16">$<%= sharedHostingPlans.business.cost %> <span>/yr</span></i>
-                            </span>
-                        </th>
-                        <th scope="col">
-                            <span class="plan-name-dedicated f-size12"><%= sharedHostingPlans.enterprise.name %></span>
-                            <span class="price-dedicated second-pricing-table-price monthly">
-                                <i class="monthly f-size16">$<%= sharedHostingPlans.enterprise.monthly_cost %> <span>/mo</span></i>
-                                <i class="yearly f-size16">$<%= sharedHostingPlans.enterprise.cost %> <span>/yr</span></i>
-                            </span>
-                        </th>
-                        <th scope="col">
-                            <span class="plan-name-dedicated f-size12"><%= sharedHostingPlans.large_scale.name %></span>
-                            <span class="price-dedicated second-pricing-table-price monthly">
-                                <i class="monthly f-size16">$<%= sharedHostingPlans.large_scale.monthly_cost %> <span>/mo</span></i>
-                                <i class="yearly f-size16">$<%= sharedHostingPlans.large_scale.cost %> <span>/yr</span></i>
-                            </span>
-                        </th>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <th>
+                                <%= sharedHostingPlan.name %>
+                            </th>
+                        <% }); %>
                     </tr>
                 </thead>
-                <tbody class="table-dedicated-hosting-body">
+
+                <tbody>
                     <tr>
-                        <th scope="row"><b class="f-size12">SSD Storage</b></th>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
+                        <td class="td-list-name td-bg">Billing Term</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td>
+                                Annual
+                            </td>
+                        <% }); %>
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">Bandwidth</b></th>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
+                        <td class="td-list-name td-bg">Monthly Pricing</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td class="td-orange">
+                                $<%= sharedHostingPlan.monthly_cost %>/month
+                            </td>
+                        <% }); %>
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">Uptime</b></th>
-                        <td><b class="plan-dedicated-config  f-size12">99.9%</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">99.9%</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">99.9%</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">99.9%</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">99.9%</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">99.9%</b> </td>
+                        <td class="td-list-name td-bg">Annual Pricing</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td class="td-orange">
+                                $<%= sharedHostingPlan.cost %>/year
+                            </td>
+                        <% }); %>
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">Hosted Domains</b></th>
-                        <td><b class="plan-dedicated-config  f-size12">1</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">5</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">20</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">50</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
+                        <td class="td-list-name td-bg">SSD Storage</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td>
+                                <%= sharedHostingPlan.features.diskspace %>
+                            </td>
+                        <% }); %>
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">Parked Domains</b></th>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
+                        <td class="td-list-name td-bg">Bandwidth</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td>
+                                <%= sharedHostingPlan.features.bandwidth %>
+                            </td>
+                        <% }); %>
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">Sub Domains</b></th>
-                        <td><b class="plan-dedicated-config  f-size12">5</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">15</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">60</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
+                        <td class="td-list-name td-bg">Uptime</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td>
+                                100%
+                            </td>
+                        <% }); %>
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">Backups</b></th>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-times"></i></b> </td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-times"></i></b> </td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-times"></i></b> </td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-times"></i></b> </td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
+                        <td class="td-list-name td-bg">Hosted Domains</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td>
+                                <%= sharedHostingPlan.features.hostedDomains %>
+                            </td>
+                        <% }); %>
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">cPanel</b></th>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
+                        <td class="td-list-name td-bg">Parked Domains</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td>
+                                Unlimited
+                            </td>
+                        <% }); %>
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">Dedicated IP</b></th>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-times"></i></b> </td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-times"></i></b> </td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-times"></i></b> </td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-times"></i></b> </td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-times"></i></b> </td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
+                        <td class="td-list-name td-bg">Subdomains</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td>
+                                <%= sharedHostingPlan.features.subDomains %>
+                            </td>
+                        <% }); %>
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">FTP Users</b></th>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
+                        <td class="td-list-name td-bg">Backups</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <% if (sharedHostingPlan.features.backups === '0') { %>
+                                <td class="td-cancel"><i class="flaticon-close"></i></td>
+                            <% }else { %>
+                                <td class="td-check"><i class="flaticon-check"></i></td>
+                            <% } %>
+                        <% }); %>   
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">Personal Nameservers</b></th>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-times"></i></b> </td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-times"></i></b> </td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-times"></i></b> </td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-times"></i></b> </td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-times"></i></b> </td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
+                        <td class="td-list-name td-bg">cPanel</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td class="td-check"><i class="flaticon-check"></i></td>
+                        <% }); %>   
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">Email Accounts</b></th>
-                        <td><b class="plan-dedicated-config  f-size12">10</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">50</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">100</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
+                        <td class="td-list-name td-bg">Dedicated IP</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <% if (sharedHostingPlan.features.dedicatedIp === '0') { %>
+                                <td class="td-cancel"><i class="flaticon-close"></i></td>
+                            <% }else { %>
+                                <td class="td-check"><i class="flaticon-check"></i></td>
+                            <% } %>
+                        <% }); %>   
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">Webmail</b></th>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
+                        <td class="td-list-name td-bg">FTP Users</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td>
+                                Unlimited
+                            </td>
+                        <% }); %>
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">SMTP, POP3, IMAP</b></th>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
+                        <td class="td-list-name td-bg">Personal Nameservers</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <% if (sharedHostingPlan.features.dedicatedIp === '0') { %>
+                                <td class="td-cancel"><i class="flaticon-close"></i></td>
+                            <% }else { %>
+                                <td class="td-check"><i class="flaticon-check"></i></td>
+                            <% } %>
+                        <% }); %>   
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">SpamAssassin</b></th>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
+                        <td class="td-list-name td-bg">Email Accounts</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td>
+                                <%= sharedHostingPlan.features.emailAccounts %>
+                            </td>
+                        <% }); %>
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">Email Per Hour</b></th>
-                        <td><b class="plan-dedicated-config  f-size12">200</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">1500</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">3000</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">5000</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
+                        <td class="td-list-name td-bg">Webmail</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td class="td-check"><i class="flaticon-check"></i></td>
+                        <% }); %>   
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">MySQL Databases</b></th>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
-                        <td><b class="plan-dedicated-config  f-size12">Unlimited</b> </td>
+                        <td class="td-list-name td-bg">SMTP, POP3, IMAP </td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td class="td-check"><i class="flaticon-check"></i></td>
+                        <% }); %>   
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">Softaculous Script Installer</b></th>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
+                        <td class="td-list-name td-bg">SpamAssassin</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td class="td-check"><i class="flaticon-check"></i></td>
+                        <% }); %>   
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">24/7 Support</b></th>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
+                        <td class="td-list-name td-bg">Emails Per Hour</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td>
+                                <%= sharedHostingPlan.features.emailPerHour %>
+                            </td>
+                        <% }); %>
                     </tr>
                     <tr>
-                        <th scope="row"><b class="f-size12">Instant Setup</b></th>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
-                        <td><b class="plan-dedicated-config  f-size12"><i class="fas fa-check-circle"></i></b></td>
+                        <td class="td-list-name td-bg">MySQL Databases</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td>
+                                Unlimited
+                            </td>
+                        <% }); %>
                     </tr>
                     <tr>
-                        <th scope="row"></th>
-                        <td><a class="plan-dedicated-order-button  f-size12" href="<%= billingURL %>">get started</a></td>
-                        <td><a class="plan-dedicated-order-button  f-size12" href="<%= billingURL %>">get started</a></td>
-                        <td><a class="plan-dedicated-order-button  f-size12" href="<%= billingURL %>">get started</a></td>
-                        <td><a class="plan-dedicated-order-button  f-size12" href="<%= billingURL %>">get started</a></td>
-                        <td><a class="plan-dedicated-order-button  f-size12" href="<%= billingURL %>">get started</a></td>
-                        <td><a class="plan-dedicated-order-button  f-size12" href="<%= billingURL %>">get started</a></td>
+                        <td class="td-list-name td-bg">Softaculous Script Installer</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td class="td-check"><i class="flaticon-check"></i></td>
+                        <% }); %>   
+                    </tr>
+                    <tr>
+                        <td class="td-list-name td-bg">24/7 Support </td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td class="td-check"><i class="flaticon-check"></i></td>
+                        <% }); %>   
+                    </tr>
+                    <tr>
+                        <td class="td-list-name td-bg">Instant Setup </td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td class="td-check"><i class="flaticon-check"></i></td>
+                        <% }); %>   
+                    </tr>
+                    <tr>
+                        <td class="td-list-name td-bg"> </td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td class="td-orange"><a href="<%= billingURL %>">Order Now</a></td>
+                        <% }); %>   
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </section>
+
+<!-- End of Compare Plans -->

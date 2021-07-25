@@ -1,181 +1,152 @@
-<div class="mt-auto header-top-height"></div>
-<main class="container mb-auto">
-    <div class="row">
-        <div class="col-md-5 d-flex mx-auto flex-column">
-            <div class="mb-auto"></div>
-            <h3 class="mt-3 main-header-text-title"><span>Unleash the beast</span>Dedicated Servers</h3>
-        </div>
-        <div class="col-md-7">
-            <div class="breadcrumb-hosting-pages row">
-                <a class="col-md-3" href="/shared-web-hosting">
-                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483555/azh/svgs/hosting_ubjjrj.svg"
-                        alt="" />
-                    <span class="sub-breadcrumb-host-title">Shared Hosting</span>
-                </a>
-                <a class="col-md-3" href="/vps">
-                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483556/azh/svgs/servers_ywxanw.svg"
-                        alt="" />
-                    <span class="sub-breadcrumb-host-title">Vps Hosting</span>
-                </a>
-                <a class="col-md-3" href="/vps-cloud">
-                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483557/azh/svgs/clouds_jxjmof.svg"
-                        alt="#" />
-                    <span class="sub-breadcrumb-host-title">clouds VPS</span>
-                </a>
-                <a class="col-md-3 active" href="#">
-                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483558/azh/svgs/dedicated_qhucdk.svg"
-                        alt="" />
-                    <span class="sub-breadcrumb-host-title">Dedicated</span>
-                </a>
+<div class="container blue-gradient">
+    <div class="row align-items-center">
+        <div class="col-sm-12">
+            <div class="header-page-content text-center text-lg-start">
+                <h1>Dedicated Servers</h1>
+                <p>If you are looking for the best Dedicated servers for your business then Azpirehosting's Dedicated Servers are the solution. We have high performing servers at affordable prices to truly deliver the power that you need.</p>
+                <ul class="section-button">
+                    <li><a href="#pricing"><button class="btn btn-pill">Get Started</button></a></li>
+                </ul>
             </div>
         </div>
     </div>
-</main>
-<div class="mt-auto"></div>
 </div>
+</header>
 
-<section class="padding-100-0 position-relative">
-    <div class="body_overlay_ono"></div>
+
+<section id="pricing" class="pricing-section-five pt-100 pb-70">
     <div class="container">
-        <h5 class="title-default-coodiv-two">Dedicated handle the weight<span class="mr-tp-20">Billed Monthly. Renew at the same price</span></h5>
-        <div class="row justify-content-start second-pricing-table-container mr-tp-30">
-            <% dedicatedHostingPlans.forEach((dedicatedHostingPlan, index) => { %>
-                <div class="col-md-4">
-                    <div class="second-pricing-table <%= index%2 == 0 ? '': 'active' %> ">
-                        <h5 class="second-pricing-table-title"><%= dedicatedHostingPlan.name %> <span></span></h5>
-                        <span class="second-pricing-table-price">
-                            <i class="monthly">$<%= dedicatedHostingPlan.cost %><small>/mo</small></i>
-                        </span>
-                        <ul class="second-pricing-table-body">
-                            <li><%= dedicatedHostingPlan.features.cores %></li>
-                            <li><%= dedicatedHostingPlan.features.ram %></li>
-                            <li><%= dedicatedHostingPlan.features.diskspace %></li>
-                            <li><%= dedicatedHostingPlan.features.bandwidth %></li>
-                            <li><%= dedicatedHostingPlan.features.dedicatedIp %> IP Addresses</li>
-                            <li><%= dedicatedHostingPlan.features.mbit %></li>
-                            <li><%= dedicatedHostingPlan.features.ghz %></li>
-                        </ul>
-                        <a class="second-pricing-table-button" href="<%= billingURL %>">Order Now</a>
+        <div class="section-title section-title-two">
+            <h2>Price & plans</h2>
+        </div>
+        <div class="row">
+            <% dedicatedHostingPlans.forEach((dedicatedHostingPlan, index)=> { %>
+                <div class="col-sm-12 col-md-4">
+                    <div class="pricing-item pricing-item-two">
+                        <div class="pricing-secondary-header">
+                            <div class="pricing-header-title">
+                                <h3 class="pricing-header-title-text">
+                                    <%= dedicatedHostingPlan.name %>
+                                </h3>
+                            </div>
+                            <div class="pricing-item-amount">
+                                <h4 class="pricing-item-amount-number"><small>$</small>
+                                    <%= dedicatedHostingPlan.cost %><span>/Month</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="pricing-item-body">
+                            <ul class="pricing-body-list pricing-body-list-two">
+                                <li><%= dedicatedHostingPlan.features.cores %></li>
+                                <li><%= dedicatedHostingPlan.features.ram %></li>
+                                <li><%= dedicatedHostingPlan.features.diskspace %></li>
+                                <li><%= dedicatedHostingPlan.features.bandwidth %></li>
+                                <li><%= dedicatedHostingPlan.features.dedicatedIp %> IP Addresses</li>
+                                <li><%= dedicatedHostingPlan.features.mbit %></li>
+                                <li><%= dedicatedHostingPlan.features.ghz %></li>
+                            </ul>
+                            <a href="<%= billingURL %>" class="btn btn-gradient">Order Now</a>
+                        </div>
                     </div>
                 </div>
-            <% }); %> 
+                <% }); %>
         </div>
     </div>
 </section>
 
-<section class="padding-100-0">
+
+<section class="feature-section pt-100 pb-70">
     <div class="container">
-        <h5 class="title-default-coodiv-two">Why Choose Azpire Dedicated Severs?</h5>
-        <div class="row justify-content-center mr-tp-40">
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="fas fa-exchange-alt"></i>
-                    <h5>200TB Transfer</h5>
-                    <p>There is enough for incoming and outgoing transfers on all our dedicated servers compared to so many other competitors out there.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="fas fa-bolt"></i>
-                    <h5>1Gbit/10Gbit Port</h5>
-                    <p>All our Dedicated servers comes with a 1Gbit Port while DED006 comes with a 10Gbit Port.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="far fa-check-circle"></i>
-                    <h5>Timely Setup</h5>
-                    <p>Our dedicated servers are created beween 1 - 3 hours. This timeframe allows us to carefully setup the server as this is done manually per each order.</p>
-                </div>
-            </div>
+        <div class="section-title section-title-two">
+            <h2>Why Choose Azpire Dedicated Server Hosting?</h2>
         </div>
-        <div class="row justify-content-center mr-tp-10">
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="e-flaticon-031-ssd"></i>
-                    <h5>SSD+HDD</h5>
-                    <p>Our dedicated servers comes with an SSD hard drive which automatically improves the server speed. These hard drives are 100% reliable.</p>
+
+        <div class="row">
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/200_transfer_onfpsj.png" alt="200TB Transfer">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>200TB Transfer</h3>
+                            <p>There is enough for incoming and outgoing transfers on all our dedicated servers compared to so many other competitors out there.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="fas fa-headset"></i>
-                    <h5>24/7 Customer Support</h5>
-                    <p>We work round the clock just to make sure all customers are enjoying their value for money. Customers get responses via the support ticket channel.</p>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627153327/azh_newui/features/port_sgcmfz.png" alt="1Gbit/10Gbit Port">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>1Gbit/10Gbit Port</h3>
+                            <p>All our Dedicated servers comes with a 1Gbit Port while DED006 comes with a 10Gbit Port.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="box-features-one">
-                    <i class="far fa-building"></i>
-                    <h5>US Data Center</h5>
-                    <p>Our Datacenter for the Dedicated Server plans exist in the US, we plan to add more locations very soon later in the future.</p>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/timely_setup_ajr04d.png" alt="Timely Setup">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>Timely Setup</h3>
+                            <p>Our dedicated servers are created beween 1 - 3 hours. This timeframe allows us to carefully setup the server as this is done manually per each order.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/ssd_hdd_gf2yb9.png" alt="SSD+HDD">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>SSD+HDD</h3>
+                            <p>Our dedicated servers comes with an SSD hard drive which automatically improves the server speed. These hard drives are 100% reliable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/24_7_support_udiwfc.png" alt="24/7 Customer Support">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>24/7 Customer Support</h3>
+                            <p>We work round the clock just to make sure all customers are enjoying their value for money. Customers get responses via the support ticket channel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6">
+                <div class="feature-item feature-item-2 fluid-height">
+                    <div class="feature-item-inner full-height bg-white">
+                        <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/data_center_az8imy.png" alt="US Data Center">
+                        </div>
+                        <div class="feature-item-content">
+                            <h3>US Data Center</h3>
+                            <p>Our Datacenter for the Dedicated Server plans exist in the US, we plan to add more locations very soon later in the future.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
         </div>
     </div>
 </section>
-<!-- <section class="padding-100-0 with-top-border">
-    <div class="container">
-        <h5 class="title-default-coodiv-two">Frequently asked questions.</h5>
-        <div class="row justify-content-center mr-tp-40">
-            <div class="col-md-9">
-                <div class="accordion" id="frequently-questions">
-                    <div class="questions-box">
-                        <div id="headingOne">
-                            <button class="btn questions-title" type="button" data-toggle="collapse"
-                                data-target="#questionone" aria-expanded="true" aria-controls="questionone">
-                                How Can I Order New Host ?
-                            </button>
-                        </div>
-                        <div id="questionone" class="collapse show questions-reponse" aria-labelledby="headingOne"
-                            data-parent="#frequently-questions">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                            quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
-                            squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                            butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                            nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                    <div class="questions-box">
-                        <div id="headingtwo">
-                            <button class="btn questions-title collapsed" type="button" data-toggle="collapse"
-                                data-target="#questiontwo" aria-expanded="true" aria-controls="questiontwo">
-                                What Is Resellers Hosting ?
-                            </button>
-                        </div>
-                        <div id="questiontwo" class="collapse questions-reponse" aria-labelledby="headingtwo"
-                            data-parent="#frequently-questions">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                            quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
-                            squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                            butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                            nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                    <div class="questions-box">
-                        <div id="headingtree">
-                            <button class="btn questions-title collapsed" type="button" data-toggle="collapse"
-                                data-target="#questiontree" aria-expanded="true" aria-controls="questiontree">
-                                I Want New Domain Name
-                            </button>
-                        </div>
-                        <div id="questiontree" class="collapse questions-reponse" aria-labelledby="headingtree"
-                            data-parent="#frequently-questions">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                            squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck
-                            quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it
-                            squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                            craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur
-                            butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                            nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
