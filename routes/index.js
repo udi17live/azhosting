@@ -112,8 +112,7 @@ router.get('/', async function (req, res) {
         minSharedHostingPrice,
         minVpsCloudPrice,
         minVpsPrice,
-        minDedicatedServerPrice,
-        title: 'Azpire Hosting'
+        minDedicatedServerPrice
     });
 });
 
@@ -149,7 +148,8 @@ router.get('/shared-web-hosting', async function (req, res) {
 
     res.render('shared-web-hosting', {
         sharedHostingPlans,
-        billingURL
+        billingURL,
+        title: 'Shared Web Hosting'
     });
 });
 
@@ -181,7 +181,8 @@ router.get('/vps', async function (req, res) {
 
     res.render('vps', {
         vpsHostingPlans,
-        billingURL
+        billingURL,
+        title: 'VPS Hosting'
     });
 
 });
@@ -213,7 +214,8 @@ router.get('/vps-cloud', async function (req, res) {
 
     res.render('vps-cloud', {
         vpsCloudHostingPlans,
-        billingURL
+        billingURL,
+        title: 'Cloud VPS Hosting'
     });
 
 });
@@ -245,7 +247,8 @@ router.get('/ded', async function (req, res) {
 
     res.render('ded', {
         dedicatedHostingPlans,
-        billingURL
+        billingURL,
+        title: 'Dedicated Servers'
     });
 
 });
@@ -273,7 +276,8 @@ router.get('/domain-pricing', async function (req, res) {
 
     res.render('domain-pricing', {
         domains,
-        selected_domains
+        selected_domains,
+        title: 'Domain Pricing'
     });
 });
 
@@ -294,13 +298,16 @@ router.get('/addons', async function (req, res) {
         })
         .catch(err => console.log(err));
     res.render('addons', {
-        addons
+        addons,
+        title: 'Addons'
     });
 });
 
 
 router.get('/whois-checker', (req, res) => {
-    res.render('whois-checker');
+    res.render('whois-checker', {
+        title: 'WHOIS Checker'
+    });
 });
 
 router.post('/whois-checker', async function (req, res) {
@@ -309,11 +316,11 @@ router.post('/whois-checker', async function (req, res) {
 
 
 //Legal Section Routes
-router.get('/privacy-policy', (req, res) => res.render('legal/privacy-policy'));
-router.get('/refund-policy', (req, res) => res.render('legal/refund-policy'));
-router.get('/aup', (req, res) => res.render('legal/aup'));
+router.get('/privacy-policy', (req, res) => res.render('legal/privacy-policy',{title: 'Privacy Policy'}));
+router.get('/refund-policy', (req, res) => res.render('legal/refund-policy',{title: 'Refund Policy'}));
+router.get('/aup', (req, res) => res.render('legal/aup',{title: 'Acceptable Use Policy'}));
 
-router.get('/contact-us', (req, res) => res.render('contact-us'));
+router.get('/contact-us', (req, res) => res.render('contact-us',{title: 'Contact Us'}));
 router.post('/contact-us', async function (req, res) {
 
     if (!req.body.captcha){
@@ -405,8 +412,8 @@ router.post('/contact-us', async function (req, res) {
     return res.json({ success: successStatus, msg: msg });
 });
 
-router.get('/freq-ask-q', (req, res) => res.render('faq'));
-router.get('/about-us', (req, res) => res.render('about-us'));
+router.get('/freq-ask-q', (req, res) => res.render('faq',{title: 'Frequently Asked Questions (FAQ) '}));
+router.get('/about-us', (req, res) => res.render('about-us',{title: 'About Us'}));
 
 
 module.exports = router;
