@@ -366,8 +366,10 @@ router.post('/contact-us', async function (req, res) {
             return html;
         });
 
+    environment = typeof process.env.NODE_ENV === 'undefined' ? "development" : process.env.NODE_ENV;
+
     var payload = {
-        "SandboxMode": true,
+        "SandboxMode": environment === 'production' ? false: true,
         "Messages": [
             {
                 "From": {
