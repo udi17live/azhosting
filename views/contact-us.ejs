@@ -139,6 +139,7 @@
 </div>
 
 <script>
+
     function formSuccess() {
         $("#contactForm")[0].reset();
         submitMSG(true, "Message Submitted!");
@@ -170,28 +171,33 @@
         const message = document.querySelector('#message').value;
         const captcha = document.querySelector('#g-recaptcha-response').value;
 
-        console.log(captcha);
+        var payload = {
+            "name": name,
+            "email": email,
+            "phoneNumber": phoneNumber,
+            "subject": subject,
+            "message": message,
+            "captcha": captcha,
+        }
 
-        // JSON.stringify({ name: name, email: email, phone_number: phoneNumber, subject: subject, message: message, captcha: captcha })
-
-        var myHeaders = new Headers();
-        myHeaders.append('Content-Type', 'application/json');
-        return fetch('/contact-us', {
-            method: 'POST',
-            headers: myHeaders,
-            body: JSON.stringify({ name: name, email: email, phone_number: phoneNumber, subject: subject, message: message, captcha: captcha })
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-
-                // if (data.success) return location.reload();
+        $.ajax({
+            type: "POST",
+            url: "/contact-us",
+            headers: {
+                "Content-Type":"application/json",
+                "Accept":"application/json",
+            },
+            data: JSON.stringify(payload),
+            success: function (data) {
                 if (data.success) {
+                    grecaptcha.reset();
                     formSuccess();
                 } else {
+                    grecaptcha.reset();
                     formError();
                     submitMSG(false, data.msg);
                 }
-            });
+            },
+        });
     });
 </script>

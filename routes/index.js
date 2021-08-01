@@ -323,22 +323,19 @@ router.get('/aup', (req, res) => res.render('legal/aup',{title: 'Acceptable Use 
 router.get('/contact-us', (req, res) => res.render('contact-us',{title: 'Contact Us'}));
 router.post('/contact-us', async function (req, res) {
 
+    const { name, email, phoneNumber, subject, message, captcha } = req.body;
+    
     if (!req.body.captcha){
         return res.json({ success: false, msg: 'Please select captchaa' });
     }
 
     // reCaptcha Validation
     // Secret key
-    const recaptchaSecretKey = process.env.RECAPTCHA_SITE_KEY;
+    const recaptchaSecretKey = process.env.RECAPTCHA_SITE_SECRET;
 
-    // Verify URL
-    const query = stringify({
-        secret: recaptchaSecretKey,
-        response: req.body.captcha,
-        remoteip: req.connection.remoteAddress
-    });
+    const query = `secret=${recaptchaSecretKey}&response=${captcha}`;
     const verifyURL = `https://google.com/recaptcha/api/siteverify?${query}`;
-
+    
     // Make a request to verifyURL
     const body = await fetch(verifyURL).then(res => res.json());
 
@@ -346,18 +343,17 @@ router.post('/contact-us', async function (req, res) {
     if (body.success !== undefined && !body.success)
         return res.json({ success: false, msg: 'Failed reCaptcha verification' });
 
-    // Email Sending    
-    const { name, email, message, phone_number, msg_subject } = req.body;
+    // Email Sending   
 
     let errors = 0;
 
-    var text_body = "name=" + name + "&email=" + email + "&msg_subject=" + msg_subject + "&phone_number=" + phone_number + "&message=" + message;
+    var text_body = "name=" + name + "&email=" + email + "&msg_subject=" + subject + "&phone_number=" + phoneNumber + "&message=" + message;
 
-    var html_body = await fetch('https://azpirehosting.xyz/cdn/cdn-new/email_templates/contact-form-template.html')
+    var html_body = await fetch('https://cdn.jsdelivr.net/gh/udi17live/azpire-cdn/email_templates/contact-form-template.html')
         .then(response => response.text())
         .then(html => {
             var replace_data_var = ["name", "email", "phone_number", "msg_subject", "message"];
-            var replace_data_with = [name, email, phone_number, msg_subject, message];
+            var replace_data_with = [name, email, phoneNumber, subject, message];
 
             for (var i = 0; i < replace_data_var.length; i++) {
                 html = html.replace(new RegExp('{{' + replace_data_var[i] + '}}', 'gi'), replace_data_with[i]);
@@ -382,7 +378,7 @@ router.post('/contact-us', async function (req, res) {
                         "Name": "Azpire Hosting Client"
                     }
                 ],
-                "Subject": msg_subject,
+                "Subject": subject,
                 "TextPart": text_body,
                 "HTMLPart": html_body
             }
