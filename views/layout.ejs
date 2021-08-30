@@ -408,6 +408,22 @@
             <script src="https://cdn.jsdelivr.net/gh/udi17live/azpire-cdn/js/jquery.meanmenu.min.js"></script>
 
             <script src="https://cdn.jsdelivr.net/gh/udi17live/azpire-cdn/js/script.js"></script>
+
+			<script>
+                $('#price-term-toggle a').on('click', function () {
+                    $(this).addClass('active').siblings().removeClass('active');
+
+                    if (jQuery('.monthly-price').hasClass('active')) {
+                        $('.pricing-item-amount').addClass('monthly');
+                        $('.pricing-item-amount').removeClass('yearly');
+                    }
+
+                    if (jQuery('.yearli-price').hasClass('active')) {
+                        $('.pricing-item-amount').addClass('yearly');
+                        $('.pricing-item-amount').removeClass('monthly');
+                    }
+                });
+            </script>
 </body>
 
 </html>

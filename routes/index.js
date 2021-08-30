@@ -43,7 +43,7 @@ router.get('/', async function (req, res) {
         .then(domains_recieved => {
             var domains_arr = [];
             domains_recieved.forEach((item) => {
-                domains_arr.push(parseFloat(item.final_cost));
+                domains_arr.push(parseFloat(item.final_cost).toFixed(2));
             });
 
             domains_arr.sort(function (a, b) { return a - b; })
@@ -55,7 +55,7 @@ router.get('/', async function (req, res) {
         .then(result => {
             var sh_arr = [];
             result.forEach((item) => {
-                sh_arr.push(parseFloat(item.final_cost));
+                sh_arr.push(parseFloat(item.final_cost).toFixed(2));
             });
 
             sh_arr.sort(function (a, b) { return a - b; });
@@ -69,7 +69,7 @@ router.get('/', async function (req, res) {
         .then(result => {
             var vps_cloud_arr = [];
             result.forEach((item) => {
-                vps_cloud_arr.push(parseFloat(item.final_cost));
+                vps_cloud_arr.push(parseFloat(item.final_cost).toFixed(2));
             });
 
             vps_cloud_arr.sort(function (a, b) { return a - b; });
@@ -83,7 +83,7 @@ router.get('/', async function (req, res) {
         .then(result => {
             var vps_arr = [];
             result.forEach((item) => {
-                vps_arr.push(parseFloat(item.final_cost));
+                vps_arr.push(parseFloat(item.final_cost).toFixed(2));
             });
 
             vps_arr.sort(function (a, b) { return a - b; });
@@ -97,7 +97,7 @@ router.get('/', async function (req, res) {
         .then(result => {
             var ded_arr = [];
             result.forEach((item) => {
-                ded_arr.push(parseFloat(item.final_cost));
+                ded_arr.push(parseFloat(item.final_cost).toFixed(2));
             });
 
             ded_arr.sort(function (a, b) { return a - b; });
@@ -122,12 +122,17 @@ router.get('/shared-web-hosting', async function (req, res) {
             var plans = [];
             result.forEach((item) => {
                 var slugified_name = slugify(item.product_name);
-                var finalCost = parseFloat(item.final_cost);
-                var monthly_cost = finalCost / 12;
+                var finalCost = parseFloat(item.final_cost).toFixed(2);
+                var monthly_cost = parseFloat(finalCost / 12).toFixed(2);
+                var costWhenPaidMonthly = item.monthly_cost * 12;
+                var diffOfMonthlyAnnualCost = costWhenPaidMonthly - finalCost
+                var save_percentage = parseInt((diffOfMonthlyAnnualCost/costWhenPaidMonthly) * 100);
                 plans.push({
                     name: item.my_custom_product_name,
-                    monthly_cost: monthly_cost,
+                    annual_monthly_cost: monthly_cost,
                     cost: finalCost,
+                    monthly_cost: item.monthly_cost,
+                    save_percentage: save_percentage,
                     features: {
                         diskspace: item.diskspace,
                         bandwidth: item.bandwidth,

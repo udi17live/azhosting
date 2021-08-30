@@ -1,15 +1,97 @@
+<style>
+    #price-term-toggle {
+        padding: 0 0 50px;
+        min-width: 200px;
+    }
+
+    #price-term-toggle a {
+        font-weight: bold;
+        color: #b4c3ca;
+        text-decoration: none;
+        position: relative;
+        font-size: 14px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    #price-term-toggle a.active {
+        color: #364248;
+    }
+
+    #price-term-toggle a:first-child {
+        padding-right: 40px;
+    }
+
+    #price-term-toggle a:last-child {
+        padding-left: 40px;
+    }
+
+    #price-term-toggle a:first-child::after {
+        content: '';
+        position: absolute;
+        height: 21px;
+        width: 50px;
+        background: #dae4e6;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -25px;
+        border-radius: 40px;
+    }
+
+    #price-term-toggle a:last-child::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #ff5500;
+        width: 18px;
+        height: 18px;
+        left: -28px;
+        border-radius: 40px;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #price-term-toggle a:last-child.active::after {
+        left: 0;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+    }
+
+    #price-term-toggle.custom-change a:first-child::after {
+        right: -20px;
+    }
+
+    #price-term-toggle.style-two a .change-box-text {
+        position: relative;
+        z-index: 1;
+    }
+
+    .pricing-item-amount.monthly .yearly{display:none;}
+    .pricing-item-amount.yearly .monthly{display:none;}
+</style>
+
 <div class="container blue-gradient">
     <div class="row align-items-center">
         <div class="col-sm-12 ">
             <div class="header-page-content text-center text-lg-start">
                 <h1>Shared Hosting</h1>
-                <p>Cheaper faster and reliable web hosting plans starting from $1.99/month. These plans are great for hosting your dream site. The most popular and easiest interface paired with array of leading apps such as Wordpress, will give you plenty of options for hosting and managing your websites and emails.</p>
+                <p>Cheaper faster and reliable web hosting plans starting from $1.99/month. These plans are great for
+                    hosting your dream site. The most popular and easiest interface paired with array of leading apps
+                    such as Wordpress, will give you plenty of options for hosting and managing your websites and
+                    emails.</p>
                 <ul class="section-button">
                     <li><a href="#shared-pricing"><button class="btn btn-pill">Get Started</button></a></li>
                 </ul>
             </div>
         </div>
-        
+
     </div>
 </div>
 </header>
@@ -19,6 +101,14 @@
     <div class="container">
         <div class="section-title section-title-two">
             <h2>Price & plans</h2>
+
+            <div id="price-term-toggle" class=" custom-change">
+                <a class="monthly-price f-size12"> <span class="change-box-text">Monthly</span> <span
+                        class="change-box"></span></a>
+                <a class="yearli-price f-size12 active"> <span class="change-box-text">Annually</span></a>
+            </div>
+
+
         </div>
         <div class="row">
             <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
@@ -30,10 +120,11 @@
                                     <%= sharedHostingPlan.name %>
                                 </h3>
                             </div>
-                            <div class="pricing-item-amount">
-                                <small>$<%= sharedHostingPlan.cost %> billed annually.</small>
-                                <h4 class="pricing-item-amount-number"><small>$</small>
-                                    <%= sharedHostingPlan.monthly_cost %><span>/Month</span>
+                            <div class="pricing-item-amount yearly">
+                                <small class="yearly">$<%= sharedHostingPlan.cost %> billed annually.&nbsp; &nbsp;<span class="badge btn-gradient">Save <%= sharedHostingPlan.save_percentage %>%</span></small>
+                                <h4 class="pricing-item-amount-number "><small>$</small>
+                                    <b class="monthly"><%= sharedHostingPlan.monthly_cost %><span>/mo</span></b>
+                                    <b class="yearly"><%= sharedHostingPlan.annual_monthly_cost %><span>/mo</span></b>
                                 </h4>
                             </div>
                         </div>
@@ -86,11 +177,13 @@
                         <div class="box-number"><span>01</span></div>
                         <div class="box-card-content text-center">
                             <div class="box-card-thumb">
-                                <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627156089/azh_newui/illustrations/free_migration_bpwyki.png" alt="Free Migration">
+                                <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627156089/azh_newui/illustrations/free_migration_bpwyki.png"
+                                    alt="Free Migration">
                             </div>
                             <div class="box-card-details">
                                 <h3>Free Migration</h3>
-                                <p>We provide a free migration service to all our customers so that the whole process migration will be seamless.</p>
+                                <p>We provide a free migration service to all our customers so that the whole process
+                                    migration will be seamless.</p>
                             </div>
                         </div>
                     </div>
@@ -102,11 +195,13 @@
                         <div class="box-number"><span>02</span></div>
                         <div class="box-card-content text-center">
                             <div class="box-card-thumb">
-                                <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627156089/azh_newui/illustrations/instant_setup_u0grpz.png" alt="Instant Setup">
+                                <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627156089/azh_newui/illustrations/instant_setup_u0grpz.png"
+                                    alt="Instant Setup">
                             </div>
                             <div class="box-card-details">
                                 <h3>Instant Setup</h3>
-                                <p>Immediately the payment is successful, the account is created and login details are automatically sent by the system.</p>
+                                <p>Immediately the payment is successful, the account is created and login details are
+                                    automatically sent by the system.</p>
                             </div>
                         </div>
                     </div>
@@ -118,11 +213,13 @@
                         <div class="box-number"><span>03</span></div>
                         <div class="box-card-content text-center">
                             <div class="box-card-thumb">
-                                <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627156089/azh_newui/illustrations/backup_lvyw8l.png" alt="Free Backup">
+                                <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627156089/azh_newui/illustrations/backup_lvyw8l.png"
+                                    alt="Free Backup">
                             </div>
                             <div class="box-card-details">
                                 <h3>Free Backup</h3>
-                                <p>We provide a free backup service for the Large Scale shared hosting plan at no additional cost. This is important incase of any data loss. </p>
+                                <p>We provide a free backup service for the Large Scale shared hosting plan at no
+                                    additional cost. This is important incase of any data loss. </p>
                             </div>
                         </div>
                     </div>
@@ -130,16 +227,18 @@
             </div>
         </div>
 
-        <div class="row"  id="features">
+        <div class="row" id="features">
             <div class="col-sm-12 col-lg-6">
                 <div class="feature-item feature-item-2 fluid-height">
                     <div class="feature-item-inner full-height bg-white">
                         <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
-                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627148557/azh_newui/features/ssl_dvdxyr.png" alt="Free SSL">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627148557/azh_newui/features/ssl_dvdxyr.png"
+                                alt="Free SSL">
                         </div>
                         <div class="feature-item-content">
                             <h3>Free SSL</h3>
-                            <p>All our shared hosting plans comes with a free SSL certificate for all hosted domains including addon domains later added.</p>
+                            <p>All our shared hosting plans comes with a free SSL certificate for all hosted domains
+                                including addon domains later added.</p>
                         </div>
                     </div>
                 </div>
@@ -149,11 +248,13 @@
                 <div class="feature-item feature-item-2 fluid-height">
                     <div class="feature-item-inner full-height bg-white">
                         <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
-                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/apps_install_wordpress_cnejeh.png" alt="Easy Wordpress Install">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/apps_install_wordpress_cnejeh.png"
+                                alt="Easy Wordpress Install">
                         </div>
                         <div class="feature-item-content">
                             <h3>Easy Wordpress Install</h3>
-                            <p>We have installed Softaculous Apps for all plans, this makes it possible to install major apps like WordPress with just one click without any programming knowledge.</p>
+                            <p>We have installed Softaculous Apps for all plans, this makes it possible to install major
+                                apps like WordPress with just one click without any programming knowledge.</p>
                         </div>
                     </div>
                 </div>
@@ -163,11 +264,13 @@
                 <div class="feature-item feature-item-2 fluid-height">
                     <div class="feature-item-inner full-height bg-white">
                         <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
-                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152657/azh_newui/features/easy_domain_management_it86tv.png" alt="Easy Domain Management">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152657/azh_newui/features/easy_domain_management_it86tv.png"
+                                alt="Easy Domain Management">
                         </div>
                         <div class="feature-item-content">
                             <h3>Easy Domain Management</h3>
-                            <p>All customers can easily manage all their domains from the billing panel. DNS Management, Name servers set up, DNSSEC, e.t.c</p>
+                            <p>All customers can easily manage all their domains from the billing panel. DNS Management,
+                                Name servers set up, DNSSEC, e.t.c</p>
                         </div>
                     </div>
                 </div>
@@ -177,11 +280,13 @@
                 <div class="feature-item feature-item-2 fluid-height">
                     <div class="feature-item-inner full-height bg-white">
                         <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
-                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/cpanel_mcmfsh.png" alt="Hosted with cPanel">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/cpanel_mcmfsh.png"
+                                alt="Hosted with cPanel">
                         </div>
                         <div class="feature-item-content">
                             <h3>Hosted with cPanel</h3>
-                            <p>Yes, we are using the most popular web hosting management software for all our shared hosting customers. This comes for free!</p>
+                            <p>Yes, we are using the most popular web hosting management software for all our shared
+                                hosting customers. This comes for free!</p>
                         </div>
                     </div>
                 </div>
@@ -191,7 +296,8 @@
                 <div class="feature-item feature-item-2 fluid-height">
                     <div class="feature-item-inner full-height bg-white">
                         <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
-                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/uptime_f25n7g.png" alt="100% Uptime">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/uptime_f25n7g.png"
+                                alt="100% Uptime">
                         </div>
                         <div class="feature-item-content">
                             <h3>100% Uptime</h3>
@@ -205,11 +311,13 @@
                 <div class="feature-item feature-item-2 fluid-height">
                     <div class="feature-item-inner full-height bg-white">
                         <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
-                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/upgrade_downgrade_zlphuu.png" alt="Easy Upgrade & Downgrade">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/upgrade_downgrade_zlphuu.png"
+                                alt="Easy Upgrade & Downgrade">
                         </div>
                         <div class="feature-item-content">
                             <h3>Easy Upgrade & Downgrade</h3>
-                            <p>There is no need for long support and calls, customers are able to upgrade their servers instally and vise versa automatically.</p>
+                            <p>There is no need for long support and calls, customers are able to upgrade their servers
+                                instally and vise versa automatically.</p>
                         </div>
                     </div>
                 </div>
@@ -219,11 +327,13 @@
                 <div class="feature-item feature-item-2 fluid-height">
                     <div class="feature-item-inner full-height bg-white">
                         <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
-                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/money_back_yxvrgw.png" alt="7 Days Money Back Guaranteed">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/money_back_yxvrgw.png"
+                                alt="7 Days Money Back Guaranteed">
                         </div>
                         <div class="feature-item-content">
                             <h3>7 Days Money Back Guaranteed</h3>
-                            <p>For new accounts using our shared hosting servers, there is a 7 days Money back guaranteed system, its automated and true!</p>
+                            <p>For new accounts using our shared hosting servers, there is a 7 days Money back
+                                guaranteed system, its automated and true!</p>
                         </div>
                     </div>
                 </div>
@@ -233,16 +343,18 @@
                 <div class="feature-item feature-item-2 fluid-height">
                     <div class="feature-item-inner full-height bg-white">
                         <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
-                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/24_7_support_udiwfc.png" alt="24/7 Customer Support">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/24_7_support_udiwfc.png"
+                                alt="24/7 Customer Support">
                         </div>
                         <div class="feature-item-content">
                             <h3>24/7 Customer Support</h3>
-                            <p>We work round the clock just to make sure all customers are enjoying their value for money. Customers get responses via the support ticket channel.</p>
+                            <p>We work round the clock just to make sure all customers are enjoying their value for
+                                money. Customers get responses via the support ticket channel.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
 
         </div>
     </div>
@@ -268,7 +380,7 @@
                             <th>
                                 <%= sharedHostingPlan.name %>
                             </th>
-                        <% }); %>
+                            <% }); %>
                     </tr>
                 </thead>
 
@@ -279,7 +391,7 @@
                             <td>
                                 Annual
                             </td>
-                        <% }); %>
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Monthly Pricing</td>
@@ -287,7 +399,7 @@
                             <td class="td-orange">
                                 $<%= sharedHostingPlan.monthly_cost %>/month
                             </td>
-                        <% }); %>
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Annual Pricing</td>
@@ -295,7 +407,7 @@
                             <td class="td-orange">
                                 $<%= sharedHostingPlan.cost %>/year
                             </td>
-                        <% }); %>
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">SSD Storage</td>
@@ -303,7 +415,7 @@
                             <td>
                                 <%= sharedHostingPlan.features.diskspace %>
                             </td>
-                        <% }); %>
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Bandwidth</td>
@@ -311,7 +423,7 @@
                             <td>
                                 <%= sharedHostingPlan.features.bandwidth %>
                             </td>
-                        <% }); %>
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Uptime</td>
@@ -319,7 +431,7 @@
                             <td>
                                 100%
                             </td>
-                        <% }); %>
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Hosted Domains</td>
@@ -327,7 +439,7 @@
                             <td>
                                 <%= sharedHostingPlan.features.hostedDomains %>
                             </td>
-                        <% }); %>
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Parked Domains</td>
@@ -335,7 +447,7 @@
                             <td>
                                 Unlimited
                             </td>
-                        <% }); %>
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Subdomains</td>
@@ -343,33 +455,33 @@
                             <td>
                                 <%= sharedHostingPlan.features.subDomains %>
                             </td>
-                        <% }); %>
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Backups</td>
                         <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
-                            <% if (sharedHostingPlan.features.backups === '0') { %>
+                            <% if (sharedHostingPlan.features.backups==='0' ) { %>
                                 <td class="td-cancel"><i class="flaticon-close"></i></td>
-                            <% }else { %>
-                                <td class="td-check"><i class="flaticon-check"></i></td>
-                            <% } %>
-                        <% }); %>   
+                                <% }else { %>
+                                    <td class="td-check"><i class="flaticon-check"></i></td>
+                                    <% } %>
+                                        <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">cPanel</td>
                         <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
                             <td class="td-check"><i class="flaticon-check"></i></td>
-                        <% }); %>   
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Dedicated IP</td>
                         <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
-                            <% if (sharedHostingPlan.features.dedicatedIp === '0') { %>
+                            <% if (sharedHostingPlan.features.dedicatedIp==='0' ) { %>
                                 <td class="td-cancel"><i class="flaticon-close"></i></td>
-                            <% }else { %>
-                                <td class="td-check"><i class="flaticon-check"></i></td>
-                            <% } %>
-                        <% }); %>   
+                                <% }else { %>
+                                    <td class="td-check"><i class="flaticon-check"></i></td>
+                                    <% } %>
+                                        <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">FTP Users</td>
@@ -377,17 +489,17 @@
                             <td>
                                 Unlimited
                             </td>
-                        <% }); %>
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Personal Nameservers</td>
                         <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
-                            <% if (sharedHostingPlan.features.dedicatedIp === '0') { %>
+                            <% if (sharedHostingPlan.features.dedicatedIp==='0' ) { %>
                                 <td class="td-cancel"><i class="flaticon-close"></i></td>
-                            <% }else { %>
-                                <td class="td-check"><i class="flaticon-check"></i></td>
-                            <% } %>
-                        <% }); %>   
+                                <% }else { %>
+                                    <td class="td-check"><i class="flaticon-check"></i></td>
+                                    <% } %>
+                                        <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Email Accounts</td>
@@ -395,25 +507,25 @@
                             <td>
                                 <%= sharedHostingPlan.features.emailAccounts %>
                             </td>
-                        <% }); %>
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Webmail</td>
                         <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
                             <td class="td-check"><i class="flaticon-check"></i></td>
-                        <% }); %>   
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">SMTP, POP3, IMAP </td>
                         <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
                             <td class="td-check"><i class="flaticon-check"></i></td>
-                        <% }); %>   
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">SpamAssassin</td>
                         <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
                             <td class="td-check"><i class="flaticon-check"></i></td>
-                        <% }); %>   
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Emails Per Hour</td>
@@ -421,7 +533,7 @@
                             <td>
                                 <%= sharedHostingPlan.features.emailPerHour %>
                             </td>
-                        <% }); %>
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">MySQL Databases</td>
@@ -429,31 +541,31 @@
                             <td>
                                 Unlimited
                             </td>
-                        <% }); %>
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Softaculous Script Installer</td>
                         <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
                             <td class="td-check"><i class="flaticon-check"></i></td>
-                        <% }); %>   
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">24/7 Support </td>
                         <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
                             <td class="td-check"><i class="flaticon-check"></i></td>
-                        <% }); %>   
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg">Instant Setup </td>
                         <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
                             <td class="td-check"><i class="flaticon-check"></i></td>
-                        <% }); %>   
+                            <% }); %>
                     </tr>
                     <tr>
                         <td class="td-list-name td-bg"> </td>
                         <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
                             <td class="td-orange"><a href="<%= billingURL %>">Order Now</a></td>
-                        <% }); %>   
+                            <% }); %>
                     </tr>
                 </tbody>
             </table>

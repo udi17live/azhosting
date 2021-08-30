@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     product_name: DataTypes.STRING,
     my_custom_product_name: DataTypes.STRING,
     final_cost: DataTypes.STRING,
+    monthly_cost: DataTypes.DECIMAL(10.2),
     diskspace: DataTypes.STRING,
     bandwidth: DataTypes.STRING,
     dedicated_ip: DataTypes.STRING,

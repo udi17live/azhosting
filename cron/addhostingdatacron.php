@@ -1,16 +1,16 @@
 <?php
-$base_url = "https://azpirehosting.com/api";
+$base_url = "https://azpire-hosting.com/api";
 $token = "BA6A77233776A92C8FEB3BA54CAD2820";
 
 //Create MySQl Connection
-$db_handle  = mysqli_connect('localhost','azpitete_azh_dev_user','nq7)GFa8F[e4');
+$db_handle  = mysqli_connect('localhost','azpire_azh_prod_usr','Aq2LaSRi7!3@');
 
 // Check connection
 if ( !$db_handle ) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-mysqli_select_db($db_handle, azpitete_azh_dev);
+mysqli_select_db($db_handle, 'azpire_azh_prod');
 
 //Add Domains to DB
 $table = "Domains";
@@ -58,7 +58,7 @@ foreach ($shared_hosting_plans as $shared_hosting_plan) {
     $date = date('Y-m-d H:i:s', time());
     
     if (!$result){
-        $query = "INSERT INTO $table(hosting_type,product_name,my_custom_product_name,final_cost,diskspace,bandwidth,dedicated_ip,backups,hosted_domains,sub_domains,email_accounts,email_per_hour,createdAt,updatedAt) VALUES ('$shared_hosting_plan->hosting_type','$shared_hosting_plan->product_name','$shared_hosting_plan->my_custom_product_name','$shared_hosting_plan->final_cost','$shared_hosting_plan->diskspace','$shared_hosting_plan->bandwidth','$shared_hosting_plan->dedicated_ip','$shared_hosting_plan->backups','$shared_hosting_plan->hosted_domains','$shared_hosting_plan->sub_domains','$shared_hosting_plan->email_accounts','$shared_hosting_plan->email_per_hour','$date','$date' );";
+        $query = "INSERT INTO $table(hosting_type,product_name,my_custom_product_name,final_cost, monthly_cost,diskspace,bandwidth,dedicated_ip,backups,hosted_domains,sub_domains,email_accounts,email_per_hour,createdAt,updatedAt) VALUES ('$shared_hosting_plan->hosting_type','$shared_hosting_plan->product_name','$shared_hosting_plan->my_custom_product_name','$shared_hosting_plan->final_cost','$shared_hosting_plan->final_monthly_cost','$shared_hosting_plan->diskspace','$shared_hosting_plan->bandwidth','$shared_hosting_plan->dedicated_ip','$shared_hosting_plan->backups','$shared_hosting_plan->hosted_domains','$shared_hosting_plan->sub_domains','$shared_hosting_plan->email_accounts','$shared_hosting_plan->email_per_hour','$date','$date' );";
         $result = mysqli_query($db_handle,$query);
         if (!$result){
             echo "Adding record $shared_hosting_plan->product_name failed to table $table <br>";
@@ -67,7 +67,7 @@ foreach ($shared_hosting_plans as $shared_hosting_plan) {
         }
     }else{
         $id = $result['id'];
-        $query = "UPDATE $table SET product_name='$shared_hosting_plan->product_name',my_custom_product_name='$shared_hosting_plan->my_custom_product_name', final_cost='$shared_hosting_plan->final_cost', diskspace='$shared_hosting_plan->diskspace',bandwidth='$shared_hosting_plan->bandwidth', dedicated_ip='$shared_hosting_plan->dedicated_ip',backups='$shared_hosting_plan->backups', hosted_domains='$shared_hosting_plan->hosted_domains',sub_domains='$shared_hosting_plan->sub_domains',email_accounts='$shared_hosting_plan->email_accounts',email_per_hour='$shared_hosting_plan->email_per_hour', updatedAt='$date' WHERE id=$id;";
+        $query = "UPDATE $table SET product_name='$shared_hosting_plan->product_name',my_custom_product_name='$shared_hosting_plan->my_custom_product_name', final_cost='$shared_hosting_plan->final_cost', monthly_cost='$shared_hosting_plan->final_monthly_cost',diskspace='$shared_hosting_plan->diskspace',bandwidth='$shared_hosting_plan->bandwidth', dedicated_ip='$shared_hosting_plan->dedicated_ip',backups='$shared_hosting_plan->backups', hosted_domains='$shared_hosting_plan->hosted_domains',sub_domains='$shared_hosting_plan->sub_domains',email_accounts='$shared_hosting_plan->email_accounts',email_per_hour='$shared_hosting_plan->email_per_hour', updatedAt='$date' WHERE id=$id;";
         $result = mysqli_query($db_handle,$query);
         if (!$result){
             echo "Updating $shared_hosting_plan->product_name record in $table failed <br>";
