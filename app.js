@@ -43,6 +43,11 @@ app.use(function(req, res, next) {
 
 //Routes
 app.use('/', require('./routes/index'));
+app.get('*', function(req, res){
+  res.status(404);
+  res.render('404',{title:"Oops,Page Not found"});
+});
+
 
 const PORT = process.env.PORT || 5000;
 

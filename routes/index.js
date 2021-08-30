@@ -328,6 +328,8 @@ router.get('/aup', (req, res) => res.render('legal/aup',{title: 'Acceptable Use 
 router.get('/contact-us', (req, res) => res.render('contact-us',{title: 'Contact Us'}));
 router.post('/contact-us', async function (req, res) {
 
+    return res.json({ success: false, msg: 'An unknown error occured. Please reachout to us by sending an email to hello@azpirehosting.com or login to your Panel via https://panel.azpire-hosting.com/login to open a support ticket. This will be fixed soon. We appologize for any inconvenience caused' });
+
     const { name, email, phoneNumber, subject, message, captcha } = req.body;
     
     if (!req.body.captcha){
@@ -374,12 +376,12 @@ router.post('/contact-us', async function (req, res) {
         "Messages": [
             {
                 "From": {
-                    "Email": "forms@azpirehosting.info",
+                    "Email": "forms@azpirehosting.com",
                     "Name": "CF from Azpire Hosting"
                 },
                 "To": [
                     {
-                        "Email": "hello@azpirehosting.info",
+                        "Email": "hello@azpirehosting.com",
                         "Name": "Azpire Hosting Client"
                     }
                 ],
@@ -417,6 +419,5 @@ router.post('/contact-us', async function (req, res) {
 
 router.get('/freq-ask-q', (req, res) => res.render('faq',{title: 'Frequently Asked Questions (FAQ) '}));
 router.get('/about-us', (req, res) => res.render('about-us',{title: 'About Us'}));
-
 
 module.exports = router;
