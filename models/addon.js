@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Domain extends Model {
+  class Addon extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,13 +13,15 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   };
-  Domain.init({
-    tld: DataTypes.STRING,
-    final_cost: DataTypes.DOUBLE,
-    renewal_cost: DataTypes.DOUBLE
+  Addon.init({
+    addon_type: DataTypes.STRING,
+    addon_code: DataTypes.STRING,
+    cost: DataTypes.STRING,
+    features: DataTypes.STRING,
+    term: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Domain',
+    modelName: 'Addon',
   });
-  return Domain;
+  return Addon;
 };

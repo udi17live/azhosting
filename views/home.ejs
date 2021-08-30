@@ -1,397 +1,489 @@
-<div class="mt-auto header-top-height"></div>
-<main class="container mb-auto">
-    <div class="carousel carousel-main">
-        <div class="carousel-cell">
-            <h3 class="mt-3 main-header-text-title"><span>The most affordable Domain</span>secure and
-                guaranteed <small>Hurry! Order Now.</small></h3>
-            <form action="https://azpirehosting.com/bill/index.php" id="domain-search-header"
-                class="col-md-6" method="POST">
-                <i class="fas fa-globe"></i>
-                <input type="text" placeholder="search for you domain now" id="domain" name="domain">
-                <span class="inline-button-domain-order">
-                    <button data-toggle="tooltip" data-placement="left" title="transfer" id="transfer-btn" type="submit"
-                        name="transfer" value="Transfer"><i class="fas fa-undo"></i></button>
-                    <button data-toggle="tooltip" data-placement="left" title="search" id="search-btn" type="submit"
-                        name="submit" value="Search"><i class="fas fa-search"></i></button>
-                </span>
-            </form>
-            <span class="col-md-6 domain-search-header-pricetext">starting at <b>$<%= minDomainCost %>/year</b></span>
-            <div class="owl-theme owl-domain-prices-previw col-md-7">
-                <div class="domain-name-classes item">
-                    <div class="domain-img"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483279/azh/domain/black/com_alqmih.png" alt="" /></div>
-                    <span class="price">$<%= domains.com %></span>
-                    <span class="features-domains">
-                        <a data-toggle="tooltip" data-placement="right" title="on sale"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483557/azh/svgs/Time_xpzm7l.svg"
-                                alt="" /></a>
-                        <a data-toggle="tooltip" data-placement="right" title="secure"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483555/azh/svgs/Locked_qwfcc0.svg"
-                                alt="" /></a>
-                    </span>
-                </div>
-                <div class="domain-name-classes item">
-                    <div class="domain-img"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483279/azh/domain/black/net_tou2qh.png" alt="" /></div>
-                    <span class="price">$<%= domains.net %></span>
-                    <span class="features-domains">
-                        <a data-toggle="tooltip" data-placement="right" title="on sale"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483557/azh/svgs/Time_xpzm7l.svg"
-                                alt="" /></a>
-                        <a data-toggle="tooltip" data-placement="right" title="secure"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483555/azh/svgs/Locked_qwfcc0.svg"
-                                alt="" /></a>
-                    </span>
-                </div>
-                <div class="domain-name-classes item">
-                    <div class="domain-img"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483279/azh/domain/black/org_c6dm0m.png" alt="" /></div>
-                    <span class="price">$<%= domains.org %></span>
-                    <span class="features-domains">
-                        <a data-toggle="tooltip" data-placement="right" title="on sale"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483557/azh/svgs/Time_xpzm7l.svg"
-                                alt="" /></a>
-                        <a data-toggle="tooltip" data-placement="right" title="secure"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483555/azh/svgs/Locked_qwfcc0.svg"
-                                alt="" /></a>
-                    </span>
-                </div>
-                <div class="domain-name-classes item">
-                    <div class="domain-img"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483279/azh/domain/black/store_j6nthk.png" alt="" /></div>
-                    <span class="price">$<%= domains.store %></span>
-                    <span class="features-domains">
-                        <a data-toggle="tooltip" data-placement="right" title="on sale"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483557/azh/svgs/Time_xpzm7l.svg"
-                                alt="" /></a>
-                        <a data-toggle="tooltip" data-placement="right" title="secure"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483555/azh/svgs/Locked_qwfcc0.svg"
-                                alt="" /></a>
-                    </span>
-                </div>
-                <div class="domain-name-classes item">
-                    <div class="domain-img"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483279/azh/domain/black/net_tou2qh.png" alt="" /></div>
-                    <span class="price">$<%= domains.net %></span>
-                    <span class="features-domains">
-                        <a data-toggle="tooltip" data-placement="right" title="on sale"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483557/azh/svgs/Time_xpzm7l.svg"
-                                alt="" /></a>
-                        <a data-toggle="tooltip" data-placement="right" title="secure"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483555/azh/svgs/Locked_qwfcc0.svg"
-                                alt="" /></a>
-                    </span>
-                </div>
-                <div class="domain-name-classes item">
-                    <div class="domain-img"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483279/azh/domain/black/store_j6nthk.png" alt="" /></div>
-                    <span class="price">$<%= domains.store %></span>
-                    <span class="features-domains">
-                        <a data-toggle="tooltip" data-placement="right" title="on sale"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483557/azh/svgs/Time_xpzm7l.svg"
-                                alt="" /></a>
-                        <a data-toggle="tooltip" data-placement="right" title="secure"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483555/azh/svgs/Locked_qwfcc0.svg"
-                                alt="" /></a>
-                    </span>
-                </div>
-                <div class="domain-name-classes item">
-                    <div class="domain-img"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483279/azh/domain/black/com_alqmih.png" alt="" /></div>
-                    <span class="price">$<%= domains.com %></span>
-                    <span class="features-domains">
-                        <a data-toggle="tooltip" data-placement="right" title="on sale"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483557/azh/svgs/Time_xpzm7l.svg"
-                                alt="" /></a>
-                        <a data-toggle="tooltip" data-placement="right" title="secure"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483555/azh/svgs/Locked_qwfcc0.svg"
-                                alt="" /></a>
-                    </span>
-                </div>
-                <div class="domain-name-classes item">
-                    <div class="domain-img"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483279/azh/domain/black/net_tou2qh.png" alt="" /></div>
-                    <span class="price">$<%= domains.net %></span>
-                    <span class="features-domains">
-                        <a data-toggle="tooltip" data-placement="right" title="on sale"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483557/azh/svgs/Time_xpzm7l.svg"
-                                alt="" /></a>
-                        <a data-toggle="tooltip" data-placement="right" title="secure"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483555/azh/svgs/Locked_qwfcc0.svg"
-                                alt="" /></a>
-                    </span>
+<div class="container-fluid">
+    <div class="row align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="header-width header-main-content-three desk-ml-auto">
+                <!-- <div class="header-content-tab">
+                    <div class="header-tab-shadow">
+                        <div class="header-tab-shadow-inner"></div>
+                    </div>
+                    <div class="header-tab-alert"><i class="flaticon-bell-1"></i></div>
+                    <div class="header-tab-content">30% Discount on first annual purchase</div>
+                </div> -->
+                <h1>Experience <span>Cheaper, Faster and Reliable</span> Web Hosting</h1>
+                <ul class="header-content-list">
+                    <li><i class="flaticon-tick"></i>Unlimited Diskspace and Bandwidth</li>
+                    <li><i class="flaticon-tick"></i>Free Migrations </li>
+                    <li><i class="flaticon-tick"></i>Easy Wordpress install</li>
+                    <li><i class="flaticon-tick"></i>7 Day Money Back Gurantee</li>
+                    <li><i class="flaticon-tick"></i>24/7 Online Support </li>
+                </ul>
+                <div class="domain-search domain-search-three">
+                    <form  action="<%= process.env.RESELLER_HOSTING_URL %>/bill/index.php" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="domain" class="form-control" placeholder="Find Your Domain" required>
+                            <div class="input-group-append">
+                                <!-- <select class="form-control">
+                                    <option value="1">.com</option>
+                                    <option value="2">.co</option>
+                                    <option value="3">.net</option>
+                                </select> -->
+                            </div>
+                            <button class="btn btn-gradient">Search Now</button>
+                        </div>
+                        <small>Over 400 Top Level Domains starting from <b>$<%= minDomainCost %>/yr</b></small>
+                    </form>
+                    <div class="domain-search-category">
+                        <ul>
+                            <% domains.forEach((domain, index) => { %>
+                                <li>
+                                    <a href="#" class="<%= index != 0 ? '': 'active' %>">.<%= domain.tld %>  only $<%= domain.cost %></a>
+                                </li>
+                            <% }); %> 
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="carousel-cell">
-            <div class="row hosting-header-slider-cell">
-                <div class="col-md-6">
-                    <h3 class="mt-3 main-header-text-title">
-                        <i class="circle-sub-title-header-slider">the best web hosting provider</i>
-                        Perfect Plans For Getting <br>Started
-                        <small>order yours now</small>
-                    </h3>
-                    <p class="text-sub-title-header-slider">Quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                        velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    <a class="btn-sub-title-header-slider" href="dedicated.html">start now</a>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="header-content-image">
+                <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1625840350/azh_newui/header-clipart-3_y2ktq9.png" alt="clipart">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header-shape-content">
+    <div class="header-shape-item">
+        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1625840351/azh_newui/header-shape-3_oremyk.png" alt="shape">
+    </div>
+</div>
+</header>
+
+
+<section class="feature-section pt-100 pb-70">
+<div class="container">
+    <div class="section-title section-title-two">
+        <h2>Shared Hosting features</h2>
+        <p>Our shared hosting plans with a guaranteed uptime of 100% is fully cloud based, are fast, cheap and reliable.</p>
+    </div>
+    <div class="feature-tab-area">
+        <div class="feature-tab d-flex flex-wrap justify-content-center justify-content-lg-start">
+            <div class="feature-tab-item active" data-feature-tab="1">
+                <div class="feature-tab-item-inner pink-bg-with-border">
+                    <div class="feature-tab-icon">
+                        <i class="flaticon-forward"></i>
+                    </div>
+                    Get Unlimited Resources
                 </div>
-                <div class="col-md-6 text-center">
-                    <img class="hosting-header-slider-cell-img" src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483438/azh/header/slider/header-bg_rwsrsl.png" alt="" />
+            </div>
+            <div class="feature-tab-item" data-feature-tab="2">
+                <div class="feature-tab-item-inner blue-bg-with-border">
+                    <div class="feature-tab-icon">
+                        <i class="flaticon-email"></i>
+                    </div>
+                    Get Free Email
+                </div>
+            </div>
+            <div class="feature-tab-item" data-feature-tab="3">
+                <div class="feature-tab-item-inner yellow-bg-with-border">
+                    <div class="feature-tab-icon">
+                        <i class='bx bxl-wordpress' ></i>
+                    </div>
+                    Easy Wordpress
+                </div>
+            </div>
+            <div class="feature-tab-item" data-feature-tab="4">
+                <div class="feature-tab-item-inner pink-bg-with-border">
+                    <div class="feature-tab-icon">
+                        <i class="flaticon-desktop"></i>
+                    </div>
+                    Free Website CPanel
+                </div>
+            </div>
+        </div>
+        <div class="feature-tab-content">
+            <div class="feature-tab-content-item active" data-feature-details="1">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-5 col-lg-5 pb-30">
+                        <div class="feature-tab-image">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627157516/azh_newui/illustrations/resources_large_ozl7rt.png" alt="Unlimited Diskspace and Bandwidth">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-7 col-lg-7 pb-30">
+                        <div class="desk-pad-left-20 feature-item-content">
+                            <h3>Unlimited Diskspace and Bandwidth</h3>
+                            <p>Yes you read that correct. All our Shared hosting plans come with Unlimited Diskspace and Bandwith. No need to worry about storing your files or the number of users coming to visit your dream site.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-tab-content-item" data-feature-details="2">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-7 col-lg-7 pb-30">
+                        <div class="desk-pad-left-20 feature-item-content">
+                            <h3>Get Free Email</h3>
+                            <p>We include free email, because why not? Business emails are a big part of your business and we dont want to restrict that for you. With our unlimited diskspace you dont ever have to worry about email server space.Certain plans allow upto unlimited email addresses for your company domain.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-5 col-lg-5 pb-30">
+                        <div class="feature-tab-image">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627157506/azh_newui/illustrations/email_large_f324pp.png" alt="Get Free Email">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-tab-content-item" data-feature-details="3">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-5 col-lg-5 pb-30">
+                        <div class="feature-tab-image">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627157504/azh_newui/illustrations/easy_large_bayfdj.png" alt="Easy Wordpress Install">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-7 col-lg-7 pb-30">
+                        <div class="desk-pad-left-20 feature-item-content">
+                            <h3>Easy Wordpress Install</h3>
+                            <p>All our plans are equiped with Softaculous app installer. This allows you to easily install Wordpress and 100+ applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-tab-content-item" data-feature-details="4">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-7 col-lg-7 pb-30">
+                        <div class="desk-pad-left-20 feature-item-content">
+                            <h3>Free CPanel</h3>
+                            <p>Yes, we are using the most popular web hosting management software for all our shared hosting customers. This comes for free!</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-5 col-lg-5 pb-30">
+                        <div class="feature-tab-image">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627157460/azh_newui/illustrations/panel_large_n6n9vh.png" alt="Free CPanel">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <nav class="nav-header-chage nav--shamso carousel-nav">
-        <button class="nav__item nav__item--current carousel-cell" aria-label="Item 1"><span
-                class="nav__item-title">Domains</span></button>
-        <button class="nav__item carousel-cell" aria-label="Item 2"><span
-                class="nav__item-title">Hosting</span></button>
-    </nav>
-</main>
-<div class="mt-auto"></div>
+</div>
+</section>
+
+
+<div class="offer-section position-relative section-ptb-180 overflow-hidden">
+<div class="cloud-shape-bg">
+    <div class="cloud-shape-image">
+        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1625840344/azh_newui/cloud-shape-1_logtkv.png" alt="shape">
+    </div>
+</div>
+<div class="container position-relative">
+    <div class="row margin-minus-box">
+        <div class="col-sm-12 col-lg-6">
+            <div class="feature-item fluid-height">
+                <div class="feature-item-inner full-height bg-white">
+                    <div class="feature-item-thumb">
+                        <i class="flaticon-cloud-computing"></i>
+                    </div>
+                    <div class="feature-item-content">
+                        <h3>Dedicated Hosting</h3>
+                        <p>If you are looking for the best Dedicated servers for your business then Azpirehosting's Dedicated Servers  are the solution. We have high performing servers at affordable prices to truly deliver the power that you need.</p>
+                        <p><a href="/ded" class="gradient-text">Learn More <span><i
+                                        class='bx bx-chevron-right'></i></span></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+            <div class="feature-item fluid-height">
+                <div class="feature-item-inner full-height bg-white">
+                    <div class="feature-item-thumb">
+                        <i class="flaticon-cloud-hosting"></i>
+                    </div>
+                    <div class="feature-item-content">
+                        <h3>VPS Cloud Hosting</h3>
+                        <p>Faster, cheaper VPS Cloudserver with a 100% uptime gurantee.</p>
+                        <p><a href="/vps-cloud" class="gradient-text">Learn More <span><i
+                                        class='bx bx-chevron-right'></i></span></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
-<div class="padding-100-0-0"></div>
 
-<section class="padding-100-0-50">
-    <div class="container">
-        <h5 class="title-default-coodiv-two">Why Choose Azpire Hosting & Domains?</h5>
-        <div class="row justify-content-start">
-            <div class="col-md-4">
-                <div class="icon-hom-page-service-holder"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483571/azh/svgs/Detailed/Battery_balazu.svg" alt="" /></div>
-                <h5 class="icon-hom-page-service-title">Faster Website Loading</h5>
-                <p class="icon-hom-page-service-text">Websites hosted on our servers are really fast. Just try it out your self. We can provide you a refund if you are not happy.
-                 *T&C Apply</p>
-            </div>
-            <div class="col-md-4">
-                <div class="icon-hom-page-service-holder"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483571/azh/svgs/Detailed/Download_qbsxa0.svg" alt="" /></div>
-                <h5 class="icon-hom-page-service-title">Easy WordPress Install</h5>
-                <p class="icon-hom-page-service-text">Spinning up a WordPress website for your business has never been easy. Our shared hosting servers are equipped with Softaculous App Installer, where you can install WordPress and hundreds of other apps. </p>
-            </div>
-            <div class="col-md-4">
-                <div class="icon-hom-page-service-holder"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483571/azh/svgs/Detailed/VR_shkazn.svg" alt="" /></div>
-                <h5 class="icon-hom-page-service-title">24/7 365 Support</h5>
-                <p class="icon-hom-page-service-text">We provide support to our customers via a customer ticketing system. Although we don’t believe you would have a problem,  just let us know. We will guide you happily. </p>
-            </div>
-            <div class="col-md-4">
-                <div class="icon-hom-page-service-holder"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483571/azh/svgs/Detailed/Charger_juph4c.svg" alt="" /></div>
-                <h5 class="icon-hom-page-service-title">From Small to Large Scale</h5>
-                <p class="icon-hom-page-service-text">Whether you are a small business trying to host your site or an enterprise looking for high end hardware, our plans ranging from Shared hosting to Dedicated Servers will suit you.</p>
-            </div>
-            <div class="col-md-8 mr-tp-60 hom-page-service-more">
-                <span class="hom-page-service-more-banner"><img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483093/azh/bg/cercle_cqby0q.png" alt="" /></span>
-                <h5 class="hom-page-service-more-title">check out our latest offers <span>Simply Dummy Text Of The
-                        Printing And Typesetting Industry</span></h5>
-                <form
-                    action="https://codeoxy.us16.list-manage.com/subscribe/post?u=49eb75689a0b6e7eb66b67e51&amp;id=4366ef611f"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                    class="validate hom-page-service-more-form" target="_blank" novalidate>
-                    <div id="mc_embed_signup_scroll">
-                        <div class="mc-field-group">
-                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+<section class="choose-section pt-100 pb-70">
+<div class="container">
+    <div class="section-title section-title-two">
+        <small>Why choose Azpire Shared Web Hosting</small>
+        <h2>Loads to Offer</h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="box-card fluid-height">
+                <div class="box-card-inner box-card-primary full-height">
+                    <div class="box-card-content text-center">
+                        <div class="box-card-thumb">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627156089/azh_newui/illustrations/free_migration_bpwyki.png" alt="Free Migration">
                         </div>
-                        <div id="mce-responses" class="clear">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        <div class="box-card-details">
+                            <h3>Free Migration</h3>
+                            <p>We provide a free migration service to all your customers so that the whole process migration will be seamless.</p>
                         </div>
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                                name="b_49eb75689a0b6e7eb66b67e51_4366ef611f" tabindex="-1" value=""></div>
-                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe"
-                                id="mc-embedded-subscribe" class="button"></div>
                     </div>
-                </form>
-                <script type='text/javascript'>
-                    (function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'BIRTHDAY'; ftypes[3] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);
-                </script>
-
-                <div class="hom-page-service-more-payment">
-                    <a data-toggle="tooltip" data-placement="top" title="accepting visa" href="#"><img
-                            src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483481/azh/payment/icon-visa_kyuucl.png" alt="" /></a>
-                    <a data-toggle="tooltip" data-placement="top" title="accepting maestro" href="#"><img
-                            src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483481/azh/payment/icon-maestro_kigghm.png" alt="" /></a>
-                    <a data-toggle="tooltip" data-placement="top" title="accepting bitcoin" href="#"><img
-                            src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483481/azh/payment/icon-bitcoin_wwkflo.png" alt="" /></a>
                 </div>
-
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="box-card fluid-height">
+                <div class="box-card-inner box-card-secondary full-height">
+                    <div class="box-card-content text-center">
+                        <div class="box-card-thumb">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627156089/azh_newui/illustrations/instant_setup_u0grpz.png" alt="Instant Setup">
+                        </div>
+                        <div class="box-card-details">
+                            <h3>Instant Setup</h3>
+                            <p>Immediately the payment is successful, the account is created and login details are automatically sent by the system.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 offset-md-3 offset-lg-0">
+            <div class="box-card fluid-height">
+                <div class="box-card-inner box-card-warning full-height">
+                    <div class="box-card-content text-center">
+                        <div class="box-card-thumb">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627156089/azh_newui/illustrations/backup_lvyw8l.png" alt="Free Backup">
+                        </div>
+                        <div class="box-card-details">
+                            <h3>Free Backup</h3>
+                            <p>We provide a free backup service for the Large Scale shared hosting plan at no additional cost. This is important incase of any data loss.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <div class="col text-center">
+        <a href="/shared-web-hosting#features" class="btn btn-gradient btn-pill">Learn More</a>
+    </div>
+</div>
 </section>
-<section class="padding-100-0 position-relative">
-    <div class="body_overlay_ono"></div>
-    <div class="container">
-        <h5 class="title-default-coodiv-two">check out awesome plans, and order now <span class="mr-tp-20">chose
-                which package is best for you.</span></h5>
-        <div class="row justify-content-start second-pricing-table-container mr-tp-30">
-            <div class="col-md-3">
-                <div class="second-pricing-table">
-                    <h5 class="second-pricing-table-title">Shared Hosting <span>Stating as low as</span></h5>
-                    <span class="second-pricing-table-price">
-                        <i class="monthly">$<%= minSharedHostingPrice %><small>/mo</small></i>
-                    </span>
-                    <ul class="second-pricing-table-body">
+
+
+<div class="platform-section pb-70">
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-sm-12 col-lg-6">
+            <div class="about-content-item pb-30">
+                <div class="about-content-data">
+                    <div class="about-text">
+                        <h3>Dedicated Client-End Support</h3>
+                        <p>Join Azpire Hosting for a worry free web hosting experience</p>
+                    </div>
+                    <ul class="about-list">
+                        <li>
+                            <div class="about-list-check about-list-check-off-white"><i
+                                    class="flaticon-tick"></i></div>
+                            <div class="about-list-content">
+                                <h3>100% Uptime</h3>
+                                <p>Our cloud infrastructure guarantees a 100% uptime network.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="about-list-check about-list-check-off-white"><i
+                                    class="flaticon-tick"></i></div>
+                            <div class="about-list-content">
+                                <h3>24/7 Customer Support</h3>
+                                <p>We work round the clock just to make sure all customers are enjoying their value for money. Customers get responses via the support ticket channel.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="about-list-check about-list-check-off-white"><i
+                                    class="flaticon-tick"></i></div>
+                            <div class="about-list-content">
+                                <h3>7 Days Money Back Guaranteed</h3>
+                                <p>For new accounts using our shared hosting servers, there is a 7 days Money back guaranteed system, its automated and true!</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+            <div class="about-content-item desk-pad-left-30 pb-30">
+                <div class="about-content-image image-margin-left">
+                    <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627157878/azh_newui/illustrations/support_gfsjdu.png" alt="support">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<section class="pricing-section position-relative pt-100 pb-50" id="hosting">
+<div class="cloud-shape-bg-fixed bg-off-white-two">
+    <div class="cloud-shape-image">
+        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1625840344/azh_newui/cloud-shape-1_logtkv.png" alt="shape">
+    </div>
+</div>
+<div class="container position-relative">
+    <div class="section-title section-title-two">
+        <h2>Check out our awesome plans</h2>
+        <p>There is a plan for everyone</p>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="pricing-item pricing-item-two">
+                <div class="pricing-secondary-header">
+                    <div class="pricing-header-title">
+                        <h3 class="pricing-header-title-text">Shared Hosting</h3>
+                        <p>Cheap Unlimited Hosting</p>
+                    </div>
+                    <div class="pricing-item-amount">
+                        <p>Starting at</p>
+                        <h4 class="pricing-item-amount-number"><small>$</small><%= minSharedHostingPrice %><span>/Month</span></h4>
+                    </div>
+                </div>
+                <div class="pricing-item-body">
+                    <ul class="pricing-body-list pricing-body-list-two">
                         <li>Free SSL</li>
+                        <li>Easy Wordpress Install</li>
                         <li>Unlimited Disk Space</li>
                         <li>Unlimited Bandwidth</li>
                         <li>24/7 Support</li>
                     </ul>
-                    <a class="second-pricing-table-button" href="/shared-web-hosting">All Plans</a>
+                    <a href="/shared-web-hosting" class="btn btn-gradient">All Plans</a>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="second-pricing-table active">
-                    <h5 class="second-pricing-table-title">VPS Cloud <span>Stating as low as</span></h5>
-                    <span class="second-pricing-table-price">
-                        <i class="monthly">$<%= minVpsCloudPrice %><small>/mo</small></i>
-                    </span>
-                    <ul class="second-pricing-table-body">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="pricing-item pricing-item-two">
+                <div class="pricing-secondary-header">
+                    <div class="pricing-header-title">
+                        <h3 class="pricing-header-title-text">VPS Cloud Hosting</h3>
+                        <p>Affordable VPS Hosting</p>
+                    </div>
+                    <div class="pricing-item-amount">
+                        <p>Starting at</p>
+                        <h4 class="pricing-item-amount-number"><small>$</small><%= minVpsCloudPrice %><span>/Month</span></h4>
+                    </div>
+                </div>
+                <div class="pricing-item-body">
+                    <ul class="pricing-body-list pricing-body-list-two">
                         <li>Upto 8 vCPU Cores</li>
                         <li>Upto 640GB SSD</li>
                         <li>Upto 7TB Transfers</li>
+                        <li>1 Dedicated IP</li>
                         <li>24/7 Support</li>
                     </ul>
-                    <a class="second-pricing-table-button" href="/vps-cloud">All Plans</a>
+                    <a href="/vps-cloud" class="btn btn-gradient">All Plans</a>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="second-pricing-table">
-                    <h5 class="second-pricing-table-title">VPS Hosting <span>Stating as low as</span></h5>
-                    <span class="second-pricing-table-price monthly">
-                        <i class="monthly">$<%= minVpsPrice %><small>/mo</small></i>
-                    </span>
-                    <ul class="second-pricing-table-body">
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="pricing-item pricing-item-two">
+                <div class="pricing-secondary-header">
+                    <div class="pricing-header-title">
+                        <h3 class="pricing-header-title-text">VPS Hosting</h3>
+                        <p>Powerful VPS Hosting</p>
+                    </div>
+                    <div class="pricing-item-amount">
+                        <p>Starting at</p>
+                        <h4 class="pricing-item-amount-number"><small>$</small><%= minVpsPrice %><span>/Month</span></h4>
+                    </div>
+                </div>
+                <div class="pricing-item-body">
+                    <ul class="pricing-body-list pricing-body-list-two">
                         <li>Upto 10 vCPU Cores</li>
                         <li>Upto 1.6TB SSD</li>
                         <li>32TB Monthly Transfers</li>
+                        <li>Upto 1 Gbit/s Port</li>
                         <li>24/7 Support</li>
                     </ul>
-                    <a class="second-pricing-table-button" href="/vps">All Plans</a>
+                    <a href="/vps" class="btn btn-gradient">All Plans</a>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="second-pricing-table active">
-                    <h5 class="second-pricing-table-title">Dedicated Servers <span>Stating as low as</span></h5>
-                    <span class="second-pricing-table-price">
-                        <i class="monthly">$<%= minDedicatedServerPrice %><small>/mo</small></i>
-                    </span>
-                    <ul class="second-pricing-table-body">
-                        <li>Upto 12 Cores</li>
-                        <li>Upto 4TB Storage</li>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="pricing-item pricing-item-two">
+                <div class="pricing-secondary-header">
+                    <div class="pricing-header-title">
+                        <h3 class="pricing-header-title-text">Dedicated Servers</h3>
+                        <p>Dedicated to performance</p>
+                    </div>
+                    <div class="pricing-item-amount">
+                        <p>Starting at</p>
+                        <h4 class="pricing-item-amount-number"><small>$</small><%= minDedicatedServerPrice %><span>/Month</span></h4>
+                    </div>
+                </div>
+                <div class="pricing-item-body">
+                    <ul class="pricing-body-list pricing-body-list-two">
+                        <li>Upto 40 Cores</li>
+                        <li>Upto 10x 1TB SAS</li>
                         <li>200TB Monthly Transfer</li>
+                        <li>Upto 10Gbps Port</li>
                         <li>24/7 Support</li>
                     </ul>
-                    <a class="second-pricing-table-button" href="/ded">All Plans</a>
+                    <a href="/ded" class="btn btn-gradient">All Plans</a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </section>
-<section class="our-pertners">
-    <div class="container">
-        <h2 class="d-none">our pertners</h2>
-        <div class="owl-carousel pertners-carousel owl-theme">
-            <div class="item">
-                <a href="#"> <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483500/azh/partners/logo1_qdjf2x.png" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483500/azh/partners/logo2_omps4d.png" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483500/azh/partners/logo3_m3r1tk.png" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483500/azh/partners/logo4_maz5zr.png" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483500/azh/partners/logo5_elcnfy.png" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483500/azh/partners/logo1_qdjf2x.png" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483500/azh/partners/logo2_omps4d.png" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483500/azh/partners/logo3_m3r1tk.png" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483500/azh/partners/logo4_maz5zr.png" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483500/azh/partners/logo5_elcnfy.png" alt="" /> </a>
-            </div>
-        </div>
+
+
+<!-- <section class="testimonial-section bg-off-white position-relative overflow-hidden">
+<div class="cloud-shape-top">
+    <div class="cloud-shape-image">
+        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1625840344/azh_newui/cloud-shape-1_logtkv.png" alt="shape">
     </div>
-</section>
-<section class="section-wth-amwaj">
-    <div class="bg_overlay_section-amwaj">
-        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483094/azh/bg/b_bg_02_o4jwyg.jpg" alt="img-bg">
+</div>
+<div class="container">
+    <div class="section-title">
+        <small>Testimonials</small>
+        <h2>What clients are saying</h2>
     </div>
-    <div class="container">
-        <div class="row justify-content-between mr-tp-50">
-            <div class="col-md-6 side-text-right-container">
-                <h2 class="side-text-right-title">We are with you ,<br> every step of the way</h2>
-                <p class="side-text-right-text">
-                    Whether you are looking for a <b>personal</b> website hosting plan or a <b>business</b> website
-                    hosting plan, We are the perfect solution for you. Our powerful website hosting services will
-                    not only help you achieve your overall website goals, but will also provide you with the
-                    confidence you need in knowing that you are partnered with a <a href="#">reliable</a> and <a
-                        href="#">secure</a> website hosting platform.
-                    <br>
-                    <br> We are one of the easiest website hosting platforms to use, and remain committed to
-                    providing our customers with one of the best hosting solutions on the market.
-                <p>
-                    <a class="side-text-right-button" href="#">start with us now</a>
+    <div class="client-carousel-content">
+        <div class="client-carousel owl-carousel owl-theme">
+            <div class="item">
+                <div class="row align-items-end">
+                    <div class="col-sm-12 col-md-12 col-lg-5">
+                        <div class="client-image">
+                            <img src="assets/images/slider-1.png" alt="client">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 pb-100">
+                        <div class="client-carousel-details text-center text-lg-start">
+                            <p class="client-carousel-para">Lorem ipsum dolor sit amet, consectetur elit, sed do
+                                eiusmod tempor incididunt ut labore dolore. Lorem ipsum dolor sit amet elit,
+                                consectetur adipisicing amet.</p>
+                            <h3 class="client-carousel-name">Devit m. kotlin</h3>
+                            <h4 class="client-carousel-designation">CEO & Founder</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-5">
-                <div class="display-on-hover-box-container">
-                    <a href="#tab1" class="display-on-hover-box-items">
-                        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483593/azh/svgs/hover-box/quality-badge_xwejcx.svg" alt="" />
-                    </a>
-                    <a href="#tab2" class="display-on-hover-box-items">
-                        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483593/azh/svgs/hover-box/inclined-rocket_bvb9lz.svg" alt="" />
-                    </a>
-                    <a href="#tab3" class="display-on-hover-box-items">
-                        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483593/azh/svgs/hover-box/public-speech_stdp6z.svg" alt="" />
-                    </a>
-                    <a href="#tab4" class="display-on-hover-box-items">
-                        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483593/azh/svgs/hover-box/big-light_z1takh.svg" alt="" />
-                    </a>
-                    <a href="#tab5" class="display-on-hover-box-items">
-                        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483593/azh/svgs/hover-box/big-lifesaver_v8bfbo.svg" alt="" />
-                    </a>
-                    <a href="#tab6" class="display-on-hover-box-items">
-                        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483595/azh/svgs/hover-box/headphones-with-thin-mic_u1zd8t.svg" alt="" />
-                    </a>
-                    <a href="#tab7" class="display-on-hover-box-items">
-                        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483593/azh/svgs/hover-box/inclined-paper-plane_gn2atq.svg" alt="" />
-                    </a>
-                    <a href="#tab8" class="display-on-hover-box-items">
-                        <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1624483595/azh/svgs/hover-box/big-telephone_xf9z6n.svg" alt="" />
-                    </a>
-                    <div class="display-on-hover-box-content">
-                        <div class="display-on-hover-box-cotent-items">
-                            <div id="tab1" class="tab-content-hover">
-                                <h5>word press hosting</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit
-                                    amet elit. Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <div id="tab2" class="tab-content-hover">
-                                <h5>word press2 hosting</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit
-                                    amet elit. Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <div id="tab3" class="tab-content-hover">
-                                <h5>word press3 hosting</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit
-                                    amet elit. Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <div id="tab4" class="tab-content-hover">
-                                <h5>word press4 hosting</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit
-                                    amet elit. Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <div id="tab5" class="tab-content-hover">
-                                <h5>word press5 hosting</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit
-                                    amet elit. Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <div id="tab6" class="tab-content-hover">
-                                <h5>word press6 hosting</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit
-                                    amet elit. Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <div id="tab7" class="tab-content-hover">
-                                <h5>word press7 hosting</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit
-                                    amet elit. Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <div id="tab8" class="tab-content-hover">
-                                <h5>word press8 hosting</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit
-                                    amet elit. Lorem ipsum dolor sit amet</p>
-                            </div>
+            <div class="item">
+                <div class="row align-items-end">
+                    <div class="col-sm-12 col-md-12 col-lg-5">
+                        <div class="client-image">
+                            <img src="assets/images/slider-2.png" alt="client">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6 pb-100">
+                        <div class="client-carousel-details text-center text-lg-start">
+                            <p class="client-carousel-para">Lorem ipsum dolor sit amet, consectetur elit, sed do
+                                eiusmod tempor incididunt ut labore dolore. Lorem ipsum dolor sit amet elit,
+                                consectetur adipisicing amet.</p>
+                            <h3 class="client-carousel-name">Alexa Disuza</h3>
+                            <h4 class="client-carousel-designation">CTO & Manager</h4>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
+</section> -->

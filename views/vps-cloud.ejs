@@ -2,13 +2,14 @@
     <div class="row align-items-center">
         <div class="col-sm-12">
             <div class="header-page-content text-center text-lg-start">
-                <h1>Dedicated Servers</h1>
-                <p>If you are looking for the best Dedicated servers for your business then Azpirehosting's Dedicated Servers are the solution. We have high performing servers at affordable prices to truly deliver the power that you need.</p>
+                <h1>Cloud VPS Hosting</h1>
+                <p>Decent servers that performs better and is very much affordable.</p>
                 <ul class="section-button">
                     <li><a href="#pricing"><button class="btn btn-pill">Get Started</button></a></li>
                 </ul>
             </div>
         </div>
+        
     </div>
 </div>
 </header>
@@ -20,30 +21,28 @@
             <h2>Price & plans</h2>
         </div>
         <div class="row">
-            <% dedicatedHostingPlans.forEach((dedicatedHostingPlan, index)=> { %>
+            <% vpsCloudHostingPlans.forEach((vpsCloudHostingPlan, index)=> { %>
                 <div class="col-sm-12 col-md-4">
                     <div class="pricing-item pricing-item-two">
                         <div class="pricing-secondary-header">
                             <div class="pricing-header-title">
                                 <h3 class="pricing-header-title-text">
-                                    <%= dedicatedHostingPlan.name %>
+                                    <%= vpsCloudHostingPlan.name %>
                                 </h3>
                             </div>
                             <div class="pricing-item-amount">
                                 <h4 class="pricing-item-amount-number"><small>$</small>
-                                    <%= dedicatedHostingPlan.cost %><span>/Month</span>
+                                    <%= vpsCloudHostingPlan.cost %><span>/Month</span>
                                 </h4>
                             </div>
                         </div>
                         <div class="pricing-item-body">
                             <ul class="pricing-body-list pricing-body-list-two">
-                                <li><%= dedicatedHostingPlan.features.cores %></li>
-                                <li><%= dedicatedHostingPlan.features.ram %></li>
-                                <li><%= dedicatedHostingPlan.features.diskspace %></li>
-                                <li><%= dedicatedHostingPlan.features.bandwidth %></li>
-                                <li><%= dedicatedHostingPlan.features.dedicatedIp %> IP Addresses</li>
-                                <li><%= dedicatedHostingPlan.features.mbit %></li>
-                                <li><%= dedicatedHostingPlan.features.ghz %></li>
+                                <li><%= vpsCloudHostingPlan.features.cores %></li>
+                                <li><%= vpsCloudHostingPlan.features.ram %></li>
+                                <li><%= vpsCloudHostingPlan.features.diskspace %></li>
+                                <li><%= vpsCloudHostingPlan.features.bandwidth %></li>
+                                <li><%= vpsCloudHostingPlan.features.dedicatedIp %> Dedicated IP</li>
                             </ul>
                             <a href="<%= billingURL %>" class="btn btn-gradient">Order Now</a>
                         </div>
@@ -58,7 +57,7 @@
 <section class="feature-section pt-100 pb-70">
     <div class="container">
         <div class="section-title section-title-two">
-            <h2>Why Choose Azpire Dedicated Server Hosting?</h2>
+            <h2>Why Choose Azpire Cloud VPS Hosting?</h2>
         </div>
 
         <div class="row">
@@ -66,11 +65,11 @@
                 <div class="feature-item feature-item-2 fluid-height">
                     <div class="feature-item-inner full-height bg-white">
                         <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
-                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/200_transfer_onfpsj.png" alt="200TB Transfer">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/ssd_rhtwwy.png" alt="Faster-than-SSD with MaxIOPS">
                         </div>
                         <div class="feature-item-content">
-                            <h3>200TB Transfer</h3>
-                            <p>There is enough for incoming and outgoing transfers on all our dedicated servers compared to so many other competitors out there.</p>
+                            <h3>Faster-than-SSD with MaxIOPS</h3>
+                            <p>MaxIOPS is our proprietary storage technology, built on enterprise-grade SSDs but up to 2x faster compared to industry-standard cloud servers.</p>
                         </div>
                     </div>
                 </div>
@@ -80,11 +79,11 @@
                 <div class="feature-item feature-item-2 fluid-height">
                     <div class="feature-item-inner full-height bg-white">
                         <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
-                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627153327/azh_newui/features/port_sgcmfz.png" alt="1Gbit/10Gbit Port">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/uptime_f25n7g.png" alt="100% Uptime">
                         </div>
                         <div class="feature-item-content">
-                            <h3>1Gbit/10Gbit Port</h3>
-                            <p>All our Dedicated servers comes with a 1Gbit Port while DED006 comes with a 10Gbit Port.</p>
+                            <h3>100% Uptime</h3>
+                            <p>Our cloud infrastructure guarantees a 100% uptime network</p>
                         </div>
                     </div>
                 </div>
@@ -94,11 +93,11 @@
                 <div class="feature-item feature-item-2 fluid-height">
                     <div class="feature-item-inner full-height bg-white">
                         <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
-                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/timely_setup_ajr04d.png" alt="Timely Setup">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/upgrade_downgrade_zlphuu.png" alt="Easy Upgrade & Downgrade">
                         </div>
                         <div class="feature-item-content">
-                            <h3>Timely Setup</h3>
-                            <p>Our dedicated servers are created beween 1 - 3 hours. This timeframe allows us to carefully setup the server as this is done manually per each order.</p>
+                            <h3>Easy Upgrade & Downgrade</h3>
+                            <p>There is no need for long support and calls, customers are able to upgrade their servers instally and vise versa automatically.</p>
                         </div>
                     </div>
                 </div>
@@ -108,11 +107,11 @@
                 <div class="feature-item feature-item-2 fluid-height">
                     <div class="feature-item-inner full-height bg-white">
                         <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
-                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152274/azh_newui/features/ssd_hdd_gf2yb9.png" alt="SSD+HDD">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/instant_setup_pwdg8k.png" alt="Instant Setup">
                         </div>
                         <div class="feature-item-content">
-                            <h3>SSD+HDD</h3>
-                            <p>Our dedicated servers comes with an SSD hard drive which automatically improves the server speed. These hard drives are 100% reliable.</p>
+                            <h3>Instant Setup</h3>
+                            <p>Immediately the payment is successful, the account is created and login details are automatically sent by the system.</p>
                         </div>
                     </div>
                 </div>
@@ -136,11 +135,11 @@
                 <div class="feature-item feature-item-2 fluid-height">
                     <div class="feature-item-inner full-height bg-white">
                         <div class="feature-item-thumb feature-item-thumb-round bg-off-hard-gradient">
-                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/data_center_az8imy.png" alt="US Data Center">
+                            <img src="https://res.cloudinary.com/azpire-ui/image/upload/v1627152273/azh_newui/features/data_center_az8imy.png" alt="Multi Location Data Center">
                         </div>
                         <div class="feature-item-content">
-                            <h3>US Data Center</h3>
-                            <p>Our Datacenter for the Dedicated Server plans exist in the US, we plan to add more locations very soon later in the future.</p>
+                            <h3>Multi Location Data Center</h3>
+                            <p>Our Datacenter for the cloud VPS plans exist in several regions; USA, FRANCE, GERMANY, ITALY, NETHERLANDS, SINGAPORE, POLAND, UK, SPAIN.</p>
                         </div>
                     </div>
                 </div>

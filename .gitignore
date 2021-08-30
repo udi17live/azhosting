@@ -1,2 +1,6 @@
 .env
 node_modules
+azhosting.zip
+logs
+tmp
+config
