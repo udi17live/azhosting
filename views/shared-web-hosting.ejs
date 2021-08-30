@@ -386,15 +386,7 @@
 
                 <tbody>
                     <tr>
-                        <td class="td-list-name td-bg">Billing Term</td>
-                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
-                            <td>
-                                Annual
-                            </td>
-                            <% }); %>
-                    </tr>
-                    <tr>
-                        <td class="td-list-name td-bg">Monthly Pricing</td>
+                        <td class="td-list-name td-bg">Buy Monthly for</td>
                         <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
                             <td class="td-orange">
                                 $<%= sharedHostingPlan.monthly_cost %>/month
@@ -402,10 +394,26 @@
                             <% }); %>
                     </tr>
                     <tr>
-                        <td class="td-list-name td-bg">Annual Pricing</td>
+                        <td class="td-list-name td-bg">Buy Annually for</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td class="td-orange">
+                                $<%= sharedHostingPlan.annual_monthly_cost %>/month
+                            </td>
+                            <% }); %>
+                    </tr>
+                    <tr>
+                        <td class="td-list-name td-bg">Annual Pricing Total</td>
                         <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
                             <td class="td-orange">
                                 $<%= sharedHostingPlan.cost %>/year
+                            </td>
+                            <% }); %>
+                    </tr>
+                    <tr>
+                        <td class="td-list-name td-bg">Save on Annual Plan</td>
+                        <% sharedHostingPlans.forEach((sharedHostingPlan, index)=> { %>
+                            <td class="td-orange">
+                                <%= sharedHostingPlan.save_percentage %>%
                             </td>
                             <% }); %>
                     </tr>
